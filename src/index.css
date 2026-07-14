@@ -6,6 +6,15 @@
   --color-brand-light: #e8eef9;
   --color-accent: #c8760a;
   --color-accent-dark: #a5610a;
+
+  --color-success: #22a06b;
+  --color-success-light: #e3f6ee;
+  --color-danger: #e5484d;
+  --color-danger-light: #fdecec;
+  --color-gold: #f5b301;
+  --color-heart: #ff4b4b;
+  --color-grape: #7c4dff;
+
   --font-sans: "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -26,3 +35,45 @@ body {
 .hero-gradient {
   background: linear-gradient(to bottom, var(--color-brand), var(--color-brand-dark));
 }
+
+/* ── Game-feel animations ─────────────────────────────────────────── */
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-8px); }
+  40%, 60% { transform: translateX(8px); }
+}
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-48px); opacity: 0; }
+}
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.15); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes slide-up {
+  0% { transform: translateY(16px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes confetti-fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.animate-pop-in { animation: pop-in 0.28s ease-out both; }
+.animate-shake { animation: shake 0.5s both; }
+.animate-float-up { animation: float-up 0.9s ease-out forwards; }
+.animate-bounce-in { animation: bounce-in 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) both; }
+.animate-slide-up { animation: slide-up 0.35s ease-out both; }
+.animate-pulse-glow { animation: pulse-glow 1.6s ease-in-out infinite; }

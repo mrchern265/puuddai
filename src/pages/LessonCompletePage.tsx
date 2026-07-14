@@ -1,11 +1,15 @@
 import { useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { Button, PhoneFrame } from '../components/ui'
+import { Button, Confetti, PhoneFrame, ProgressRing, Stars } from '../components/ui'
 
 interface CompleteState {
   score?: number
   correct?: number
   total?: number
+  points?: number
+  maxCombo?: number
+  lives?: number
+  stars?: number
 }
 
 interface Encouragement {
@@ -48,66 +52,78 @@ export default function LessonCompletePage() {
       ? state.total
       : null
   const hasBreakdown = correct !== null && total !== null && total > 0
+  const points = state?.points ?? 0
+  const maxCombo = state?.maxCombo ?? 0
+  const stars = state?.stars ?? (score >= 80 ? 3 : score >= 50 ? 2 : 1)
 
   const encouragement = useMemo<Encouragement>(() => {
-    if (score >= 80) {
-      return {
-        emoji: '🎉',
-        headline: 'เยี่ยมมาก!',
-        message: 'คุณทำได้ยอดเยี่ยมเลย เก่งขึ้นทุกวัน ไปต่อกันเลย!',
-      }
+    if (stars >= 3) {
+      return { emoji: '🏆', headline: 'สุดยอด! เพอร์เฟกต์!', message: 'ตอบถูกหมดเลย เก่งมากกก ไปต่อกันเลย!' }
     }
     if (score >= 50) {
-      return {
-        emoji: '👏',
-        headline: 'ทำได้ดี!',
-        message: 'มาถูกทางแล้ว ฝึกอีกนิดเดียวก็เก่งขึ้นแน่นอน',
-      }
+      return { emoji: '🎉', headline: 'ทำได้ดีมาก!', message: 'มาถูกทางแล้ว ฝึกอีกนิดเดียวก็เก่งขึ้นแน่นอน' }
     }
-    return {
-      emoji: '💪',
-      headline: 'สู้ต่อไปนะ!',
-      message: 'ไม่เป็นไรเลย ลองทบทวนอีกครั้ง แล้วคุณจะทำได้ดีขึ้นแน่นอน',
-    }
-  }, [score])
+    return { emoji: '💪', headline: 'สู้ต่อไปนะ!', message: 'ไม่เป็นไรเลย ลองเล่นซ้ำอีกครั้ง แล้วคุณจะทำได้ดีขึ้นแน่นอน' }
+  }, [score, stars])
 
   return (
     <PhoneFrame>
+      {score >= 50 && <Confetti />}
       <div className="hero-gradient flex min-h-screen flex-1 flex-col items-center justify-center px-6 py-12 text-center text-white">
-        <div className="text-7xl" aria-hidden>
+        <div className="text-6xl animate-bounce-in" aria-hidden>
           {encouragement.emoji}
         </div>
 
-        <h1 className="mt-4 text-3xl font-bold">{encouragement.headline}</h1>
-        <p className="mt-2 text-base text-white/80">เรียนบทเรียนจบแล้ว</p>
+        <h1 className="mt-3 text-2xl font-bold animate-slide-up">{encouragement.headline}</h1>
 
-        <div className="mt-8 flex h-44 w-44 flex-col items-center justify-center rounded-full border-4 border-white/40 bg-white/10 shadow-lg">
-          <span className="text-6xl font-extrabold leading-none">{score}%</span>
-          <span className="mt-2 text-sm text-white/80">คะแนน</span>
+        <div className="mt-5">
+          <Stars earned={stars} />
         </div>
 
-        {hasBreakdown ? (
+        <div className="mt-6">
+          <ProgressRing percent={score} size={168} stroke={13}>
+            <span className="text-5xl font-extrabold leading-none">{score}%</span>
+            <span className="mt-1 text-sm text-white/80">คะแนน</span>
+          </ProgressRing>
+        </div>
+
+        {hasBreakdown && (
           <p className="mt-4 text-sm text-white/85">
             ตอบถูก {correct} จาก {total} ข้อ
           </p>
-        ) : null}
+        )}
 
-        <div className="mt-6 rounded-full bg-accent px-6 py-2 text-lg font-bold text-white shadow-md">
-          +50 XP
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <span className="rounded-full bg-accent px-5 py-2 text-lg font-bold shadow-md">+50 XP</span>
+          <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-bold backdrop-blur">
+            ⭐ {points} แต้ม
+          </span>
+          {maxCombo >= 2 && (
+            <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-bold backdrop-blur">
+              🔥 คอมโบสูงสุด x{maxCombo}
+            </span>
+          )}
         </div>
 
-        <p className="mt-6 max-w-xs text-base leading-relaxed text-white/90">
+        <p className="mt-6 max-w-xs text-base leading-relaxed text-white/90 animate-slide-up">
           {encouragement.message}
         </p>
 
-        <div className="mt-10 w-full max-w-xs">
+        <div className="mt-10 flex w-full max-w-xs flex-col gap-3">
           <Button
             variant="accent"
             className="w-full"
             onClick={() => navigate('/home', { replace: true })}
           >
-            ถัดไป
+            ไปต่อ 🚀
           </Button>
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="text-sm font-medium text-white/70 underline-offset-2 hover:underline"
+          >
+            เล่นบทนี้อีกครั้ง
+          </button>
         </div>
       </div>
     </PhoneFrame>

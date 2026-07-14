@@ -1,0 +1,147 @@
+import type { CefrLevel } from '../types'
+
+export type Skill = 'listening' | 'vocab' | 'grammar'
+
+export interface PlacementQuestion {
+  skill: Skill
+  instructionTh: string
+  prompt: string // English text shown (and spoken for listening items)
+  audio?: string // when set, the item is a listening task — the learner taps to hear `audio`
+  choices: string[]
+  answerIndex: number
+}
+
+export interface PlacementScore {
+  total: number // 0-100
+  listening: number
+  vocab: number
+  grammar: number
+  cefr: CefrLevel
+  correct: number
+  totalQuestions: number
+}
+
+export const SKILL_LABEL_TH: Record<Skill, { label: string; emoji: string }> = {
+  listening: { label: 'การฟัง', emoji: '👂' },
+  vocab: { label: 'คำศัพท์', emoji: '📚' },
+  grammar: { label: 'ไวยากรณ์', emoji: '✍️' },
+}
+
+// 10-question placement test spanning listening, vocab, and grammar.
+export const PLACEMENT_QUESTIONS: PlacementQuestion[] = [
+  {
+    skill: 'listening',
+    instructionTh: 'กดฟังเสียง แล้วเลือกความหมาย',
+    prompt: 'Good morning',
+    audio: 'Good morning',
+    choices: ['สวัสดีตอนเช้า', 'ราตรีสวัสดิ์', 'ลาก่อน', 'ขอบคุณ'],
+    answerIndex: 0,
+  },
+  {
+    skill: 'listening',
+    instructionTh: 'กดฟังเสียง แล้วเลือกความหมาย',
+    prompt: 'How much is it?',
+    audio: 'How much is it?',
+    choices: ['กี่โมงแล้ว', 'ราคาเท่าไร', 'คุณชื่ออะไร', 'ห้องน้ำอยู่ไหน'],
+    answerIndex: 1,
+  },
+  {
+    skill: 'listening',
+    instructionTh: 'กดฟังเสียง แล้วเลือกความหมาย',
+    prompt: 'Turn left',
+    audio: 'Turn left',
+    choices: ['เลี้ยวขวา', 'ตรงไป', 'เลี้ยวซ้าย', 'หยุด'],
+    answerIndex: 2,
+  },
+  {
+    skill: 'vocab',
+    instructionTh: "เลือกความหมายของคำว่า 'water'",
+    prompt: 'water',
+    choices: ['ไฟ', 'ข้าว', 'นม', 'น้ำ'],
+    answerIndex: 3,
+  },
+  {
+    skill: 'vocab',
+    instructionTh: "เลือกความหมายของคำว่า 'airport'",
+    prompt: 'airport',
+    choices: ['สนามบิน', 'สถานีรถไฟ', 'โรงแรม', 'โรงพยาบาล'],
+    answerIndex: 0,
+  },
+  {
+    skill: 'vocab',
+    instructionTh: "'หนังสือเดินทาง' ภาษาอังกฤษคือคำไหน",
+    prompt: 'หนังสือเดินทาง',
+    choices: ['ticket', 'passport', 'visa', 'luggage'],
+    answerIndex: 1,
+  },
+  {
+    skill: 'vocab',
+    instructionTh: "เลือกความหมายของคำว่า 'expensive'",
+    prompt: 'expensive',
+    choices: ['ถูก', 'ใหญ่', 'แพง', 'เล็ก'],
+    answerIndex: 2,
+  },
+  {
+    skill: 'grammar',
+    instructionTh: 'เติมคำในช่องว่างให้ถูกต้อง',
+    prompt: 'I ____ a student.',
+    choices: ['am', 'is', 'are', 'be'],
+    answerIndex: 0,
+  },
+  {
+    skill: 'grammar',
+    instructionTh: 'เติมคำในช่องว่างให้ถูกต้อง',
+    prompt: 'She ____ to work every day.',
+    choices: ['go', 'goes', 'going', 'gone'],
+    answerIndex: 1,
+  },
+  {
+    skill: 'grammar',
+    instructionTh: 'เลือกประโยคที่ถูกต้องตามหลักไวยากรณ์',
+    prompt: 'Which sentence is correct?',
+    choices: [
+      'He not like it.',
+      "He doesn't like it.",
+      "He don't like it.",
+      'He no like it.',
+    ],
+    answerIndex: 1,
+  },
+]
+
+function pct(correct: number, total: number): number {
+  return total > 0 ? Math.round((correct / total) * 100) : 0
+}
+
+function cefrFromScore(total: number): CefrLevel {
+  if (total < 40) return 'A0'
+  if (total <= 75) return 'A1'
+  return 'A2'
+}
+
+// Compute the score from a per-question correctness list (skill + right/wrong).
+export function computeScore(results: { skill: Skill; correct: boolean }[]): PlacementScore {
+  const bySkill: Record<Skill, { c: number; n: number }> = {
+    listening: { c: 0, n: 0 },
+    vocab: { c: 0, n: 0 },
+    grammar: { c: 0, n: 0 },
+  }
+  let correct = 0
+  for (const r of results) {
+    bySkill[r.skill].n += 1
+    if (r.correct) {
+      bySkill[r.skill].c += 1
+      correct += 1
+    }
+  }
+  const total = pct(correct, results.length)
+  return {
+    total,
+    listening: pct(bySkill.listening.c, bySkill.listening.n),
+    vocab: pct(bySkill.vocab.c, bySkill.vocab.n),
+    grammar: pct(bySkill.grammar.c, bySkill.grammar.n),
+    cefr: cefrFromScore(total),
+    correct,
+    totalQuestions: results.length,
+  }
+}

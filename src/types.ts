@@ -89,3 +89,17 @@ export interface ScoreResult {
   corrections: { wrong: string; right: string }[]
   encouragementTh: string
 }
+
+export type AssessmentKind = 'pre' | 'post'
+
+export interface AssessmentResult {
+  id: string
+  user_id: string
+  kind: AssessmentKind
+  total_score: number
+  listening_score: number
+  vocab_score: number
+  grammar_score: number
+  cefr_level: string
+  taken_at: string
+}

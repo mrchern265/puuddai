@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import { getLesson, completeLesson, saveQuizAttempt } from '../lib/data'
+import { shuffleQuiz } from '../lib/shuffle'
 import type { Lesson } from '../types'
-import { Button, Card, LoadingScreen, PhoneFrame } from '../components/ui'
+import { Button, Card, HeartBar, LoadingScreen, PhoneFrame } from '../components/ui'
 
 function speak(text: string) {
   if (!('speechSynthesis' in window)) return
@@ -42,6 +43,19 @@ export default function LessonPlayerPage() {
   const [quizIndex, setQuizIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
   const [submitting, setSubmitting] = useState(false)
+
+  // game state
+  const [lives, setLives] = useState(3)
+  const [points, setPoints] = useState(0)
+  const [combo, setCombo] = useState(0)
+  const [maxCombo, setMaxCombo] = useState(0)
+  const [floater, setFloater] = useState<{ key: number; text: string } | null>(null)
+
+  // shuffle choices once per lesson so the correct answer isn't in a fixed slot
+  const quiz = useMemo(
+    () => (lesson ? shuffleQuiz(lesson.content_json.quiz) : []),
+    [lesson],
+  )
 
   useEffect(() => {
     let active = true
@@ -95,19 +109,34 @@ export default function LessonPlayerPage() {
   }
 
   const content = lesson.content_json
-  const quiz = content.quiz
   const hasQuiz = quiz.length > 0
 
   const selected = hasQuiz ? answers[quizIndex] ?? null : null
   const answered = step === 3 ? (!hasQuiz || selected !== null) : true
+  const current = hasQuiz ? quiz[quizIndex] : null
 
   function selectAnswer(ci: number) {
+    if (!current) return
     if (answers[quizIndex] !== null && answers[quizIndex] !== undefined) return
     setAnswers((prev) => {
       const copy = [...prev]
       copy[quizIndex] = ci
       return copy
     })
+    if (ci === current.answerIndex) {
+      const gain = 10 + combo * 5
+      setPoints((p) => p + gain)
+      setCombo((c) => {
+        const nc = c + 1
+        setMaxCombo((m) => Math.max(m, nc))
+        return nc
+      })
+      setFloater({ key: Date.now(), text: `+${gain}${combo >= 1 ? ` 🔥x${combo + 1}` : ''}` })
+    } else {
+      setLives((l) => Math.max(0, l - 1))
+      setCombo(0)
+      setFloater({ key: Date.now(), text: '💔' })
+    }
   }
 
   async function finish() {
@@ -118,7 +147,9 @@ export default function LessonPlayerPage() {
       (acc, q, i) => acc + (answers[i] === q.answerIndex ? 1 : 0),
       0,
     )
-    const score = total > 0 ? Math.round((correct / total) * 100) : 0
+    const score = total > 0 ? Math.round((correct / total) * 100) : 100
+    const wrong = total - correct
+    const stars = wrong === 0 ? 3 : score >= 60 ? 2 : 1
     if (user) {
       try {
         await completeLesson(user.id, lesson.id, score)
@@ -128,7 +159,7 @@ export default function LessonPlayerPage() {
       }
     }
     navigate(`/lesson/${lesson.id}/complete`, {
-      state: { score, correct, total },
+      state: { score, correct, total, points, maxCombo, lives, stars },
     })
   }
 
@@ -155,11 +186,7 @@ export default function LessonPlayerPage() {
   const prevVisible = step > 0
   const nextDisabled = (step === 3 && !answered) || submitting
   const nextLabel =
-    step < 3
-      ? 'ถัดไป'
-      : quizIndex === quiz.length - 1
-        ? 'ดูผลลัพธ์'
-        : 'ถัดไป'
+    step < 3 ? 'ถัดไป' : quizIndex === quiz.length - 1 ? 'ดูผลลัพธ์' : 'ข้อถัดไป'
 
   return (
     <PhoneFrame>
@@ -173,30 +200,51 @@ export default function LessonPlayerPage() {
           >
             ✕
           </button>
-          <span className="text-sm font-medium opacity-90">{STEP_LABELS[step]}</span>
+          {step === 3 && hasQuiz ? (
+            <HeartBar lives={lives} />
+          ) : (
+            <span className="text-sm font-medium opacity-90">{STEP_LABELS[step]}</span>
+          )}
           <span className="text-sm opacity-80">{step + 1}/4</span>
         </div>
         <h1 className="mt-3 text-xl font-bold">{lesson.title_th}</h1>
-        <div className="mt-4 flex gap-1.5">
-          {STEP_LABELS.map((label, i) => (
-            <div
-              key={label}
-              className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-white' : 'bg-white/30'}`}
-            />
-          ))}
+        <div className="mt-4 flex items-center gap-3">
+          <div className="flex flex-1 gap-1.5">
+            {STEP_LABELS.map((label, i) => (
+              <div
+                key={label}
+                className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-white' : 'bg-white/30'}`}
+              />
+            ))}
+          </div>
+          {step === 3 && (
+            <span className="shrink-0 rounded-full bg-white/20 px-2.5 py-0.5 text-sm font-bold">
+              ⭐ {points}
+            </span>
+          )}
         </div>
       </header>
 
-      <main className="flex-1 space-y-4 overflow-y-auto px-5 py-5">
+      <main className="relative flex-1 space-y-4 overflow-y-auto px-5 py-5">
+        {/* floating points / heart feedback */}
+        {floater && (
+          <div
+            key={floater.key}
+            className="animate-float-up pointer-events-none absolute left-1/2 top-2 z-10 -translate-x-1/2 text-2xl font-extrabold text-accent drop-shadow"
+          >
+            {floater.text}
+          </div>
+        )}
+
         {step === 0 && (
-          <Card className="text-center">
+          <Card className="text-center animate-slide-up">
             <p className="text-2xl font-bold leading-snug text-brand">
               {content.listen.audioText}
             </p>
             <button
               type="button"
               onClick={() => speak(content.listen.audioText)}
-              className="mx-auto mt-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent text-3xl text-white shadow-lg transition active:scale-95"
+              className="mx-auto mt-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent text-3xl text-white shadow-lg transition active:scale-95 animate-pulse-glow"
               aria-label="เล่นเสียง"
             >
               🔊
@@ -212,7 +260,7 @@ export default function LessonPlayerPage() {
             </Card>
           ) : (
             content.vocab.map((v, i) => (
-              <Card key={`${v.word}-${i}`}>
+              <Card key={`${v.word}-${i}`} className="animate-slide-up" >
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <span className="text-lg font-bold text-slate-800">{v.word}</span>
@@ -239,7 +287,7 @@ export default function LessonPlayerPage() {
             </Card>
           ) : (
             content.examples.map((ex, i) => (
-              <Card key={`${ex.en}-${i}`}>
+              <Card key={`${ex.en}-${i}`} className="animate-slide-up">
                 <div className="flex items-start justify-between gap-3">
                   <p className="text-slate-800">{ex.en}</p>
                   <SpeakerButton text={ex.en} className="h-10 w-10 text-lg" />
@@ -250,63 +298,71 @@ export default function LessonPlayerPage() {
           ))}
 
         {step === 3 &&
-          (!hasQuiz ? (
+          (!hasQuiz || !current ? (
             <Card>
               <p className="text-center text-slate-500">บทเรียนนี้ไม่มีแบบทดสอบ</p>
             </Card>
           ) : (
-            (() => {
-              const q = quiz[quizIndex]
-              return (
-                <div className="space-y-4">
-                  <p className="text-sm font-medium text-slate-500">
-                    ข้อ {quizIndex + 1} จาก {quiz.length}
-                  </p>
-                  <Card>
-                    <p className="text-lg font-semibold text-slate-800">{q.questionTh}</p>
-                    <div className="mt-4 space-y-3">
-                      {q.choices.map((choice, ci) => {
-                        const isAnswer = ci === q.answerIndex
-                        const isSelected = ci === selected
-                        let cls =
-                          'flex w-full items-center justify-between gap-2 rounded-2xl border px-4 py-3 text-left transition'
-                        if (!answered) {
-                          cls += ' border-slate-200 bg-white active:scale-[0.99]'
-                        } else if (isAnswer) {
-                          cls += ' border-green-500 bg-green-50 text-green-800'
-                        } else if (isSelected) {
-                          cls += ' border-red-400 bg-red-50 text-red-700'
-                        } else {
-                          cls += ' border-slate-200 bg-white opacity-60'
-                        }
-                        return (
-                          <button
-                            key={ci}
-                            type="button"
-                            disabled={answered}
-                            onClick={() => selectAnswer(ci)}
-                            className={cls}
-                          >
-                            <span>{choice}</span>
-                            {answered && isAnswer && <span>✓</span>}
-                            {answered && isSelected && !isAnswer && <span>✗</span>}
-                          </button>
-                        )
-                      })}
-                    </div>
-                  </Card>
-
-                  {answered && (
-                    <div className="rounded-2xl bg-brand-light p-4">
-                      <p className="text-sm font-semibold text-brand">
-                        {selected === q.answerIndex ? '✅ ถูกต้อง!' : '❌ ยังไม่ถูก'}
-                      </p>
-                      <p className="mt-1 text-sm text-slate-700">{q.explainTh}</p>
-                    </div>
-                  )}
+            <div className="space-y-4">
+              <div className="flex items-center justify-between text-sm font-medium text-slate-500">
+                <span>
+                  ข้อ {quizIndex + 1} จาก {quiz.length}
+                </span>
+                {combo >= 2 && <span className="font-bold text-accent">🔥 คอมโบ x{combo}</span>}
+              </div>
+              <Card>
+                <p className="text-lg font-semibold text-slate-800">{current.questionTh}</p>
+                <div className="mt-4 space-y-3">
+                  {current.choices.map((choice, ci) => {
+                    const isAnswer = ci === current.answerIndex
+                    const isSelected = ci === selected
+                    let cls =
+                      'flex w-full items-center justify-between gap-2 rounded-2xl border-2 px-4 py-3 text-left transition'
+                    if (!answered) {
+                      cls += ' border-slate-200 bg-white active:scale-[0.98] hover:border-brand'
+                    } else if (isAnswer) {
+                      cls += ' border-success bg-success-light text-success animate-pop-in'
+                    } else if (isSelected) {
+                      cls += ' border-danger bg-danger-light text-danger animate-shake'
+                    } else {
+                      cls += ' border-slate-200 bg-white opacity-50'
+                    }
+                    return (
+                      <button
+                        key={ci}
+                        type="button"
+                        disabled={answered}
+                        onClick={() => selectAnswer(ci)}
+                        className={cls}
+                      >
+                        <span className="font-medium">{choice}</span>
+                        {answered && isAnswer && <span className="text-lg">✓</span>}
+                        {answered && isSelected && !isAnswer && <span className="text-lg">✗</span>}
+                      </button>
+                    )
+                  })}
                 </div>
-              )
-            })()
+              </Card>
+
+              {answered && (
+                <div
+                  className={`animate-slide-up rounded-2xl p-4 ${
+                    selected === current.answerIndex
+                      ? 'bg-success-light'
+                      : 'bg-danger-light'
+                  }`}
+                >
+                  <p
+                    className={`text-sm font-bold ${
+                      selected === current.answerIndex ? 'text-success' : 'text-danger'
+                    }`}
+                  >
+                    {selected === current.answerIndex ? '🎉 ถูกต้อง!' : '💡 คำตอบที่ถูกคือ'}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-700">{current.explainTh}</p>
+                </div>
+              )}
+            </div>
           ))}
       </main>
 
@@ -319,7 +375,7 @@ export default function LessonPlayerPage() {
           <div className="flex-1" />
         )}
         <Button
-          variant="accent"
+          variant={step === 3 && answered ? 'success' : 'accent'}
           onClick={goNext}
           disabled={nextDisabled}
           className="flex-1"

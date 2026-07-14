@@ -9,6 +9,7 @@ import LessonPlayerPage from './pages/LessonPlayerPage'
 import LessonCompletePage from './pages/LessonCompletePage'
 import AIConversationPage from './pages/AIConversationPage'
 import ProgressPage from './pages/ProgressPage'
+import AssessmentPage from './pages/AssessmentPage'
 import VocabBankPage from './pages/VocabBankPage'
 import VocabReviewPage from './pages/VocabReviewPage'
 import SettingsPage from './pages/SettingsPage'
@@ -29,6 +30,7 @@ export default function App() {
       <Route path="/lesson/:id/complete" element={<Protected><LessonCompletePage /></Protected>} />
       <Route path="/practice/:unitId" element={<Protected><AIConversationPage /></Protected>} />
       <Route path="/progress" element={<Protected><ProgressPage /></Protected>} />
+      <Route path="/assessment" element={<Protected><AssessmentPage /></Protected>} />
       <Route path="/vocab" element={<Protected><VocabBankPage /></Protected>} />
       <Route path="/review" element={<Protected><VocabReviewPage /></Protected>} />
       <Route path="/settings" element={<Protected><SettingsPage /></Protected>} />

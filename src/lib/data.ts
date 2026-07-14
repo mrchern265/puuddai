@@ -9,7 +9,10 @@ import type {
   ChatMessage,
   ScoreResult,
   VocabItem,
+  AssessmentResult,
+  AssessmentKind,
 } from '../types'
+import type { PlacementScore } from './placementTest'
 
 export interface VocabWithSource extends VocabItem {
   lessonId: string
@@ -100,6 +103,42 @@ export async function getProfile(userId: string): Promise<Profile | null> {
 export async function setCefrLevel(userId: string, level: string) {
   const { error } = await supabase.from('profiles').update({ cefr_level: level }).eq('id', userId)
   if (error) throw error
+}
+
+export async function saveOnboarding(userId: string, goal: string, level: string) {
+  const { error } = await supabase
+    .from('profiles')
+    .update({ goal, cefr_level: level })
+    .eq('id', userId)
+  if (error) throw error
+}
+
+// Placement / progress assessment (pre-test baseline + post-test comparison).
+export async function saveAssessment(
+  userId: string,
+  kind: AssessmentKind,
+  s: PlacementScore,
+) {
+  const { error } = await supabase.from('assessment_results').insert({
+    user_id: userId,
+    kind,
+    total_score: s.total,
+    listening_score: s.listening,
+    vocab_score: s.vocab,
+    grammar_score: s.grammar,
+    cefr_level: s.cefr,
+  })
+  if (error) throw error
+}
+
+export async function getAssessments(userId: string): Promise<AssessmentResult[]> {
+  const { data, error } = await supabase
+    .from('assessment_results')
+    .select('*')
+    .eq('user_id', userId)
+    .order('taken_at', { ascending: false })
+  if (error) throw error
+  return (data ?? []) as AssessmentResult[]
 }
 
 export async function getSkillProfile(userId: string): Promise<SkillProfile | null> {
