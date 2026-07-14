@@ -8,4 +8,12 @@ if (!url || !key) {
   console.error('Missing VITE_SUPABASE_URL / VITE_SUPABASE_PUBLISHABLE_KEY')
 }
 
-export const supabase = createClient(url, key)
+export const supabase = createClient(url, key, {
+  auth: {
+    // Keep the user logged in across reloads and refresh tokens automatically
+    // so the session does not silently expire while they are using the app.
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true,
+  },
+})

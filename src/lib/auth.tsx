@@ -13,7 +13,11 @@ interface AuthCtx {
   session: Session | null
   user: User | null
   loading: boolean
-  signUp: (email: string, password: string) => Promise<{ error: string | null }>
+  signUp: (
+    email: string,
+    password: string,
+    displayName: string,
+  ) => Promise<{ error: string | null }>
   signIn: (email: string, password: string) => Promise<{ error: string | null }>
   signOut: () => Promise<void>
 }
@@ -25,19 +29,49 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session)
+    // onAuthStateChange fires INITIAL_SESSION plus every SIGNED_IN/OUT/TOKEN_REFRESHED.
+    // Track that so the initial getSession() (which may resolve LATE with a stale
+    // null) can't clobber a session already set by an auth event — that race was
+    // signing users out shortly after they signed up.
+    let gotEvent = false
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => {
+      gotEvent = true
+      setSession(s)
       setLoading(false)
     })
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, s) => {
-      setSession(s)
+    supabase.auth.getSession().then(({ data }) => {
+      if (gotEvent) return
+      setSession(data.session)
+      setLoading(false)
     })
     return () => sub.subscription.unsubscribe()
   }, [])
 
-  const signUp = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signUp({ email, password })
-    return { error: error?.message ?? null }
+  const signUp = async (email: string, password: string, displayName: string) => {
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { display_name: displayName } },
+    })
+    if (error) return { error: error.message }
+
+    // When email confirmation is off, signUp returns a session and the user is
+    // already logged in. If no session came back, sign in right away so signup
+    // flows straight into the app (no separate login step).
+    let activeSession = data.session
+    if (!activeSession) {
+      const { data: signInData, error: signInError } =
+        await supabase.auth.signInWithPassword({ email, password })
+      if (signInError) return { error: signInError.message }
+      activeSession = signInData.session
+    }
+
+    // profiles row is auto-created by the handle_new_user trigger; set the name.
+    const uid = activeSession?.user?.id ?? data.user?.id
+    if (uid && displayName.trim()) {
+      await supabase.from('profiles').update({ display_name: displayName.trim() }).eq('id', uid)
+    }
+    return { error: null }
   }
   const signIn = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
