@@ -183,6 +183,11 @@ export default function LessonPlayerPage() {
     else void finish()
   }
 
+  function goStep(i: number) {
+    setStep(i)
+    if (i === 3) setQuizIndex(0)
+  }
+
   const prevVisible = step > 0
   const nextDisabled = (step === 3 && !answered) || submitting
   const nextLabel =
@@ -208,21 +213,21 @@ export default function LessonPlayerPage() {
           <span className="text-sm opacity-80">{step + 1}/4</span>
         </div>
         <h1 className="mt-3 text-xl font-bold">{lesson.title_th}</h1>
-        <div className="mt-4 flex items-center gap-3">
-          <div className="flex flex-1 gap-1.5">
-            {STEP_LABELS.map((label, i) => (
-              <div
-                key={label}
-                className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-white' : 'bg-white/30'}`}
-              />
-            ))}
-          </div>
-          {step === 3 && (
-            <span className="shrink-0 rounded-full bg-white/20 px-2.5 py-0.5 text-sm font-bold">
-              ⭐ {points}
-            </span>
-          )}
+        <div className="mt-3 flex gap-1.5">
+          {STEP_LABELS.map((label, i) => (
+            <button
+              key={label}
+              type="button"
+              onClick={() => goStep(i)}
+              className={`flex-1 rounded-full px-1 py-1.5 text-[11px] font-semibold transition active:scale-95 ${
+                i === step ? 'bg-white text-brand' : 'bg-white/20 text-white/90'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
+        <p className="mt-2 text-center text-xs text-white/70">แตะเลือกช่วงที่อยากฝึกได้เลย</p>
       </header>
 
       <main className="relative flex-1 space-y-4 overflow-y-auto px-5 py-5">
