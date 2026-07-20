@@ -3,8 +3,11 @@ import { ProtectedRoute } from './lib/auth'
 import LandingPage from './pages/LandingPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import ForgotPasswordPage from './pages/ForgotPasswordPage'
+import ResetPasswordPage from './pages/ResetPasswordPage'
 import OnboardingPage from './pages/OnboardingPage'
 import HomePage from './pages/HomePage'
+import UnitPage from './pages/UnitPage'
 import LessonPlayerPage from './pages/LessonPlayerPage'
 import LessonCompletePage from './pages/LessonCompletePage'
 import AIConversationPage from './pages/AIConversationPage'
@@ -24,8 +27,11 @@ export default function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route path="/onboarding" element={<Protected><OnboardingPage /></Protected>} />
       <Route path="/home" element={<Protected><HomePage /></Protected>} />
+      <Route path="/unit/:id" element={<Protected><UnitPage /></Protected>} />
       <Route path="/lesson/:id" element={<Protected><LessonPlayerPage /></Protected>} />
       <Route path="/lesson/:id/complete" element={<Protected><LessonCompletePage /></Protected>} />
       <Route path="/practice/:unitId" element={<Protected><AIConversationPage /></Protected>} />
