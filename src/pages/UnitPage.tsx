@@ -4,6 +4,7 @@ import { useAuth } from '../lib/auth'
 import { getUnits, getAllLessons, getMyProgress, getScenarioByUnit } from '../lib/data'
 import type { Unit, Lesson, UserLessonProgress, Scenario } from '../types'
 import { BottomNav, LoadingScreen, PhoneFrame } from '../components/ui'
+import { unitGlyph } from '../lib/units'
 
 export default function UnitPage() {
   const { id } = useParams()
@@ -70,8 +71,8 @@ export default function UnitPage() {
 
         {unit ? (
           <div className="flex items-center gap-3">
-            <div className="grid h-16 w-16 flex-none place-items-center rounded-2xl bg-white/15 text-4xl">
-              {unit.milestone_badge}
+            <div className="grid h-16 w-16 flex-none place-items-center overflow-hidden rounded-2xl bg-white/15 text-4xl leading-none">
+              {unitGlyph(unit.milestone_badge)}
             </div>
             <div className="min-w-0">
               <div className="text-[11px] font-bold uppercase tracking-wide text-white/70">

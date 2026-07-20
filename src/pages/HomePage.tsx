@@ -4,6 +4,7 @@ import { useAuth } from '../lib/auth'
 import { getUnits, getAllLessons, getMyProgress, getProfile } from '../lib/data'
 import type { Unit, Lesson, UserLessonProgress, Profile } from '../types'
 import { BottomNav, LoadingScreen, PhoneFrame, XpBar } from '../components/ui'
+import { unitGlyph } from '../lib/units'
 
 const XP_PER_LESSON = 50
 const XP_PER_LEVEL = 150
@@ -118,9 +119,9 @@ export default function HomePage() {
                   </span>
                 )}
                 <div
-                  className={`grid h-16 w-16 place-items-center rounded-2xl text-4xl transition group-hover:scale-105 ${tint.soft}`}
+                  className={`grid h-16 w-16 place-items-center overflow-hidden rounded-2xl text-4xl leading-none transition group-hover:scale-105 ${tint.soft}`}
                 >
-                  {u.milestone_badge}
+                  {unitGlyph(u.milestone_badge)}
                 </div>
                 <div className={`mt-2 text-[10px] font-bold uppercase tracking-wide ${tint.ring}`}>
                   Unit {u.order_index} · {u.cefr_level}
