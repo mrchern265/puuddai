@@ -44,7 +44,12 @@ export default function LoginPage() {
           placeholder="รหัสผ่าน"
         />
         {error && <p className="text-sm text-red-600">{error}</p>}
-        <Button variant="primary" type="submit" disabled={busy} className="mt-2">
+        <div className="text-right">
+          <Link to="/forgot-password" className="text-sm font-medium text-brand hover:underline">
+            ลืมรหัสผ่าน?
+          </Link>
+        </div>
+        <Button variant="primary" type="submit" disabled={busy} className="mt-1">
           {busy ? 'กำลังเข้าสู่ระบบ…' : 'เข้าสู่ระบบ'}
         </Button>
       </form>
