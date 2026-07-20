@@ -159,7 +159,7 @@ export default function LessonPlayerPage() {
       }
     }
     navigate(`/lesson/${lesson.id}/complete`, {
-      state: { score, correct, total, points, maxCombo, lives, stars },
+      state: { score, correct, total, points, maxCombo, lives, stars, unitId: lesson.unit_id },
     })
   }
 
@@ -199,7 +199,7 @@ export default function LessonPlayerPage() {
         <div className="flex items-center justify-between">
           <button
             type="button"
-            onClick={() => navigate('/home')}
+            onClick={() => navigate(lesson ? `/unit/${lesson.unit_id}` : '/home')}
             aria-label="ปิดบทเรียน"
             className="text-2xl leading-none opacity-90 transition active:scale-90"
           >

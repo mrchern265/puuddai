@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import OnboardingPage from './pages/OnboardingPage'
 import HomePage from './pages/HomePage'
+import UnitPage from './pages/UnitPage'
 import LessonPlayerPage from './pages/LessonPlayerPage'
 import LessonCompletePage from './pages/LessonCompletePage'
 import AIConversationPage from './pages/AIConversationPage'
@@ -26,6 +27,7 @@ export default function App() {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/onboarding" element={<Protected><OnboardingPage /></Protected>} />
       <Route path="/home" element={<Protected><HomePage /></Protected>} />
+      <Route path="/unit/:id" element={<Protected><UnitPage /></Protected>} />
       <Route path="/lesson/:id" element={<Protected><LessonPlayerPage /></Protected>} />
       <Route path="/lesson/:id/complete" element={<Protected><LessonCompletePage /></Protected>} />
       <Route path="/practice/:unitId" element={<Protected><AIConversationPage /></Protected>} />

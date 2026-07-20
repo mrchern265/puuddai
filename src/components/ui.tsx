@@ -38,7 +38,11 @@ export function LoadingScreen({ text = 'กำลังโหลด…' }: { tex
 
 export function PhoneFrame({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col bg-[#f6f7fb]">{children}</div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-brand-light via-[#eef1f8] to-[#e7ecf7] sm:flex sm:justify-center sm:py-6">
+      <div className="mx-auto flex min-h-screen w-full max-w-md flex-col bg-[#f6f7fb] shadow-xl ring-1 ring-black/5 sm:min-h-[calc(100vh-3rem)] sm:overflow-hidden sm:rounded-[2rem]">
+        {children}
+      </div>
+    </div>
   )
 }
 

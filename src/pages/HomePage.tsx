@@ -8,12 +8,12 @@ import { BottomNav, LoadingScreen, PhoneFrame, XpBar } from '../components/ui'
 const XP_PER_LESSON = 50
 const XP_PER_LEVEL = 150
 
-// A lively accent per unit card, cycled by index.
+// A lively accent per category card, cycled by index.
 const UNIT_TINTS = [
-  { bar: 'bg-brand', ring: 'text-brand', chip: 'bg-brand-light text-brand' },
-  { bar: 'bg-accent', ring: 'text-accent', chip: 'bg-accent/15 text-accent' },
-  { bar: 'bg-success', ring: 'text-success', chip: 'bg-success-light text-success' },
-  { bar: 'bg-grape', ring: 'text-grape', chip: 'bg-grape/15 text-grape' },
+  { bar: 'bg-brand', ring: 'text-brand', soft: 'bg-brand-light' },
+  { bar: 'bg-accent', ring: 'text-accent', soft: 'bg-accent/15' },
+  { bar: 'bg-success', ring: 'text-success', soft: 'bg-success-light' },
+  { bar: 'bg-grape', ring: 'text-grape', soft: 'bg-grape/15' },
 ]
 
 export default function HomePage() {
@@ -94,66 +94,53 @@ export default function HomePage() {
       </header>
 
       <div className="flex-1 overflow-y-auto px-4 pb-6 pt-4">
-        <h2 className="mb-1 font-bold text-slate-800">เลือกบทที่อยากเล่น</h2>
-        <p className="mb-4 text-xs text-slate-500">เล่นบทไหนก่อนก็ได้ ไม่ต้องเรียงลำดับ</p>
+        <h2 className="mb-1 font-bold text-slate-800">เลือกหมวดที่อยากเล่น</h2>
+        <p className="mb-4 text-xs text-slate-500">แตะหมวดไหนก็ได้ เล่นก่อน-หลังได้ตามใจ 🎈</p>
 
-        {units.map((u, ui) => {
-          const unitLessons = lessons
-            .filter((l) => l.unit_id === u.id)
-            .sort((a, b) => a.order_index - b.order_index)
-          const doneInUnit = unitLessons.filter((l) => doneIds.has(l.id)).length
-          const allDone = unitLessons.length > 0 && doneInUnit === unitLessons.length
-          const tint = UNIT_TINTS[ui % UNIT_TINTS.length]
-          const pct =
-            unitLessons.length > 0 ? Math.round((doneInUnit / unitLessons.length) * 100) : 0
-          return (
-            <div key={u.id} className="mb-4 rounded-2xl bg-white p-4 shadow-sm">
-              <div className="flex items-center gap-3">
-                <div className="text-3xl">{u.milestone_badge}</div>
-                <div className="min-w-0 flex-1">
-                  <div className={`text-[11px] font-bold uppercase ${tint.ring}`}>
-                    Unit {u.order_index} · {u.cefr_level}
-                  </div>
-                  <div className="truncate font-bold text-slate-800">{u.title_th}</div>
-                </div>
-                {allDone ? (
-                  <span className="shrink-0 rounded-full bg-success-light px-2 py-1 text-xs font-bold text-success">
-                    จบแล้ว ✓
-                  </span>
-                ) : (
-                  <span className={`shrink-0 rounded-full px-2 py-1 text-xs font-bold ${tint.chip}`}>
-                    {doneInUnit}/{unitLessons.length}
+        <div className="grid grid-cols-2 gap-3">
+          {units.map((u, ui) => {
+            const unitLessons = lessons.filter((l) => l.unit_id === u.id)
+            const total = unitLessons.length
+            const doneInUnit = unitLessons.filter((l) => doneIds.has(l.id)).length
+            const allDone = total > 0 && doneInUnit === total
+            const pct = total > 0 ? Math.round((doneInUnit / total) * 100) : 0
+            const tint = UNIT_TINTS[ui % UNIT_TINTS.length]
+            return (
+              <button
+                key={u.id}
+                onClick={() => nav(`/unit/${u.id}`)}
+                title={u.title_th}
+                className="group relative flex flex-col items-center rounded-3xl bg-white p-4 text-center shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+              >
+                {allDone && (
+                  <span className="absolute right-2 top-2 grid h-6 w-6 place-items-center rounded-full bg-success text-xs font-bold text-white shadow">
+                    ✓
                   </span>
                 )}
-              </div>
-
-              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-slate-100">
                 <div
-                  className={`h-full rounded-full ${tint.bar} transition-all duration-500`}
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-
-              <div className="mt-3 flex flex-wrap gap-2">
-                {unitLessons.map((l) => {
-                  const done = doneIds.has(l.id)
-                  return (
-                    <button
-                      key={l.id}
-                      onClick={() => nav(`/lesson/${l.id}`)}
-                      title={l.title_th}
-                      className={`flex h-11 w-11 items-center justify-center rounded-xl text-sm font-bold text-white transition active:scale-90 ${
-                        done ? 'bg-success' : tint.bar
-                      }`}
-                    >
-                      {done ? '✓' : l.order_index}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          )
-        })}
+                  className={`grid h-16 w-16 place-items-center rounded-2xl text-4xl transition group-hover:scale-105 ${tint.soft}`}
+                >
+                  {u.milestone_badge}
+                </div>
+                <div className={`mt-2 text-[10px] font-bold uppercase tracking-wide ${tint.ring}`}>
+                  Unit {u.order_index} · {u.cefr_level}
+                </div>
+                <div className="mt-0.5 line-clamp-2 min-h-[2.5rem] text-sm font-bold leading-snug text-slate-800">
+                  {u.title_th}
+                </div>
+                <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+                  <div
+                    className={`h-full rounded-full ${tint.bar} transition-all duration-500`}
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+                <div className="mt-1.5 text-[11px] font-bold text-slate-400">
+                  {allDone ? 'จบแล้ว 🎉' : `${doneInUnit}/${total} บท`}
+                </div>
+              </button>
+            )
+          })}
+        </div>
       </div>
       <BottomNav />
     </PhoneFrame>

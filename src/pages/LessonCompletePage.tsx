@@ -10,6 +10,7 @@ interface CompleteState {
   maxCombo?: number
   lives?: number
   stars?: number
+  unitId?: string
 }
 
 interface Encouragement {
@@ -113,7 +114,9 @@ export default function LessonCompletePage() {
           <Button
             variant="accent"
             className="w-full"
-            onClick={() => navigate('/home', { replace: true })}
+            onClick={() =>
+              navigate(state?.unitId ? `/unit/${state.unitId}` : '/home', { replace: true })
+            }
           >
             ไปต่อ 🚀
           </Button>
