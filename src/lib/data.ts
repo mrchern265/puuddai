@@ -9,6 +9,8 @@ import type {
   ChatMessage,
   ScoreResult,
   VocabItem,
+  VocabTheme,
+  VocabWord,
   AssessmentResult,
   AssessmentKind,
 } from '../types'
@@ -201,4 +203,24 @@ export async function getAllVocab(): Promise<VocabWithSource[]> {
       lessonTitleTh: l.title_th,
     })),
   )
+}
+
+// ── "ศัพท์เป็นชุด" themed vocabulary clusters (tables from migration 0006) ──────
+export async function getVocabThemes(): Promise<VocabTheme[]> {
+  const { data, error } = await supabase
+    .from('vocab_themes')
+    .select('*')
+    .order('order_index')
+  if (error) throw error
+  return (data ?? []) as VocabTheme[]
+}
+
+export async function getVocabWordsByTheme(themeId: string): Promise<VocabWord[]> {
+  const { data, error } = await supabase
+    .from('vocab_words')
+    .select('*')
+    .eq('theme_id', themeId)
+    .order('order_index')
+  if (error) throw error
+  return (data ?? []) as VocabWord[]
 }

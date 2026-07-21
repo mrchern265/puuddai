@@ -1,0 +1,17 @@
+theme_slug,theme_title_th,theme_emoji,theme_order,word,ipa,thai,emoji,pos,example_en,example_th,order
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,lettuce,/ˈletɪs/,ผักกาดหอม,🥬,n.,I want extra lettuce.,ขอผักกาดหอมเพิ่ม,1
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,tomato,/təˈmɑːtoʊ/,มะเขือเทศ,🍅,n.,No tomato please.,ไม่ใส่มะเขือเทศครับ,2
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,onion,/ˈʌnjən/,หัวหอม,🧅,n.,Add some onion.,ใส่หัวหอมหน่อย,3
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,pickle,/ˈpɪkl/,แตงกวาดอง,🥒,n.,I love pickles.,ฉันชอบแตงกวาดอง,4
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,cheese,/tʃiːz/,ชีส,🧀,n.,Extra cheese please.,ขอชีสเพิ่มครับ,5
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,bacon,/ˈbeɪkən/,เบคอน,🥓,n.,A bacon burger.,เบอร์เกอร์เบคอน,6
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,bun,/bʌn/,ขนมปัง,🍞,n.,A soft bun.,ขนมปังนุ่ม ๆ,7
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,patty,/ˈpæti/,เนื้อแผ่น,🥩,n.,A beef patty.,เนื้อวัวแผ่น,8
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,fries,/fraɪz/,เฟรนช์ฟราย,🍟,n.,Large fries please.,เฟรนช์ฟรายไซซ์ใหญ่,9
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,straw,/strɔː/,หลอดดูด,🥤,n.,Where are the straws?,หลอดดูดอยู่ไหน,10
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,ketchup,/ˈketʃəp/,ซอสมะเขือเทศ,🍅,n.,Pass the ketchup.,ส่งซอสมะเขือเทศหน่อย,11
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,mayonnaise,/ˈmeɪəneɪz/,มายองเนส,🧴,n.,No mayonnaise thanks.,ไม่ใส่มายองเนสครับ,12
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,menu,/ˈmenjuː/,เมนู,📋,n.,Can I see the menu?,ขอดูเมนูได้ไหม,13
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,combo,/ˈkɒmboʊ/,ชุดคอมโบ,🍱,n.,One combo please.,ขอคอมโบหนึ่งชุด,14
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,receipt,/rɪˈsiːt/,ใบเสร็จ,🧾,n.,Can I get a receipt?,ขอใบเสร็จได้ไหม,15
+hamburger,ร้านแฮมเบอร์เกอร์,🍔,1,takeaway,/ˈteɪkəweɪ/,ห่อกลับบ้าน,🥡,n.,Takeaway please.,ขอห่อกลับบ้านครับ,16
