@@ -232,6 +232,7 @@ export function Confetti({ pieces = 42 }: { pieces?: number }) {
 
 const NAV = [
   { to: '/home', icon: '🏠', label: 'เรียน' },
+  { to: '/clusters', icon: '🍔', label: 'ศัพท์ชุด' },
   { to: '/review', icon: '🔁', label: 'ทบทวน' },
   { to: '/vocab', icon: '📖', label: 'คลังคำ' },
   { to: '/progress', icon: '📊', label: 'ก้าวหน้า' },
@@ -239,7 +240,7 @@ const NAV = [
 
 export function BottomNav() {
   return (
-    <nav className="sticky bottom-0 grid grid-cols-4 border-t border-gray-100 bg-white">
+    <nav className="sticky bottom-0 grid grid-cols-5 border-t border-gray-100 bg-white">
       {NAV.map((n) => (
         <NavLink
           key={n.to}
