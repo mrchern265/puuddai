@@ -15,6 +15,8 @@ import ProgressPage from './pages/ProgressPage'
 import AssessmentPage from './pages/AssessmentPage'
 import VocabBankPage from './pages/VocabBankPage'
 import VocabReviewPage from './pages/VocabReviewPage'
+import VocabClustersPage from './pages/VocabClustersPage'
+import VocabClusterPage from './pages/VocabClusterPage'
 import SettingsPage from './pages/SettingsPage'
 
 function Protected({ children }: { children: React.ReactNode }) {
@@ -38,6 +40,8 @@ export default function App() {
       <Route path="/progress" element={<Protected><ProgressPage /></Protected>} />
       <Route path="/assessment" element={<Protected><AssessmentPage /></Protected>} />
       <Route path="/vocab" element={<Protected><VocabBankPage /></Protected>} />
+      <Route path="/clusters" element={<Protected><VocabClustersPage /></Protected>} />
+      <Route path="/clusters/:id" element={<Protected><VocabClusterPage /></Protected>} />
       <Route path="/review" element={<Protected><VocabReviewPage /></Protected>} />
       <Route path="/settings" element={<Protected><SettingsPage /></Protected>} />
       <Route path="*" element={<Navigate to="/" replace />} />
