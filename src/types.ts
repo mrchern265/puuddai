@@ -90,6 +90,31 @@ export interface ScoreResult {
   encouragementTh: string
 }
 
+export interface VocabTheme {
+  id: string
+  slug: string
+  order_index: number
+  title_th: string
+  title_en: string | null
+  hero_emoji: string | null
+  description_th: string | null
+  cefr_level: string
+}
+
+export interface VocabWord {
+  id: string
+  theme_id: string
+  order_index: number
+  word: string
+  ipa: string | null
+  thai: string
+  image_emoji: string | null
+  image_url: string | null
+  part_of_speech: string | null
+  example_en: string | null
+  example_th: string | null
+}
+
 export type AssessmentKind = 'pre' | 'post'
 
 export interface AssessmentResult {
