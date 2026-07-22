@@ -110,6 +110,7 @@ export interface VocabWord {
   thai: string
   image_emoji: string | null
   image_url: string | null
+  hint_th: string | null
   part_of_speech: string | null
   example_en: string | null
   example_th: string | null

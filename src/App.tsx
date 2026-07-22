@@ -17,6 +17,7 @@ import VocabBankPage from './pages/VocabBankPage'
 import VocabReviewPage from './pages/VocabReviewPage'
 import VocabClustersPage from './pages/VocabClustersPage'
 import VocabClusterPage from './pages/VocabClusterPage'
+import VocabMatchGamePage from './pages/VocabMatchGamePage'
 import SettingsPage from './pages/SettingsPage'
 
 function Protected({ children }: { children: React.ReactNode }) {
@@ -42,6 +43,7 @@ export default function App() {
       <Route path="/vocab" element={<Protected><VocabBankPage /></Protected>} />
       <Route path="/clusters" element={<Protected><VocabClustersPage /></Protected>} />
       <Route path="/clusters/:id" element={<Protected><VocabClusterPage /></Protected>} />
+      <Route path="/clusters/:id/game" element={<Protected><VocabMatchGamePage /></Protected>} />
       <Route path="/review" element={<Protected><VocabReviewPage /></Protected>} />
       <Route path="/settings" element={<Protected><SettingsPage /></Protected>} />
       <Route path="*" element={<Navigate to="/" replace />} />
