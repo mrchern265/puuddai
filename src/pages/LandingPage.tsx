@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
+import { useAuth } from '../lib/auth'
 
 const FEATURES: [string, string][] = [
   ['🎧', 'ฟัง'],
@@ -7,6 +8,12 @@ const FEATURES: [string, string][] = [
 ]
 
 export default function LandingPage() {
+  const { session, loading } = useAuth()
+  // Already signed in → go straight to the app instead of showing the
+  // marketing/login page again (the "must log in every time I open it" feeling).
+  if (loading) return null
+  if (session) return <Navigate to="/home" replace />
+
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col">
       <div className="hero-gradient flex flex-1 flex-col items-center justify-center px-6 py-16 text-center text-white">

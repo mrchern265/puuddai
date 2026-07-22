@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuth, authErrorTh } from '../lib/auth'
 import { Button, TextField } from '../components/ui'
 
 export default function RegisterPage() {
-  const { signUp } = useAuth()
+  const { signUp, session, loading } = useAuth()
   const nav = useNavigate()
   const [displayName, setDisplayName] = useState('')
   const [email, setEmail] = useState('')
@@ -28,6 +28,8 @@ export default function RegisterPage() {
     }
     nav('/onboarding', { replace: true })
   }
+
+  if (!loading && session) return <Navigate to="/home" replace />
 
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
