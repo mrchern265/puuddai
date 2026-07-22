@@ -1,10 +1,21 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getVocabThemes, getVocabWordsByTheme } from '../lib/data'
 import type { VocabTheme, VocabWord } from '../types'
 import { Confetti, LoadingScreen, PhoneFrame } from '../components/ui'
 
-const ROUND_SIZE = 6
+const TOTAL_LEVELS = 10
+
+// Pairs grow with the level (capped by the pool): L1-2:4, L3-4:5, … L9-10:8.
+function pairsForLevel(level: number, poolSize: number): number {
+  return Math.min(4 + Math.floor((level - 1) / 2), 8, poolSize)
+}
+
+function starsForMoves(moves: number, pairs: number): number {
+  if (moves <= pairs) return 3
+  if (moves <= pairs + 2) return 2
+  return 1
+}
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
@@ -31,25 +42,26 @@ export default function VocabMatchGamePage() {
   const [pool, setPool] = useState<VocabWord[]>([])
   const [loading, setLoading] = useState(true)
 
+  const [level, setLevel] = useState(1)
   const [round, setRound] = useState<VocabWord[]>([])
   const [rightOrder, setRightOrder] = useState<VocabWord[]>([])
   const [picked, setPicked] = useState<string | null>(null)
   const [matched, setMatched] = useState<Set<string>>(new Set())
   const [wrong, setWrong] = useState<string | null>(null)
   const [moves, setMoves] = useState(0)
-  const [startedAt, setStartedAt] = useState(0)
-  const [now, setNow] = useState(0)
+  const [levelStars, setLevelStars] = useState<number[]>([]) // one entry per cleared level
+  const [levelCleared, setLevelCleared] = useState(false)
 
-  const newRound = useCallback((words: VocabWord[]) => {
-    const pick = shuffle(words).slice(0, Math.min(ROUND_SIZE, words.length))
+  const startRound = useCallback((lvl: number, words: VocabWord[]) => {
+    const n = pairsForLevel(lvl, words.length)
+    const pick = shuffle(words).slice(0, n)
     setRound(pick)
     setRightOrder(shuffle(pick))
     setPicked(null)
     setMatched(new Set())
     setWrong(null)
     setMoves(0)
-    setStartedAt(Date.now())
-    setNow(Date.now())
+    setLevelCleared(false)
   }, [])
 
   useEffect(() => {
@@ -62,7 +74,7 @@ export default function VocabMatchGamePage() {
         if (!alive) return
         setTheme(themes.find((t) => t.id === id) ?? null)
         setPool(ws)
-        newRound(ws)
+        startRound(1, ws)
       } catch (e) {
         console.error('game load error', e)
       } finally {
@@ -73,51 +85,54 @@ export default function VocabMatchGamePage() {
     return () => {
       alive = false
     }
-  }, [id, newRound])
+  }, [id, startRound])
 
-  const done = round.length > 0 && matched.size === round.length
-
-  // tick the timer while playing
-  useEffect(() => {
-    if (loading || done) return
-    const t = setInterval(() => setNow(Date.now()), 500)
-    return () => clearInterval(t)
-  }, [loading, done])
-
-  const seconds = Math.max(0, Math.floor((now - startedAt) / 1000))
+  const allLevelsDone = levelCleared && level >= TOTAL_LEVELS
+  const totalStars = levelStars.reduce((a, b) => a + b, 0)
+  const currentStars = levelStars[level - 1] ?? 0
 
   function tapLeft(w: VocabWord) {
-    if (matched.has(w.id)) return
+    if (matched.has(w.id) || levelCleared) return
     setWrong(null)
     setPicked(w.id)
     speak(w.word)
   }
 
   function tapRight(w: VocabWord) {
-    if (matched.has(w.id) || !picked) return
-    setMoves((m) => m + 1)
+    if (matched.has(w.id) || !picked || levelCleared) return
+    const attempt = moves + 1
+    setMoves(attempt)
     if (w.id === picked) {
-      setMatched((prev) => new Set(prev).add(w.id))
+      const next = new Set(matched).add(w.id)
+      setMatched(next)
       setPicked(null)
+      if (next.size === round.length) {
+        setLevelStars((prev) => [...prev, starsForMoves(attempt, round.length)])
+        setLevelCleared(true)
+      }
     } else {
       setWrong(w.id)
       setTimeout(() => setWrong(null), 450)
     }
   }
 
-  const stars = useMemo(() => {
-    if (!done) return 0
-    const perfect = round.length
-    if (moves <= perfect) return 3
-    if (moves <= perfect + 2) return 2
-    return 1
-  }, [done, moves, round.length])
+  function nextLevel() {
+    const lvl = level + 1
+    setLevel(lvl)
+    startRound(lvl, pool)
+  }
+
+  function restart() {
+    setLevel(1)
+    setLevelStars([])
+    startRound(1, pool)
+  }
 
   if (loading) return <LoadingScreen text="กำลังเตรียมเกม…" />
 
   return (
     <PhoneFrame>
-      {done && <Confetti />}
+      {levelCleared && <Confetti />}
       <header className="hero-gradient rounded-b-3xl px-5 pb-5 pt-7 text-white">
         <button
           type="button"
@@ -128,17 +143,17 @@ export default function VocabMatchGamePage() {
         </button>
         <h1 className="text-xl font-bold">🎮 จับคู่คำศัพท์</h1>
         <p className="mt-1 text-sm text-white/80">{theme?.title_th}</p>
-        <div className="mt-3 flex gap-2 text-sm font-bold">
-          <span className="rounded-full bg-white/18 px-3 py-1">⏱️ {seconds}s</span>
+        <div className="mt-3 flex items-center gap-2 text-sm font-bold">
+          <span className="rounded-full bg-gold px-3 py-1 text-[#3a2a06]">เลเวล {level}/{TOTAL_LEVELS}</span>
           <span className="rounded-full bg-white/18 px-3 py-1">🎯 {matched.size}/{round.length}</span>
-          <span className="rounded-full bg-white/18 px-3 py-1">👆 {moves} ครั้ง</span>
+          <span className="rounded-full bg-white/18 px-3 py-1">⭐ {totalStars}</span>
         </div>
       </header>
 
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <p className="mb-3 text-center text-xs text-slate-500">แตะคำอังกฤษ แล้วแตะคำแปลที่คู่กัน</p>
         <div className="flex gap-3">
-          {/* English column */}
+          {/* English column — no image in the game, on purpose */}
           <div className="flex flex-1 flex-col gap-2.5">
             {round.map((w) => {
               const isMatched = matched.has(w.id)
@@ -148,7 +163,7 @@ export default function VocabMatchGamePage() {
                   key={w.id}
                   onClick={() => tapLeft(w)}
                   disabled={isMatched}
-                  className={`flex items-center gap-2 rounded-2xl border p-3 text-left text-sm font-bold transition active:scale-95 ${
+                  className={`rounded-2xl border p-3 text-center text-sm font-bold transition active:scale-95 ${
                     isMatched
                       ? 'border-success/30 bg-success-light text-success'
                       : isPicked
@@ -156,8 +171,7 @@ export default function VocabMatchGamePage() {
                         : 'border-slate-100 bg-white text-slate-800 shadow-sm'
                   }`}
                 >
-                  <span className="text-xl leading-none">{w.image_emoji || '📘'}</span>
-                  <span className="min-w-0 flex-1 truncate">{isMatched ? '✓ ' : ''}{w.word}</span>
+                  {isMatched ? '✓ ' : ''}{w.word}
                 </button>
               )
             })}
@@ -188,32 +202,58 @@ export default function VocabMatchGamePage() {
         </div>
       </div>
 
-      {done && (
+      {levelCleared && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
           <div className="w-full max-w-sm animate-pop-in rounded-3xl bg-white p-6 text-center shadow-2xl">
-            <div className="text-5xl">{stars >= 3 ? '🏆' : '🎉'}</div>
-            <h2 className="mt-2 text-xl font-bold text-brand">จับคู่ครบแล้ว!</h2>
-            <div className="mt-2 text-3xl">{'⭐'.repeat(stars)}{'▫️'.repeat(3 - stars)}</div>
-            <div className="mt-3 flex justify-center gap-4 text-sm text-slate-600">
-              <span>⏱️ {seconds} วินาที</span>
-              <span>👆 {moves} ครั้ง</span>
-            </div>
-            <div className="mt-5 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => newRound(pool)}
-                className="w-full rounded-full bg-accent py-3 font-bold text-white active:scale-95"
-              >
-                เล่นอีกรอบ 🔄
-              </button>
-              <button
-                type="button"
-                onClick={() => nav(`/clusters/${id}`)}
-                className="w-full rounded-full bg-brand-light py-3 font-bold text-brand active:scale-95"
-              >
-                กลับไปหมวดศัพท์
-              </button>
-            </div>
+            {allLevelsDone ? (
+              <>
+                <div className="text-5xl">🏆</div>
+                <h2 className="mt-2 text-xl font-bold text-brand">จบครบ 10 เลเวล!</h2>
+                <p className="mt-1 text-sm text-slate-600">เก่งมากกก 🎉</p>
+                <div className="mt-3 text-3xl">⭐ {totalStars}/30</div>
+                <div className="mt-5 flex flex-col gap-2">
+                  <button
+                    type="button"
+                    onClick={restart}
+                    className="w-full rounded-full bg-accent py-3 font-bold text-white active:scale-95"
+                  >
+                    เล่นใหม่ตั้งแต่เลเวล 1 🔄
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => nav(`/clusters/${id}`)}
+                    className="w-full rounded-full bg-brand-light py-3 font-bold text-brand active:scale-95"
+                  >
+                    กลับไปหมวดศัพท์
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="text-5xl">{currentStars >= 3 ? '🌟' : '🎉'}</div>
+                <h2 className="mt-2 text-xl font-bold text-brand">ผ่านเลเวล {level}!</h2>
+                <div className="mt-2 text-3xl">
+                  {'⭐'.repeat(currentStars)}{'▫️'.repeat(3 - currentStars)}
+                </div>
+                <p className="mt-2 text-sm text-slate-500">ต่อไปเลเวล {level + 1} — คู่เยอะขึ้นนะ 💪</p>
+                <div className="mt-5 flex flex-col gap-2">
+                  <button
+                    type="button"
+                    onClick={nextLevel}
+                    className="w-full rounded-full bg-accent py-3 font-bold text-white active:scale-95"
+                  >
+                    เลเวลถัดไป →
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => nav(`/clusters/${id}`)}
+                    className="w-full rounded-full bg-brand-light py-3 font-bold text-brand active:scale-95"
+                  >
+                    พักก่อน
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
