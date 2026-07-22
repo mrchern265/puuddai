@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import { getAssessments, saveAssessment } from '../lib/data'
-import { SKILL_LABEL_TH } from '../lib/placementTest'
+import { SKILL_LABEL_TH, PLACEMENT_QUESTIONS } from '../lib/placementTest'
 import type { PlacementScore } from '../lib/placementTest'
 import type { AssessmentResult } from '../types'
 import { Button, Card, Confetti, LoadingScreen, PhoneFrame, ProgressRing } from '../components/ui'
@@ -64,7 +64,9 @@ export default function AssessmentPage() {
         </button>
         <h1 className="text-2xl font-bold">แบบทดสอบวัดผล</h1>
         <p className="mt-1 text-sm text-white/85">
-          {step === 'result' ? 'เทียบกับตอนเริ่มต้น' : 'ทำ 10 ข้อเหมือนตอนเริ่ม เพื่อวัดพัฒนาการ'}
+          {step === 'result'
+            ? 'เทียบกับตอนเริ่มต้น'
+            : `ทำ ${PLACEMENT_QUESTIONS.length} ข้อเหมือนตอนเริ่ม เพื่อวัดพัฒนาการ`}
         </p>
       </header>
 
@@ -75,7 +77,7 @@ export default function AssessmentPage() {
               <div className="text-5xl">📈</div>
               <p className="mt-3 font-bold text-slate-800">ทำแบบวัดผลตอนนี้</p>
               <p className="mt-2 text-sm text-slate-600">
-                ชุดข้อสอบเดียวกับตอนเริ่มเรียน (10 ข้อ) เพื่อเทียบว่าคุณเก่งขึ้นแค่ไหน
+                ชุดข้อสอบเดียวกับตอนเริ่มเรียน ({PLACEMENT_QUESTIONS.length} ข้อ) เพื่อเทียบว่าคุณเก่งขึ้นแค่ไหน
               </p>
               {pre ? (
                 <div className="mt-4 rounded-xl bg-brand-light px-4 py-3 text-sm text-brand">

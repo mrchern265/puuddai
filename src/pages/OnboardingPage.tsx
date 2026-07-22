@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/auth'
 import { saveAssessment, saveOnboarding } from '../lib/data'
-import { SKILL_LABEL_TH } from '../lib/placementTest'
+import { SKILL_LABEL_TH, PLACEMENT_QUESTIONS } from '../lib/placementTest'
 import type { PlacementScore } from '../lib/placementTest'
 import { Button, Card, Confetti, LoadingScreen, PhoneFrame, ProgressRing } from '../components/ui'
 import TestRunner from '../components/TestRunner'
@@ -84,7 +84,7 @@ export default function OnboardingPage() {
           {step === 'goal'
             ? 'เลือกสิ่งที่คุณอยากใช้ภาษาอังกฤษมากที่สุด'
             : step === 'test'
-              ? 'ตอบ 10 ข้อ วัดการฟัง คำศัพท์ และไวยากรณ์'
+              ? `ตอบ ${PLACEMENT_QUESTIONS.length} ข้อ วัดการฟัง คำศัพท์ และไวยากรณ์`
               : 'นี่คือจุดเริ่มต้นของคุณ — ไว้เทียบพัฒนาการทีหลัง'}
         </p>
       </header>
