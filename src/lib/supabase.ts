@@ -15,5 +15,10 @@ export const supabase = createClient(url, key, {
     persistSession: true,
     autoRefreshToken: true,
     detectSessionInUrl: true,
+    // Pin storage to localStorage explicitly. Without this the client can fall
+    // back to in-memory storage in some browsers/build setups, which drops the
+    // session on every reload (the "logged out on every fresh open" symptom).
+    storage: typeof window !== 'undefined' ? window.localStorage : undefined,
+    storageKey: 'puuddai-auth',
   },
 })
