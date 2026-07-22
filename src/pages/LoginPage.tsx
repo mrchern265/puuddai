@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useAuth, authErrorTh } from '../lib/auth'
 import { Button, TextField } from '../components/ui'
 
 export default function LoginPage() {
-  const { signIn } = useAuth()
+  const { signIn, session, loading } = useAuth()
   const nav = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -23,6 +23,8 @@ export default function LoginPage() {
     }
     nav('/home', { replace: true })
   }
+
+  if (!loading && session) return <Navigate to="/home" replace />
 
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
