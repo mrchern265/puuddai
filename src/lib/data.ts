@@ -15,6 +15,7 @@ import type {
   AssessmentKind,
 } from '../types'
 import type { PlacementScore } from './placementTest'
+import { FALLBACK_THEMES, fallbackWords } from './vocabFallback'
 
 export interface VocabWithSource extends VocabItem {
   lessonId: string
@@ -206,21 +207,33 @@ export async function getAllVocab(): Promise<VocabWithSource[]> {
 }
 
 // ── "ศัพท์เป็นชุด" themed vocabulary clusters (tables from migration 0006) ──────
+// Falls back to the bundled starter set (src/lib/vocabFallback.ts) when the DB
+// tables are missing or empty, so the feature works before Supabase is seeded.
 export async function getVocabThemes(): Promise<VocabTheme[]> {
-  const { data, error } = await supabase
-    .from('vocab_themes')
-    .select('*')
-    .order('order_index')
-  if (error) throw error
-  return (data ?? []) as VocabTheme[]
+  try {
+    const { data, error } = await supabase
+      .from('vocab_themes')
+      .select('*')
+      .order('order_index')
+    if (error) throw error
+    if (data && data.length > 0) return data as VocabTheme[]
+  } catch (e) {
+    console.warn('vocab_themes unavailable, using bundled fallback', e)
+  }
+  return FALLBACK_THEMES
 }
 
 export async function getVocabWordsByTheme(themeId: string): Promise<VocabWord[]> {
-  const { data, error } = await supabase
-    .from('vocab_words')
-    .select('*')
-    .eq('theme_id', themeId)
-    .order('order_index')
-  if (error) throw error
-  return (data ?? []) as VocabWord[]
+  try {
+    const { data, error } = await supabase
+      .from('vocab_words')
+      .select('*')
+      .eq('theme_id', themeId)
+      .order('order_index')
+    if (error) throw error
+    if (data && data.length > 0) return data as VocabWord[]
+  } catch (e) {
+    console.warn('vocab_words unavailable, using bundled fallback', e)
+  }
+  return fallbackWords(themeId)
 }
