@@ -86,6 +86,7 @@ function main() {
       ipa: col('ipa') > -1 ? r[col('ipa')] : '',
       thai: r[col('thai')],
       emoji: col('emoji') > -1 ? r[col('emoji')] : '',
+      hint: col('hint') > -1 ? r[col('hint')] : '',
       pos: col('pos') > -1 ? r[col('pos')] : '',
       example_en: col('example_en') > -1 ? r[col('example_en')] : '',
       example_th: col('example_th') > -1 ? r[col('example_th')] : '',
@@ -110,18 +111,19 @@ function main() {
 
     if (t.words.length) {
       out.push('insert into vocab_words')
-      out.push('  (theme_id, order_index, word, ipa, thai, image_emoji, part_of_speech, example_en, example_th)')
+      out.push('  (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)')
       out.push('values')
       const values = t.words.map((w, i) => {
         const ord = w.order || i + 1
         return `  ((select id from vocab_themes where slug = ${q(t.slug)}), ` +
-          `${ord}, ${q(w.word)}, ${q(w.ipa)}, ${q(w.thai)}, ${q(w.emoji)}, ` +
+          `${ord}, ${q(w.word)}, ${q(w.ipa)}, ${q(w.thai)}, ${q(w.emoji)}, ${q(w.hint)}, ` +
           `${q(w.pos)}, ${q(w.example_en)}, ${q(w.example_th)})`
       })
       out.push(values.join(',\n'))
       out.push('on conflict (theme_id, word) do update set')
       out.push('  order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,')
-      out.push('  image_emoji = excluded.image_emoji, part_of_speech = excluded.part_of_speech,')
+      out.push('  image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,')
+      out.push('  part_of_speech = excluded.part_of_speech,')
       out.push('  example_en = excluded.example_en, example_th = excluded.example_th;')
       out.push('')
       totalWords += t.words.length

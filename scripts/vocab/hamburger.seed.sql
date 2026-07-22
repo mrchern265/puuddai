@@ -9,27 +9,28 @@ on conflict (slug) do update set
   title_th = excluded.title_th, hero_emoji = excluded.hero_emoji, order_index = excluded.order_index;
 
 insert into vocab_words
-  (theme_id, order_index, word, ipa, thai, image_emoji, part_of_speech, example_en, example_th)
+  (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 1, $v$lettuce$v$, $v$/ˈletɪs/$v$, $v$ผักกาดหอม$v$, $v$🥬$v$, $v$n.$v$, $v$I want extra lettuce.$v$, $v$ขอผักกาดหอมเพิ่ม$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 2, $v$tomato$v$, $v$/təˈmɑːtoʊ/$v$, $v$มะเขือเทศ$v$, $v$🍅$v$, $v$n.$v$, $v$No tomato please.$v$, $v$ไม่ใส่มะเขือเทศครับ$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 3, $v$onion$v$, $v$/ˈʌnjən/$v$, $v$หัวหอม$v$, $v$🧅$v$, $v$n.$v$, $v$Add some onion.$v$, $v$ใส่หัวหอมหน่อย$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 4, $v$pickle$v$, $v$/ˈpɪkl/$v$, $v$แตงกวาดอง$v$, $v$🥒$v$, $v$n.$v$, $v$I love pickles.$v$, $v$ฉันชอบแตงกวาดอง$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 5, $v$cheese$v$, $v$/tʃiːz/$v$, $v$ชีส$v$, $v$🧀$v$, $v$n.$v$, $v$Extra cheese please.$v$, $v$ขอชีสเพิ่มครับ$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 6, $v$bacon$v$, $v$/ˈbeɪkən/$v$, $v$เบคอน$v$, $v$🥓$v$, $v$n.$v$, $v$A bacon burger.$v$, $v$เบอร์เกอร์เบคอน$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 7, $v$bun$v$, $v$/bʌn/$v$, $v$ขนมปัง$v$, $v$🍞$v$, $v$n.$v$, $v$A soft bun.$v$, $v$ขนมปังนุ่ม ๆ$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 8, $v$patty$v$, $v$/ˈpæti/$v$, $v$เนื้อแผ่น$v$, $v$🥩$v$, $v$n.$v$, $v$A beef patty.$v$, $v$เนื้อวัวแผ่น$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 9, $v$fries$v$, $v$/fraɪz/$v$, $v$เฟรนช์ฟราย$v$, $v$🍟$v$, $v$n.$v$, $v$Large fries please.$v$, $v$เฟรนช์ฟรายไซซ์ใหญ่$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 10, $v$straw$v$, $v$/strɔː/$v$, $v$หลอดดูด$v$, $v$🥤$v$, $v$n.$v$, $v$Where are the straws?$v$, $v$หลอดดูดอยู่ไหน$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 11, $v$ketchup$v$, $v$/ˈketʃəp/$v$, $v$ซอสมะเขือเทศ$v$, $v$🍅$v$, $v$n.$v$, $v$Pass the ketchup.$v$, $v$ส่งซอสมะเขือเทศหน่อย$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 12, $v$mayonnaise$v$, $v$/ˈmeɪəneɪz/$v$, $v$มายองเนส$v$, $v$🧴$v$, $v$n.$v$, $v$No mayonnaise thanks.$v$, $v$ไม่ใส่มายองเนสครับ$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 13, $v$menu$v$, $v$/ˈmenjuː/$v$, $v$เมนู$v$, $v$📋$v$, $v$n.$v$, $v$Can I see the menu?$v$, $v$ขอดูเมนูได้ไหม$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 14, $v$combo$v$, $v$/ˈkɒmboʊ/$v$, $v$ชุดคอมโบ$v$, $v$🍱$v$, $v$n.$v$, $v$One combo please.$v$, $v$ขอคอมโบหนึ่งชุด$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 15, $v$receipt$v$, $v$/rɪˈsiːt/$v$, $v$ใบเสร็จ$v$, $v$🧾$v$, $v$n.$v$, $v$Can I get a receipt?$v$, $v$ขอใบเสร็จได้ไหม$v$),
-  ((select id from vocab_themes where slug = $v$hamburger$v$), 16, $v$takeaway$v$, $v$/ˈteɪkəweɪ/$v$, $v$ห่อกลับบ้าน$v$, $v$🥡$v$, $v$n.$v$, $v$Takeaway please.$v$, $v$ขอห่อกลับบ้านครับ$v$)
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 1, $v$lettuce$v$, $v$/ˈletɪs/$v$, $v$ผักกาดหอม$v$, $v$🥬$v$, $v$เล็ท-ทิส คิดถึง “เล็ต” ใบผักบาง ๆ$v$, $v$n.$v$, $v$I want extra lettuce.$v$, $v$ขอผักกาดหอมเพิ่ม$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 2, $v$tomato$v$, $v$/təˈmɑːtoʊ/$v$, $v$มะเขือเทศ$v$, $v$🍅$v$, $v$ทะ-มา-โท้ คนไทยเรียก “มะเขือเทศ” ก็ลากเสียงคล้าย$v$, $v$n.$v$, $v$No tomato please.$v$, $v$ไม่ใส่มะเขือเทศครับ$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 3, $v$onion$v$, $v$/ˈʌnjən/$v$, $v$หัวหอม$v$, $v$🧅$v$, $v$อัน-เยิ่น หอมแล้ว “อั้น” หายใจ$v$, $v$n.$v$, $v$Add some onion.$v$, $v$ใส่หัวหอมหน่อย$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 4, $v$pickle$v$, $v$/ˈpɪkl/$v$, $v$แตงกวาดอง$v$, $v$🥒$v$, $v$พิค-เคิ่ล “พิก” แตงกวามาดอง เปรี้ยว ๆ$v$, $v$n.$v$, $v$I love pickles.$v$, $v$ฉันชอบแตงกวาดอง$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 5, $v$cheese$v$, $v$/tʃiːz/$v$, $v$ชีส$v$, $v$🧀$v$, $v$ชี้ส คำเดียวกับ “ชีส” ที่คนไทยพูด$v$, $v$n.$v$, $v$Extra cheese please.$v$, $v$ขอชีสเพิ่มครับ$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 6, $v$bacon$v$, $v$/ˈbeɪkən/$v$, $v$เบคอน$v$, $v$🥓$v$, $v$เบ-เขิ่น = “เบคอน” ตรงตัว$v$, $v$n.$v$, $v$A bacon burger.$v$, $v$เบอร์เกอร์เบคอน$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 7, $v$bun$v$, $v$/bʌn/$v$, $v$ขนมปัง$v$, $v$🍞$v$, $v$บัน นึกถึง “บัน” ก้อนกลม ๆ นุ่ม ๆ$v$, $v$n.$v$, $v$A soft bun.$v$, $v$ขนมปังนุ่ม ๆ$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 8, $v$patty$v$, $v$/ˈpæti/$v$, $v$เนื้อแผ่น$v$, $v$🥩$v$, $v$แพ็ท-ที้ เนื้อแผ่นแบน ๆ ที่ “แปะ” ในเบอร์เกอร์$v$, $v$n.$v$, $v$A beef patty.$v$, $v$เนื้อวัวแผ่น$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 9, $v$fries$v$, $v$/fraɪz/$v$, $v$เฟรนช์ฟราย$v$, $v$🍟$v$, $v$ฟราย = “ฟราย” ทอด ๆ กรอบ ๆ$v$, $v$n.$v$, $v$Large fries please.$v$, $v$เฟรนช์ฟรายไซซ์ใหญ่$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 10, $v$straw$v$, $v$/strɔː/$v$, $v$หลอดดูด$v$, $v$🥤$v$, $v$สทรอว์ ดูดน้ำ “สู้ด ๆ”$v$, $v$n.$v$, $v$Where are the straws?$v$, $v$หลอดดูดอยู่ไหน$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 11, $v$ketchup$v$, $v$/ˈketʃəp/$v$, $v$ซอสมะเขือเทศ$v$, $v$🍅$v$, $v$เค็ท-ชัพ ราด “เค็ต” แล้วซด$v$, $v$n.$v$, $v$Pass the ketchup.$v$, $v$ส่งซอสมะเขือเทศหน่อย$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 12, $v$mayonnaise$v$, $v$/ˈmeɪəneɪz/$v$, $v$มายองเนส$v$, $v$🧴$v$, $v$เม-โย-เนส = “มายองเนส” ตรงตัว$v$, $v$n.$v$, $v$No mayonnaise thanks.$v$, $v$ไม่ใส่มายองเนสครับ$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 13, $v$menu$v$, $v$/ˈmenjuː/$v$, $v$เมนู$v$, $v$📋$v$, $v$เม็น-หนู = “เมนู” ตรงตัว$v$, $v$n.$v$, $v$Can I see the menu?$v$, $v$ขอดูเมนูได้ไหม$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 14, $v$combo$v$, $v$/ˈkɒmboʊ/$v$, $v$ชุดคอมโบ$v$, $v$🍱$v$, $v$คอม-โบ้ = “คอมโบ” จัดเป็นชุด$v$, $v$n.$v$, $v$One combo please.$v$, $v$ขอคอมโบหนึ่งชุด$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 15, $v$receipt$v$, $v$/rɪˈsiːt/$v$, $v$ใบเสร็จ$v$, $v$🧾$v$, $v$ริ-ซีท ตัว p ไม่ออกเสียง! อ่านว่า “ริซีท”$v$, $v$n.$v$, $v$Can I get a receipt?$v$, $v$ขอใบเสร็จได้ไหม$v$),
+  ((select id from vocab_themes where slug = $v$hamburger$v$), 16, $v$takeaway$v$, $v$/ˈteɪkəweɪ/$v$, $v$ห่อกลับบ้าน$v$, $v$🥡$v$, $v$take (เอา) + away (ไป) = เอากลับบ้าน$v$, $v$n.$v$, $v$Takeaway please.$v$, $v$ขอห่อกลับบ้านครับ$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
-  image_emoji = excluded.image_emoji, part_of_speech = excluded.part_of_speech,
+  image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
+  part_of_speech = excluded.part_of_speech,
   example_en = excluded.example_en, example_th = excluded.example_th;
 
 commit;
