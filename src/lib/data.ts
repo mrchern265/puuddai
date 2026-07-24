@@ -223,6 +223,13 @@ export async function getVocabThemes(): Promise<VocabTheme[]> {
   return FALLBACK_THEMES
 }
 
+// Every cluster word across all themes (used by the spaced-repetition review).
+export async function getAllClusterWords(): Promise<VocabWord[]> {
+  const themes = await getVocabThemes()
+  const lists = await Promise.all(themes.map((t) => getVocabWordsByTheme(t.id)))
+  return lists.flat()
+}
+
 export async function getVocabWordsByTheme(themeId: string): Promise<VocabWord[]> {
   try {
     const { data, error } = await supabase
