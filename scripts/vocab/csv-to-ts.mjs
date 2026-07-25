@@ -31,7 +31,7 @@ function parseCsv(text) {
 }
 
 const themes = new Map()
-for (const file of ['hamburger.csv', 'starter-pack.csv', 'pack2.csv']) {
+for (const file of ['hamburger.csv', 'starter-pack.csv', 'pack2.csv', 'pack3.csv', 'pack4.csv']) {
   const rows = parseCsv(readFileSync(join(here, file), 'utf8'))
   const header = rows.shift().map((h) => h.trim().toLowerCase())
   const col = (n) => header.indexOf(n)
