@@ -5,6 +5,7 @@ import { getUnits, getAllLessons, getMyProgress, getProfile } from '../lib/data'
 import type { Unit, Lesson, UserLessonProgress, Profile } from '../types'
 import { BottomNav, LoadingScreen, PhoneFrame, XpBar } from '../components/ui'
 import { unitGlyph } from '../lib/units'
+import { getDaily } from '../lib/daily'
 
 const XP_PER_LESSON = 50
 const XP_PER_LEVEL = 150
@@ -55,8 +56,10 @@ export default function HomePage() {
   const xp = doneIds.size * XP_PER_LESSON
   const level = Math.floor(xp / XP_PER_LEVEL) + 1
   const xpIntoLevel = xp % XP_PER_LEVEL
-  const streak = profile?.streak_count ?? 0
+  const daily = getDaily()
+  const streak = daily.streak
   const cefr = profile?.cefr_level ?? 'A0'
+  const goalPct = Math.min(100, Math.round((daily.count / daily.goal) * 100))
 
   return (
     <PhoneFrame>
@@ -90,6 +93,25 @@ export default function HomePage() {
             <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">🔥 {streak} วัน</span>
             <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">⭐ {xp} XP</span>
             <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">🎯 {cefr}</span>
+          </div>
+
+          {/* daily review goal */}
+          <div className="mt-3 border-t border-white/15 pt-3">
+            <div className="flex items-center justify-between text-xs">
+              <span className="font-bold">🎯 เป้าหมายทบทวนวันนี้</span>
+              <span className="text-white/85">
+                {Math.min(daily.count, daily.goal)}/{daily.goal} คำ {daily.goalMet ? '✓' : ''}
+              </span>
+            </div>
+            <XpBar value={goalPct} max={100} className="mt-1.5 bg-white/20" />
+            {!daily.goalMet && (
+              <button
+                onClick={() => nav('/review')}
+                className="mt-2 w-full rounded-full bg-gold py-2 text-sm font-bold text-[#3a2a06] transition active:scale-95"
+              >
+                ทบทวนต่อ →
+              </button>
+            )}
           </div>
         </div>
       </header>

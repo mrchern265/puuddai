@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { getAllClusterWords } from '../lib/data'
 import type { VocabWord } from '../types'
 import { buildQueue, reviewCard, getStates } from '../lib/srs'
+import { getDaily, recordActivity, type DailySnapshot } from '../lib/daily'
 import { BottomNav, Confetti, LoadingScreen, PhoneFrame } from '../components/ui'
 
 function speak(text: string) {
@@ -21,6 +22,8 @@ export default function VocabReviewPage() {
   const [reviewedCount, setReviewedCount] = useState(0)
   const [total, setTotal] = useState(0)
   const [isNew, setIsNew] = useState(false)
+  const [daily, setDaily] = useState<DailySnapshot>(() => getDaily())
+  const [goalToast, setGoalToast] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -57,6 +60,12 @@ export default function VocabReviewPage() {
     if (!current) return
     reviewCard(current.id, remembered)
     setReviewedCount((c) => c + 1)
+    const snap = recordActivity(1)
+    setDaily(snap)
+    if (snap.justHit) {
+      setGoalToast(true)
+      setTimeout(() => setGoalToast(false), 3500)
+    }
     setRevealed(false)
     setQueue((q) => {
       // Correct → drop it. Wrong → send to the back to try again this session.
@@ -72,10 +81,38 @@ export default function VocabReviewPage() {
 
   return (
     <PhoneFrame>
-      {finished && <Confetti />}
+      {(finished || goalToast) && <Confetti />}
+      {goalToast && (
+        <div className="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+          <div className="animate-pop-in rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-[#3a2a06] shadow-lg">
+            🔥 ทำเป้าหมายวันนี้สำเร็จ! สตรีค {daily.streak} วัน
+          </div>
+        </div>
+      )}
       <header className="hero-gradient rounded-b-3xl px-5 pb-6 pt-8 text-white">
-        <h1 className="text-2xl font-bold">ทบทวนคำศัพท์ 🧠</h1>
-        <p className="mt-1 text-sm text-white/80">คำที่ยังไม่แม่นจะวนกลับมาถี่ คำที่จำได้จะห่างออกไป</p>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h1 className="text-2xl font-bold">ทบทวนคำศัพท์ 🧠</h1>
+            <p className="mt-1 text-sm text-white/80">คำที่ยังไม่แม่นจะวนกลับมาถี่ คำที่จำได้จะห่างออกไป</p>
+          </div>
+          <span className="flex-none rounded-full bg-white/18 px-3 py-1 text-sm font-bold">
+            🔥 {daily.streak}
+          </span>
+        </div>
+        <div className="mt-3 rounded-2xl bg-white/12 p-3">
+          <div className="flex items-center justify-between text-xs">
+            <span className="font-bold">🎯 เป้าหมายวันนี้</span>
+            <span className="text-white/85">
+              {Math.min(daily.count, daily.goal)}/{daily.goal} คำ {daily.goalMet ? '✓' : ''}
+            </span>
+          </div>
+          <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-white/20">
+            <div
+              className="h-full rounded-full bg-gold transition-all duration-300"
+              style={{ width: `${Math.min(100, Math.round((daily.count / daily.goal) * 100))}%` }}
+            />
+          </div>
+        </div>
         {total > 0 && !finished && (
           <div className="mt-4">
             <div className="flex items-center justify-between text-sm">
