@@ -14,12 +14,36 @@ function speak(text: string) {
   window.speechSynthesis.speak(u)
 }
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+// Four Thai choices: the correct meaning + 3 distractors from other words.
+function makeOptions(word: VocabWord, pool: VocabWord[]): string[] {
+  const seen = new Set([word.thai])
+  const distractors: string[] = []
+  for (const w of shuffle(pool)) {
+    if (distractors.length >= 3) break
+    if (!seen.has(w.thai)) {
+      seen.add(w.thai)
+      distractors.push(w.thai)
+    }
+  }
+  return shuffle([word.thai, ...distractors])
+}
+
 export default function VocabReviewPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [pool, setPool] = useState<VocabWord[]>([])
   const [queue, setQueue] = useState<VocabWord[]>([])
-  const [revealed, setRevealed] = useState(false)
-  const [reviewedCount, setReviewedCount] = useState(0)
+  const [options, setOptions] = useState<string[]>([])
+  const [chosen, setChosen] = useState<string | null>(null)
   const [total, setTotal] = useState(0)
   const [isNew, setIsNew] = useState(false)
   const [daily, setDaily] = useState<DailySnapshot>(() => getDaily())
@@ -35,9 +59,13 @@ export default function VocabReviewPage() {
         if (!alive) return
         const q = buildQueue(words)
         const states = getStates()
-        setIsNew(q.length > 0 ? !states[q[0].id]?.seen : false)
+        setPool(words)
         setQueue(q)
         setTotal(q.length)
+        if (q[0]) {
+          setOptions(makeOptions(q[0], words))
+          setIsNew(!states[q[0].id]?.seen)
+        }
       } catch {
         if (alive) setError('โหลดคำศัพท์ไม่สำเร็จ ลองใหม่อีกครั้ง')
       } finally {
@@ -51,30 +79,42 @@ export default function VocabReviewPage() {
   }, [])
 
   const current = queue[0]
-  const doneCount = reviewedCount
+  const answered = chosen !== null
+  const isCorrect = answered && chosen === current?.thai
+  const doneCount = Math.max(0, total - queue.length)
   const progressPct = total > 0 ? Math.round((doneCount / total) * 100) : 0
   const finished = !loading && !error && total > 0 && queue.length === 0
   const emptyToday = useMemo(() => !loading && !error && total === 0, [loading, error, total])
 
-  function answer(remembered: boolean) {
-    if (!current) return
-    reviewCard(current.id, remembered)
-    setReviewedCount((c) => c + 1)
-    const snap = recordActivity(1)
-    setDaily(snap)
-    if (snap.justHit) {
-      setGoalToast(true)
-      setTimeout(() => setGoalToast(false), 3500)
+  function choose(opt: string) {
+    if (answered || !current) return
+    setChosen(opt)
+    const ok = opt === current.thai
+    reviewCard(current.id, ok)
+    if (ok) {
+      // Daily goal / streak only counts words you actually got right.
+      const snap = recordActivity(1)
+      setDaily(snap)
+      if (snap.justHit) {
+        setGoalToast(true)
+        setTimeout(() => setGoalToast(false), 3500)
+      }
     }
-    setRevealed(false)
+  }
+
+  function next() {
     setQueue((q) => {
-      // Correct → drop it. Wrong → send to the back to try again this session.
       const rest = q.slice(1)
-      const next = remembered ? rest : [...rest, q[0]]
+      // Right → done. Wrong → back of the queue to try again this session.
+      const nextQ = isCorrect ? rest : [...rest, q[0]]
       const states = getStates()
-      if (next[0]) setIsNew(!states[next[0].id]?.seen)
-      return next
+      if (nextQ[0]) {
+        setOptions(makeOptions(nextQ[0], pool))
+        setIsNew(!states[nextQ[0].id]?.seen)
+      }
+      return nextQ
     })
+    setChosen(null)
   }
 
   if (loading) return <LoadingScreen text="กำลังเตรียมคำทบทวน…" />
@@ -89,11 +129,12 @@ export default function VocabReviewPage() {
           </div>
         </div>
       )}
+
       <header className="hero-gradient rounded-b-3xl px-5 pb-6 pt-8 text-white">
         <div className="flex items-start justify-between gap-3">
           <div>
             <h1 className="text-2xl font-bold">ทบทวนคำศัพท์ 🧠</h1>
-            <p className="mt-1 text-sm text-white/80">คำที่ยังไม่แม่นจะวนกลับมาถี่ คำที่จำได้จะห่างออกไป</p>
+            <p className="mt-1 text-sm text-white/80">เลือกความหมายให้ถูก — ตอบถูกถึงจะนับ</p>
           </div>
           <span className="flex-none rounded-full bg-white/18 px-3 py-1 text-sm font-bold">
             🔥 {daily.streak}
@@ -114,14 +155,14 @@ export default function VocabReviewPage() {
           </div>
         </div>
         {total > 0 && !finished && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between text-sm">
-              <span className="font-bold">{doneCount}/{total} คำ</span>
+          <div className="mt-3">
+            <div className="flex items-center justify-between text-xs">
+              <span>รอบนี้ {doneCount}/{total}</span>
               <span className="text-white/80">{isNew ? '✨ คำใหม่' : '🔁 ทบทวน'}</span>
             </div>
-            <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/20">
+            <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-white/20">
               <div
-                className="h-full rounded-full bg-gold transition-all duration-300"
+                className="h-full rounded-full bg-white/70 transition-all duration-300"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
@@ -153,71 +194,69 @@ export default function VocabReviewPage() {
           </div>
         ) : current ? (
           <>
-            <div
-              role="button"
-              tabIndex={0}
-              onClick={() => setRevealed(true)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') setRevealed(true)
-              }}
-              className="flex flex-1 flex-col items-center justify-center rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"
-            >
-              <div className="text-5xl leading-none">{current.image_emoji || '📘'}</div>
-              <div className="mt-3 flex items-center gap-2">
-                <span className="text-3xl font-extrabold text-slate-800">{current.word}</span>
+            <div className="rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+              <div className="text-4xl leading-none">{current.image_emoji || '📘'}</div>
+              <div className="mt-2 flex items-center justify-center gap-2">
+                <span className="text-2xl font-extrabold text-slate-800">{current.word}</span>
                 <button
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    speak(current.word)
-                  }}
+                  onClick={() => speak(current.word)}
                   aria-label="ฟังเสียง"
-                  className="grid h-9 w-9 place-items-center rounded-full bg-brand-light text-lg text-brand active:scale-90"
+                  className="grid h-8 w-8 place-items-center rounded-full bg-brand-light text-base text-brand active:scale-90"
                 >
                   🔊
                 </button>
               </div>
-              {current.ipa && <div className="mt-0.5 text-sm text-slate-400">{current.ipa}</div>}
-
-              {revealed ? (
-                <>
-                  <div className="mt-4 text-2xl font-bold text-success">{current.thai}</div>
-                  {current.hint_th && (
-                    <div className="mt-3 rounded-2xl bg-accent/10 px-4 py-2 text-sm text-accent-dark ring-1 ring-accent/20">
-                      💡 {current.hint_th}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <div className="mt-6 text-sm text-slate-400">แตะเพื่อดูความหมาย 👆</div>
-              )}
+              {current.ipa && <div className="text-xs text-slate-400">{current.ipa}</div>}
+              <div className="mt-2 text-sm font-medium text-slate-500">แปลว่าอะไร?</div>
             </div>
 
-            <div className="mt-5">
-              {revealed ? (
-                <div className="flex gap-3">
+            <div className="mt-4 grid grid-cols-1 gap-2.5">
+              {options.map((opt) => {
+                const isChoice = chosen === opt
+                const isRight = opt === current.thai
+                let cls = 'border-slate-100 bg-white text-slate-800 shadow-sm'
+                if (answered) {
+                  if (isRight) cls = 'border-success/40 bg-success-light text-success'
+                  else if (isChoice) cls = 'border-danger/40 bg-danger-light text-danger'
+                  else cls = 'border-slate-100 bg-white text-slate-400'
+                }
+                return (
                   <button
-                    onClick={() => answer(false)}
-                    className="flex-1 rounded-full bg-danger-light py-3.5 font-bold text-danger active:scale-95"
+                    key={opt}
+                    onClick={() => choose(opt)}
+                    disabled={answered}
+                    className={`flex items-center justify-between rounded-2xl border p-3.5 text-left text-base font-bold transition active:scale-[0.98] ${cls}`}
                   >
-                    😅 ยังไม่ได้
+                    <span>{opt}</span>
+                    {answered && isRight && <span>✓</span>}
+                    {answered && isChoice && !isRight && <span>✗</span>}
                   </button>
-                  <button
-                    onClick={() => answer(true)}
-                    className="flex-1 rounded-full bg-success py-3.5 font-bold text-white active:scale-95"
-                  >
-                    😎 จำได้
-                  </button>
-                </div>
-              ) : (
+                )
+              })}
+            </div>
+
+            {answered && (
+              <div className="mt-4">
+                {(current.hint_th || current.example_en) && (
+                  <div className="rounded-2xl bg-accent/10 px-4 py-3 text-sm text-accent-dark ring-1 ring-accent/20">
+                    {current.hint_th && <div>💡 {current.hint_th}</div>}
+                    {current.example_en && (
+                      <div className="mt-1 text-slate-600">
+                        <span className="font-medium">{current.example_en}</span>
+                        {current.example_th && <span className="text-slate-400"> — {current.example_th}</span>}
+                      </div>
+                    )}
+                  </div>
+                )}
                 <button
-                  onClick={() => setRevealed(true)}
-                  className="w-full rounded-full bg-brand py-3.5 font-bold text-white active:scale-95"
+                  onClick={next}
+                  className="mt-3 w-full rounded-full bg-brand py-3.5 font-bold text-white active:scale-95"
                 >
-                  เฉลย
+                  {isCorrect ? 'ถัดไป →' : 'เข้าใจแล้ว ลองใหม่ทีหลัง →'}
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </>
         ) : null}
       </main>
