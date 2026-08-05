@@ -1,0 +1,47 @@
+theme_slug,theme_title_th,theme_emoji,theme_order,word,ipa,thai,emoji,hint,pos,example_en,example_th,order
+prompts,วลีสั่ง AI,✍️,42,make it shorter,,ทำให้สั้นลง,✂️,บอก AI ให้ย่อข้อความ,phr.,Make it shorter.,ทำให้สั้นลง,1
+prompts,วลีสั่ง AI,✍️,42,in bullet points,,ตอบเป็นข้อ ๆ,🔘,ให้ AI ตอบเป็นหัวข้อย่อย,phr.,List it in bullet points.,ตอบเป็นข้อ ๆ,2
+prompts,วลีสั่ง AI,✍️,42,step by step,,ทีละขั้นตอน,🪜,ให้ AI อธิบายเป็นขั้น ๆ,phr.,Explain step by step.,อธิบายทีละขั้น,3
+prompts,วลีสั่ง AI,✍️,42,fix the grammar,,แก้ไวยากรณ์,✏️,ให้ AI แก้แกรมมาร์,phr.,Fix the grammar.,ช่วยแก้ไวยากรณ์,4
+prompts,วลีสั่ง AI,✍️,42,give me examples,,ขอตัวอย่าง,💡,ให้ AI ยกตัวอย่าง,phr.,Give me examples.,ขอตัวอย่างหน่อย,5
+prompts,วลีสั่ง AI,✍️,42,make it formal,,ทำให้ทางการ,👔,ปรับให้เป็นทางการ,phr.,Make it more formal.,ทำให้ทางการขึ้น,6
+prompts,วลีสั่ง AI,✍️,42,explain simply,,อธิบายง่าย ๆ,🧒,ขอคำอธิบายแบบง่าย,phr.,Explain it simply.,อธิบายแบบง่าย ๆ,7
+prompts,วลีสั่ง AI,✍️,42,in Thai,,เป็นภาษาไทย,🇹🇭,ให้ AI ตอบเป็นไทย,phr.,Answer in Thai.,ตอบเป็นภาษาไทย,8
+prompts,วลีสั่ง AI,✍️,42,double-check,,ตรวจทานซ้ำ,🔎,ให้ AI ตรวจข้อมูลซ้ำ,phr.,Double-check the facts.,ช่วยตรวจข้อมูลซ้ำ,9
+prompts,วลีสั่ง AI,✍️,42,make a list,,ทำเป็นรายการ,📝,ให้ AI ทำลิสต์,phr.,Make a list of ideas.,ทำรายการไอเดีย,10
+prompts,วลีสั่ง AI,✍️,42,add more details,,ใส่รายละเอียดเพิ่ม,➕,ขอรายละเอียดมากขึ้น,phr.,Add more details.,ใส่รายละเอียดเพิ่ม,11
+prompts,วลีสั่ง AI,✍️,42,for beginners,,สำหรับมือใหม่,🐣,ให้เข้าใจง่ายระดับเริ่มต้น,phr.,Explain it for beginners.,อธิบายแบบมือใหม่,12
+prompts,วลีสั่ง AI,✍️,42,proofread,/ˈpruːfriːd/,ตรวจแก้คำผิด,🧐,proof + read = ตรวจทาน,v.,Proofread this email.,ตรวจอีเมลนี้ให้หน่อย,13
+prompts,วลีสั่ง AI,✍️,42,keep it simple,,เรียบง่ายเข้าไว้,🙂,ให้ AI ตอบแบบไม่ซับซ้อน,phr.,Keep it simple.,เอาแบบง่าย ๆ,14
+email,อีเมลและประชุม,📧,43,meeting,/ˈmiːtɪŋ/,การประชุม,📅,มีตติ้ง = ประชุม,n.,We have a meeting at three.,เรามีประชุมบ่ายสาม,1
+email,อีเมลและประชุม,📧,43,agenda,/əˈdʒendə/,วาระการประชุม,📋,อาเจนด้า = หัวข้อประชุม,n.,Send the agenda.,ส่งวาระการประชุม,2
+email,อีเมลและประชุม,📧,43,deadline,/ˈdedlaɪn/,กำหนดส่ง,⏰,เดดไลน์ = เส้นตาย,n.,The deadline is Friday.,กำหนดส่งวันศุกร์,3
+email,อีเมลและประชุม,📧,43,schedule,/ˈskedʒuːl/,ตารางเวลา,🗓️,สเกจูล = ตารางนัด,n.,Check the schedule.,ดูตารางเวลา,4
+email,อีเมลและประชุม,📧,43,reply,/rɪˈplaɪ/,ตอบกลับ,↩️,รีพลาย = ตอบอีเมล,v.,Reply to the email.,ตอบอีเมล,5
+email,อีเมลและประชุม,📧,43,forward,/ˈfɔːrwərd/,ส่งต่อ,➡️,ฟอร์เวิร์ด = ส่งต่อ,v.,Forward it to me.,ส่งต่อมาให้ผม,6
+email,อีเมลและประชุม,📧,43,subject,/ˈsʌbdʒɪkt/,หัวข้ออีเมล,🏷️,ซับเจกต์ = หัวเรื่อง,n.,Write a clear subject.,เขียนหัวข้อให้ชัด,7
+email,อีเมลและประชุม,📧,43,invite,/ɪnˈvaɪt/,เชิญ,💌,อินไวท์ = เชิญ,v.,Invite the team.,เชิญทีมเข้าประชุม,8
+email,อีเมลและประชุม,📧,43,confirm,/kənˈfɜːrm/,ยืนยัน,✅,คอนเฟิร์ม = ยืนยัน,v.,Please confirm the time.,กรุณายืนยันเวลา,9
+email,อีเมลและประชุม,📧,43,reminder,/rɪˈmaɪndər/,การแจ้งเตือน,🔔,รีมายเดอร์ = ตัวเตือน,n.,Set a reminder.,ตั้งแจ้งเตือน,10
+email,อีเมลและประชุม,📧,43,follow up,/ˈfɒloʊ ʌp/,ติดตามงาน,📌,ฟอลโลว์อัพ = ตามงาน,phr.,I will follow up next week.,ผมจะติดตามสัปดาห์หน้า,11
+email,อีเมลและประชุม,📧,43,attachment,/əˈtætʃmənt/,ไฟล์แนบ,📎,attach + ment = ของแนบ,n.,See the attachment.,ดูไฟล์แนบ,12
+email,อีเมลและประชุม,📧,43,approve,/əˈpruːv/,อนุมัติ,👍,แอพพรูฟ = อนุมัติ,v.,Approve the request.,อนุมัติคำขอ,13
+email,อีเมลและประชุม,📧,43,urgent,/ˈɜːrdʒənt/,ด่วน,🚨,เออร์เจนต์ = เร่งด่วน,adj.,This email is urgent.,อีเมลนี้ด่วน,14
+email,อีเมลและประชุม,📧,43,reschedule,/ˌriːˈskedʒuːl/,เลื่อนนัด,🔁,re + schedule = เลื่อนเวลา,v.,Can we reschedule?,เลื่อนนัดได้ไหม,15
+email,อีเมลและประชุม,📧,43,minutes,/ˈmɪnɪts/,บันทึกการประชุม,📝,มินิทส์ = สรุปประชุม,n.,Take the minutes.,จดบันทึกการประชุม,16
+office,คำศัพท์ออฟฟิศ,💼,44,report,/rɪˈpɔːrt/,รายงาน,📄,รีพอร์ต = รายงาน,n.,Finish the report.,ทำรายงานให้เสร็จ,1
+office,คำศัพท์ออฟฟิศ,💼,44,project,/ˈprɒdʒekt/,โปรเจกต์,📁,โปรเจกต์ = โครงการ,n.,Start a new project.,เริ่มโปรเจกต์ใหม่,2
+office,คำศัพท์ออฟฟิศ,💼,44,task,/tæsk/,งาน/ภารกิจ,✅,ทาสก์ = งานย่อย,n.,Finish this task.,ทำงานนี้ให้เสร็จ,3
+office,คำศัพท์ออฟฟิศ,💼,44,colleague,/ˈkɒliːɡ/,เพื่อนร่วมงาน,🧑‍💼,คอลลีก = เพื่อนร่วมงาน,n.,Ask a colleague.,ถามเพื่อนร่วมงาน,4
+office,คำศัพท์ออฟฟิศ,💼,44,boss,/bɒs/,เจ้านาย,👔,บอส = หัวหน้า,n.,Tell the boss.,บอกเจ้านาย,5
+office,คำศัพท์ออฟฟิศ,💼,44,file,/faɪl/,ไฟล์,📄,ไฟล์ = แฟ้มข้อมูล,n.,Open the file.,เปิดไฟล์,6
+office,คำศัพท์ออฟฟิศ,💼,44,folder,/ˈfoʊldər/,โฟลเดอร์,📁,โฟลเดอร์ = แฟ้มเก็บไฟล์,n.,Put it in the folder.,ใส่ในโฟลเดอร์,7
+office,คำศัพท์ออฟฟิศ,💼,44,document,/ˈdɒkjumənt/,เอกสาร,📃,ด็อกคิวเมนต์ = เอกสาร,n.,Share the document.,แชร์เอกสาร,8
+office,คำศัพท์ออฟฟิศ,💼,44,presentation,/ˌpreznˈteɪʃn/,การนำเสนอ,📊,เพรเซนเทชั่น = พรีเซนต์,n.,Give a presentation.,นำเสนองาน,9
+office,คำศัพท์ออฟฟิศ,💼,44,spreadsheet,/ˈspredʃiːt/,สเปรดชีต,📈,spread + sheet = ตารางคำนวณ,n.,Update the spreadsheet.,อัปเดตสเปรดชีต,10
+office,คำศัพท์ออฟฟิศ,💼,44,printer,/ˈprɪntər/,เครื่องพิมพ์,🖨️,print + er = เครื่องพิมพ์,n.,Use the printer.,ใช้เครื่องพิมพ์,11
+office,คำศัพท์ออฟฟิศ,💼,44,client,/ˈklaɪənt/,ลูกค้า,🤝,ไคลเอนต์ = ลูกค้า,n.,Meet the client.,เจอลูกค้า,12
+office,คำศัพท์ออฟฟิศ,💼,44,overtime,/ˈoʊvərtaɪm/,ทำงานล่วงเวลา,🌙,over + time = โอที,n.,I worked overtime.,ผมทำโอที,13
+office,คำศัพท์ออฟฟิศ,💼,44,break,/breɪk/,พักเบรก,☕,เบรก = พัก,n.,Take a break.,พักเบรกหน่อย,14
+office,คำศัพท์ออฟฟิศ,💼,44,office,/ˈɒfɪs/,สำนักงาน,🏢,ออฟฟิศ = ที่ทำงาน,n.,Go to the office.,ไปออฟฟิศ,15
+office,คำศัพท์ออฟฟิศ,💼,44,manager,/ˈmænɪdʒər/,ผู้จัดการ,💼,manage + r = ผู้จัดการ,n.,Talk to the manager.,คุยกับผู้จัดการ,16
