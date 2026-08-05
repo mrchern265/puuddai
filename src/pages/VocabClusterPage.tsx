@@ -72,17 +72,17 @@ export default function VocabClusterPage() {
           </span>
         </div>
 
-        <div className="mt-4 flex gap-2">
-          <button
-            type="button"
-            onClick={() => setHideTh((h) => !h)}
-            className={`flex-1 rounded-full py-2.5 text-sm font-bold transition ${
-              hideTh ? 'bg-gold text-[#3a2a06]' : 'bg-white/18 text-white'
-            }`}
-          >
-            {hideTh ? '🙈 ซ่อนคำแปลอยู่' : '👁️ โชว์คำแปล'}
-          </button>
-          {words.length >= 4 && (
+        <button
+          type="button"
+          onClick={() => setHideTh((h) => !h)}
+          className={`mt-4 w-full rounded-full py-2.5 text-sm font-bold transition ${
+            hideTh ? 'bg-gold text-[#3a2a06]' : 'bg-white/18 text-white'
+          }`}
+        >
+          {hideTh ? '🙈 ซ่อนคำแปลอยู่' : '👁️ โชว์คำแปล'}
+        </button>
+        {words.length >= 4 && (
+          <div className="mt-2 flex gap-2">
             <button
               type="button"
               onClick={() => nav(`/clusters/${id}/game`)}
@@ -90,8 +90,15 @@ export default function VocabClusterPage() {
             >
               🎮 เกมจับคู่
             </button>
-          )}
-        </div>
+            <button
+              type="button"
+              onClick={() => nav(`/clusters/${id}/speak`)}
+              className="flex-1 rounded-full bg-success py-2.5 text-sm font-bold text-white transition active:scale-95"
+            >
+              🎤 ฝึกพูด
+            </button>
+          </div>
+        )}
       </header>
 
       <div className="flex-1 overflow-y-auto px-4 pb-6 pt-4">
