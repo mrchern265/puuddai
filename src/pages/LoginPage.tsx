@@ -6,7 +6,7 @@ import { Button, TextField } from '../components/ui'
 export default function LoginPage() {
   const { signIn, session, loading } = useAuth()
   const nav = useNavigate()
-  const [email, setEmail] = useState('')
+  const [identifier, setIdentifier] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -15,7 +15,7 @@ export default function LoginPage() {
     e.preventDefault()
     setError(null)
     setBusy(true)
-    const { error } = await signIn(email, password)
+    const { error } = await signIn(identifier, password)
     setBusy(false)
     if (error) {
       setError(authErrorTh(error))
@@ -32,11 +32,11 @@ export default function LoginPage() {
       <p className="mb-8 text-gray-500">ยินดีต้อนรับกลับมา</p>
       <form onSubmit={submit} className="flex flex-col gap-4">
         <TextField
-          label="อีเมล"
-          type="email"
-          value={email}
-          onChange={setEmail}
-          placeholder="you@email.com"
+          label="ชื่อผู้ใช้"
+          type="text"
+          value={identifier}
+          onChange={setIdentifier}
+          placeholder="username หรืออีเมล"
         />
         <TextField
           label="รหัสผ่าน"

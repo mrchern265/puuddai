@@ -6,6 +6,7 @@ import { Button, TextField } from '../components/ui'
 export default function RegisterPage() {
   const { signUp, session, loading } = useAuth()
   const nav = useNavigate()
+  const [username, setUsername] = useState('')
   const [displayName, setDisplayName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -15,12 +16,17 @@ export default function RegisterPage() {
   async function submit(e: FormEvent) {
     e.preventDefault()
     setError(null)
+    const uname = username.trim().toLowerCase()
+    if (!/^[a-z0-9._]{3,20}$/.test(uname)) {
+      setError('ชื่อผู้ใช้ 3–20 ตัว ใช้ได้แค่ a–z, 0–9, จุด และขีดล่าง (_)')
+      return
+    }
     if (!displayName.trim()) {
       setError('กรุณากรอกชื่อที่แสดง')
       return
     }
     setBusy(true)
-    const { error } = await signUp(email, password, displayName.trim())
+    const { error } = await signUp(uname, email, password, displayName.trim())
     setBusy(false)
     if (error) {
       setError(authErrorTh(error))
@@ -36,6 +42,13 @@ export default function RegisterPage() {
       <h1 className="mb-1 text-3xl font-black text-brand">สมัครเรียนฟรी</h1>
       <p className="mb-8 text-gray-500">เริ่มเรียนภาษาอังกฤษได้ทันที ไม่มีค่าใช้จ่าย</p>
       <form onSubmit={submit} className="flex flex-col gap-4">
+        <TextField
+          label="ชื่อผู้ใช้ (username)"
+          type="text"
+          value={username}
+          onChange={setUsername}
+          placeholder="เช่น nong_puuddai (ใช้เข้าสู่ระบบ)"
+        />
         <TextField
           label="ชื่อที่แสดง"
           type="text"

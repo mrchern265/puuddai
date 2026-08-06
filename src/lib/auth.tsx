@@ -14,11 +14,14 @@ interface AuthCtx {
   user: User | null
   loading: boolean
   signUp: (
+    username: string,
     email: string,
     password: string,
     displayName: string,
   ) => Promise<{ error: string | null }>
-  signIn: (email: string, password: string) => Promise<{ error: string | null }>
+  // `identifier` may be a username or an email — usernames are resolved to the
+  // account email before signing in.
+  signIn: (identifier: string, password: string) => Promise<{ error: string | null }>
   signOut: () => Promise<void>
   resetPassword: (email: string) => Promise<{ error: string | null }>
   updatePassword: (password: string) => Promise<{ error: string | null }>
@@ -49,11 +52,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => sub.subscription.unsubscribe()
   }, [])
 
-  const signUp = async (email: string, password: string, displayName: string) => {
+  const signUp = async (
+    username: string,
+    email: string,
+    password: string,
+    displayName: string,
+  ) => {
+    const uname = username.trim()
+
+    // Reject a taken username up front (the DB unique index is the real guard,
+    // but this gives a friendly message before we create the auth account).
+    const { data: taken } = await supabase.rpc('email_for_username', { uname })
+    if (taken) return { error: 'username-taken' }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { display_name: displayName } },
+      options: { data: { display_name: displayName, username: uname } },
     })
     if (error) return { error: error.message }
 
@@ -68,14 +83,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       activeSession = signInData.session
     }
 
-    // profiles row is auto-created by the handle_new_user trigger; set the name.
+    // profiles row is auto-created by the handle_new_user trigger; set the
+    // username + display name on it now.
     const uid = activeSession?.user?.id ?? data.user?.id
-    if (uid && displayName.trim()) {
-      await supabase.from('profiles').update({ display_name: displayName.trim() }).eq('id', uid)
+    if (uid) {
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .update({ username: uname, display_name: displayName.trim() })
+        .eq('id', uid)
+      if (profileError)
+        return {
+          error: /duplicate|unique/i.test(profileError.message)
+            ? 'username-taken'
+            : profileError.message,
+        }
     }
     return { error: null }
   }
-  const signIn = async (email: string, password: string) => {
+  const signIn = async (identifier: string, password: string) => {
+    let email = identifier.trim()
+    // No "@" → treat it as a username and resolve to the account email first.
+    if (!email.includes('@')) {
+      const { data, error } = await supabase.rpc('email_for_username', { uname: email })
+      if (error) return { error: error.message }
+      if (!data) return { error: 'no-username' }
+      email = data as string
+    }
     const { error } = await supabase.auth.signInWithPassword({ email, password })
     return { error: error?.message ?? null }
   }
@@ -136,6 +169,8 @@ export function ProtectedRoute({ children }: { children: ReactNode }) {
 
 // eslint-disable-next-line react-refresh/only-export-components
 export function authErrorTh(msg: string): string {
+  if (msg === 'username-taken') return 'ชื่อผู้ใช้นี้ถูกใช้แล้ว ลองชื่ออื่นครับ'
+  if (msg === 'no-username') return 'ไม่พบชื่อผู้ใช้นี้ ลองใหม่หรือสมัครก่อนครับ'
   if (/already registered|already exists|user already/i.test(msg))
     return 'อีเมลนี้มีบัญชีอยู่แล้ว ลองเข้าสู่ระบบแทน'
   if (/password/i.test(msg)) return 'รหัสผ่านไม่ผ่าน (อย่างน้อย 6 ตัวอักษร)'
