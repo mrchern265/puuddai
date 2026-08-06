@@ -11,18 +11,18 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$months$v$), 1, $v$January$v$, $v$/ˈdʒænjueri/$v$, $v$มกราคม$v$, $v$🗓️$v$, $v$แจนยัวรี่ = มกราคม$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 2, $v$February$v$, $v$/ˈfebrueri/$v$, $v$กุมภาพันธ์$v$, $v$🗓️$v$, $v$เฟบรัวรี่ = กุมภา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 3, $v$March$v$, $v$/mɑːrtʃ/$v$, $v$มีนาคม$v$, $v$🗓️$v$, $v$มาร์ช = มีนา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 4, $v$April$v$, $v$/ˈeɪprəl/$v$, $v$เมษายน$v$, $v$🗓️$v$, $v$เอพริล = เมษา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 5, $v$May$v$, $v$/meɪ/$v$, $v$พฤษภาคม$v$, $v$🗓️$v$, $v$เมย์ = พฤษภา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 6, $v$June$v$, $v$/dʒuːn/$v$, $v$มิถุนายน$v$, $v$🗓️$v$, $v$จูน = มิถุนา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 7, $v$July$v$, $v$/dʒuˈlaɪ/$v$, $v$กรกฎาคม$v$, $v$🗓️$v$, $v$จุลาย = กรกฎา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 8, $v$August$v$, $v$/ˈɔːɡəst/$v$, $v$สิงหาคม$v$, $v$🗓️$v$, $v$ออกัสต์ = สิงหา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 9, $v$September$v$, $v$/sepˈtembər/$v$, $v$กันยายน$v$, $v$🗓️$v$, $v$เซพเทมเบอร์ = กันยา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 10, $v$October$v$, $v$/ɒkˈtoʊbər/$v$, $v$ตุลาคม$v$, $v$🗓️$v$, $v$อ็อกโทเบอร์ = ตุลา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 11, $v$November$v$, $v$/noʊˈvembər/$v$, $v$พฤศจิกายน$v$, $v$🗓️$v$, $v$โนเวมเบอร์ = พฤศจิกา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$months$v$), 12, $v$December$v$, $v$/dɪˈsembər/$v$, $v$ธันวาคม$v$, $v$🗓️$v$, $v$ดีเซมเบอร์ = ธันวา$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$months$v$), 1, $v$January$v$, $v$/ˈdʒænjueri/$v$, $v$มกราคม$v$, $v$🗓️$v$, $v$แจนยัวรี่ = มกราคม$v$, $v$n.$v$, $v$My birthday is in January.$v$, $v$วันเกิดฉันเดือนมกราคม$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 2, $v$February$v$, $v$/ˈfebrueri/$v$, $v$กุมภาพันธ์$v$, $v$🗓️$v$, $v$เฟบรัวรี่ = กุมภา$v$, $v$n.$v$, $v$February is short.$v$, $v$กุมภาพันธ์เดือนสั้น$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 3, $v$March$v$, $v$/mɑːrtʃ/$v$, $v$มีนาคม$v$, $v$🗓️$v$, $v$มาร์ช = มีนา$v$, $v$n.$v$, $v$It is hot in March.$v$, $v$มีนาคมอากาศร้อน$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 4, $v$April$v$, $v$/ˈeɪprəl/$v$, $v$เมษายน$v$, $v$🗓️$v$, $v$เอพริล = เมษา$v$, $v$n.$v$, $v$Songkran is in April.$v$, $v$สงกรานต์อยู่เดือนเมษายน$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 5, $v$May$v$, $v$/meɪ/$v$, $v$พฤษภาคม$v$, $v$🗓️$v$, $v$เมย์ = พฤษภา$v$, $v$n.$v$, $v$It rains in May.$v$, $v$พฤษภาคมฝนตก$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 6, $v$June$v$, $v$/dʒuːn/$v$, $v$มิถุนายน$v$, $v$🗓️$v$, $v$จูน = มิถุนา$v$, $v$n.$v$, $v$School starts in June.$v$, $v$เปิดเรียนเดือนมิถุนายน$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 7, $v$July$v$, $v$/dʒuˈlaɪ/$v$, $v$กรกฎาคม$v$, $v$🗓️$v$, $v$จุลาย = กรกฎา$v$, $v$n.$v$, $v$July is rainy.$v$, $v$กรกฎาคมฝนเยอะ$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 8, $v$August$v$, $v$/ˈɔːɡəst/$v$, $v$สิงหาคม$v$, $v$🗓️$v$, $v$ออกัสต์ = สิงหา$v$, $v$n.$v$, $v$I travel in August.$v$, $v$ฉันเที่ยวเดือนสิงหาคม$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 9, $v$September$v$, $v$/sepˈtembər/$v$, $v$กันยายน$v$, $v$🗓️$v$, $v$เซพเทมเบอร์ = กันยา$v$, $v$n.$v$, $v$September is cool.$v$, $v$กันยายนอากาศเย็น$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 10, $v$October$v$, $v$/ɒkˈtoʊbər/$v$, $v$ตุลาคม$v$, $v$🗓️$v$, $v$อ็อกโทเบอร์ = ตุลา$v$, $v$n.$v$, $v$October is nice.$v$, $v$ตุลาคมอากาศดี$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 11, $v$November$v$, $v$/noʊˈvembər/$v$, $v$พฤศจิกายน$v$, $v$🗓️$v$, $v$โนเวมเบอร์ = พฤศจิกา$v$, $v$n.$v$, $v$November is cool.$v$, $v$พฤศจิกายนอากาศเย็น$v$),
+  ((select id from vocab_themes where slug = $v$months$v$), 12, $v$December$v$, $v$/dɪˈsembər/$v$, $v$ธันวาคม$v$, $v$🗓️$v$, $v$ดีเซมเบอร์ = ธันวา$v$, $v$n.$v$, $v$December is cold.$v$, $v$ธันวาคมหนาว$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -38,20 +38,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$sports$v$), 1, $v$football$v$, $v$/ˈfʊtbɔːl/$v$, $v$ฟุตบอล$v$, $v$⚽$v$, $v$foot + ball = ฟุตบอล$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 2, $v$basketball$v$, $v$/ˈbæskɪtbɔːl/$v$, $v$บาสเกตบอล$v$, $v$🏀$v$, $v$บาสเก็ตบอล ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 3, $v$tennis$v$, $v$/ˈtenɪs/$v$, $v$เทนนิส$v$, $v$🎾$v$, $v$เทนนิส ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 4, $v$swimming$v$, $v$/ˈswɪmɪŋ/$v$, $v$ว่ายน้ำ$v$, $v$🏊$v$, $v$สวิมมิ่ง = ว่ายน้ำ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 5, $v$running$v$, $v$/ˈrʌnɪŋ/$v$, $v$วิ่ง$v$, $v$🏃$v$, $v$รันนิ่ง = วิ่ง$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 6, $v$boxing$v$, $v$/ˈbɒksɪŋ/$v$, $v$ชกมวย$v$, $v$🥊$v$, $v$บ็อกซิ่ง = มวย$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 7, $v$badminton$v$, $v$/ˈbædmɪntən/$v$, $v$แบดมินตัน$v$, $v$🏸$v$, $v$แบดมินตัน ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 8, $v$golf$v$, $v$/ɡɒlf/$v$, $v$กอล์ฟ$v$, $v$⛳$v$, $v$กอล์ฟ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 9, $v$volleyball$v$, $v$/ˈvɒlibɔːl/$v$, $v$วอลเลย์บอล$v$, $v$🏐$v$, $v$วอลเลย์บอล ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 10, $v$cycling$v$, $v$/ˈsaɪklɪŋ/$v$, $v$ปั่นจักรยาน$v$, $v$🚴$v$, $v$ไซคลิ่ง = ปั่นจักรยาน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 11, $v$yoga$v$, $v$/ˈjoʊɡə/$v$, $v$โยคะ$v$, $v$🧘$v$, $v$โยคะ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 12, $v$ping pong$v$, $v$/ˈpɪŋ pɒŋ/$v$, $v$ปิงปอง$v$, $v$🏓$v$, $v$ปิงปอง ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 13, $v$team$v$, $v$/tiːm/$v$, $v$ทีม$v$, $v$👥$v$, $v$ทีม ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$sports$v$), 14, $v$ball$v$, $v$/bɔːl/$v$, $v$ลูกบอล$v$, $v$⚽$v$, $v$บอล = ลูกบอล$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$sports$v$), 1, $v$football$v$, $v$/ˈfʊtbɔːl/$v$, $v$ฟุตบอล$v$, $v$⚽$v$, $v$foot + ball = ฟุตบอล$v$, $v$n.$v$, $v$I play football.$v$, $v$ฉันเล่นฟุตบอล$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 2, $v$basketball$v$, $v$/ˈbæskɪtbɔːl/$v$, $v$บาสเกตบอล$v$, $v$🏀$v$, $v$บาสเก็ตบอล ตรงตัว$v$, $v$n.$v$, $v$Play basketball.$v$, $v$เล่นบาสเกตบอล$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 3, $v$tennis$v$, $v$/ˈtenɪs/$v$, $v$เทนนิส$v$, $v$🎾$v$, $v$เทนนิส ตรงตัว$v$, $v$n.$v$, $v$She plays tennis.$v$, $v$เธอเล่นเทนนิส$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 4, $v$swimming$v$, $v$/ˈswɪmɪŋ/$v$, $v$ว่ายน้ำ$v$, $v$🏊$v$, $v$สวิมมิ่ง = ว่ายน้ำ$v$, $v$n.$v$, $v$I like swimming.$v$, $v$ฉันชอบว่ายน้ำ$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 5, $v$running$v$, $v$/ˈrʌnɪŋ/$v$, $v$วิ่ง$v$, $v$🏃$v$, $v$รันนิ่ง = วิ่ง$v$, $v$n.$v$, $v$Running is good.$v$, $v$การวิ่งดีต่อสุขภาพ$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 6, $v$boxing$v$, $v$/ˈbɒksɪŋ/$v$, $v$ชกมวย$v$, $v$🥊$v$, $v$บ็อกซิ่ง = มวย$v$, $v$n.$v$, $v$He likes boxing.$v$, $v$เขาชอบมวย$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 7, $v$badminton$v$, $v$/ˈbædmɪntən/$v$, $v$แบดมินตัน$v$, $v$🏸$v$, $v$แบดมินตัน ตรงตัว$v$, $v$n.$v$, $v$Let’s play badminton.$v$, $v$ไปเล่นแบดกัน$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 8, $v$golf$v$, $v$/ɡɒlf/$v$, $v$กอล์ฟ$v$, $v$⛳$v$, $v$กอล์ฟ ตรงตัว$v$, $v$n.$v$, $v$My dad plays golf.$v$, $v$พ่อฉันเล่นกอล์ฟ$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 9, $v$volleyball$v$, $v$/ˈvɒlibɔːl/$v$, $v$วอลเลย์บอล$v$, $v$🏐$v$, $v$วอลเลย์บอล ตรงตัว$v$, $v$n.$v$, $v$We play volleyball.$v$, $v$เราเล่นวอลเลย์บอล$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 10, $v$cycling$v$, $v$/ˈsaɪklɪŋ/$v$, $v$ปั่นจักรยาน$v$, $v$🚴$v$, $v$ไซคลิ่ง = ปั่นจักรยาน$v$, $v$n.$v$, $v$I enjoy cycling.$v$, $v$ฉันชอบปั่นจักรยาน$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 11, $v$yoga$v$, $v$/ˈjoʊɡə/$v$, $v$โยคะ$v$, $v$🧘$v$, $v$โยคะ ตรงตัว$v$, $v$n.$v$, $v$I do yoga.$v$, $v$ฉันเล่นโยคะ$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 12, $v$ping pong$v$, $v$/ˈpɪŋ pɒŋ/$v$, $v$ปิงปอง$v$, $v$🏓$v$, $v$ปิงปอง ตรงตัว$v$, $v$n.$v$, $v$Play ping pong.$v$, $v$เล่นปิงปอง$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 13, $v$team$v$, $v$/tiːm/$v$, $v$ทีม$v$, $v$👥$v$, $v$ทีม ตรงตัว$v$, $v$n.$v$, $v$We are a team.$v$, $v$เราเป็นทีมเดียวกัน$v$),
+  ((select id from vocab_themes where slug = $v$sports$v$), 14, $v$ball$v$, $v$/bɔːl/$v$, $v$ลูกบอล$v$, $v$⚽$v$, $v$บอล = ลูกบอล$v$, $v$n.$v$, $v$Throw the ball.$v$, $v$โยนลูกบอล$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -67,20 +67,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$technology$v$), 1, $v$phone$v$, $v$/foʊn/$v$, $v$โทรศัพท์$v$, $v$📱$v$, $v$โฟน = โทรศัพท์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 2, $v$computer$v$, $v$/kəmˈpjuːtər/$v$, $v$คอมพิวเตอร์$v$, $v$💻$v$, $v$คอมพิวเตอร์ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 3, $v$internet$v$, $v$/ˈɪntərnet/$v$, $v$อินเทอร์เน็ต$v$, $v$🌐$v$, $v$อินเทอร์เน็ต ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 4, $v$email$v$, $v$/ˈiːmeɪl/$v$, $v$อีเมล$v$, $v$📧$v$, $v$อีเมล ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 5, $v$password$v$, $v$/ˈpæswɜːrd/$v$, $v$รหัสผ่าน$v$, $v$🔑$v$, $v$pass + word = รหัสผ่าน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 6, $v$app$v$, $v$/æp/$v$, $v$แอป$v$, $v$📲$v$, $v$แอป ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 7, $v$screen$v$, $v$/skriːn/$v$, $v$หน้าจอ$v$, $v$🖥️$v$, $v$สกรีน = หน้าจอ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 8, $v$camera$v$, $v$/ˈkæmərə/$v$, $v$กล้อง$v$, $v$📷$v$, $v$คาเมร่า = กล้อง$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 9, $v$battery$v$, $v$/ˈbætəri/$v$, $v$แบตเตอรี่$v$, $v$🔋$v$, $v$แบตเตอรี่ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 10, $v$charger$v$, $v$/ˈtʃɑːrdʒər/$v$, $v$ที่ชาร์จ$v$, $v$🔌$v$, $v$charge + r = ที่ชาร์จ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 11, $v$keyboard$v$, $v$/ˈkiːbɔːrd/$v$, $v$คีย์บอร์ด$v$, $v$⌨️$v$, $v$key + board = แป้นพิมพ์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 12, $v$mouse$v$, $v$/maʊs/$v$, $v$เมาส์$v$, $v$🖱️$v$, $v$เมาส์ (แปลว่าหนู)$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 13, $v$website$v$, $v$/ˈwebsaɪt/$v$, $v$เว็บไซต์$v$, $v$🌐$v$, $v$web + site = เว็บไซต์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$technology$v$), 14, $v$message$v$, $v$/ˈmesɪdʒ/$v$, $v$ข้อความ$v$, $v$💬$v$, $v$เมสเสจ = ข้อความ$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$technology$v$), 1, $v$phone$v$, $v$/foʊn/$v$, $v$โทรศัพท์$v$, $v$📱$v$, $v$โฟน = โทรศัพท์$v$, $v$n.$v$, $v$Answer the phone.$v$, $v$รับโทรศัพท์$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 2, $v$computer$v$, $v$/kəmˈpjuːtər/$v$, $v$คอมพิวเตอร์$v$, $v$💻$v$, $v$คอมพิวเตอร์ ตรงตัว$v$, $v$n.$v$, $v$Turn on the computer.$v$, $v$เปิดคอมพิวเตอร์$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 3, $v$internet$v$, $v$/ˈɪntərnet/$v$, $v$อินเทอร์เน็ต$v$, $v$🌐$v$, $v$อินเทอร์เน็ต ตรงตัว$v$, $v$n.$v$, $v$The internet is slow.$v$, $v$อินเทอร์เน็ตช้า$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 4, $v$email$v$, $v$/ˈiːmeɪl/$v$, $v$อีเมล$v$, $v$📧$v$, $v$อีเมล ตรงตัว$v$, $v$n.$v$, $v$Send me an email.$v$, $v$ส่งอีเมลมาให้ฉัน$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 5, $v$password$v$, $v$/ˈpæswɜːrd/$v$, $v$รหัสผ่าน$v$, $v$🔑$v$, $v$pass + word = รหัสผ่าน$v$, $v$n.$v$, $v$Enter your password.$v$, $v$ใส่รหัสผ่าน$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 6, $v$app$v$, $v$/æp/$v$, $v$แอป$v$, $v$📲$v$, $v$แอป ตรงตัว$v$, $v$n.$v$, $v$Download the app.$v$, $v$ดาวน์โหลดแอป$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 7, $v$screen$v$, $v$/skriːn/$v$, $v$หน้าจอ$v$, $v$🖥️$v$, $v$สกรีน = หน้าจอ$v$, $v$n.$v$, $v$The screen is bright.$v$, $v$หน้าจอสว่าง$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 8, $v$camera$v$, $v$/ˈkæmərə/$v$, $v$กล้อง$v$, $v$📷$v$, $v$คาเมร่า = กล้อง$v$, $v$n.$v$, $v$Turn on the camera.$v$, $v$เปิดกล้อง$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 9, $v$battery$v$, $v$/ˈbætəri/$v$, $v$แบตเตอรี่$v$, $v$🔋$v$, $v$แบตเตอรี่ ตรงตัว$v$, $v$n.$v$, $v$The battery is low.$v$, $v$แบตใกล้หมด$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 10, $v$charger$v$, $v$/ˈtʃɑːrdʒər/$v$, $v$ที่ชาร์จ$v$, $v$🔌$v$, $v$charge + r = ที่ชาร์จ$v$, $v$n.$v$, $v$Where is my charger?$v$, $v$ที่ชาร์จอยู่ไหน$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 11, $v$keyboard$v$, $v$/ˈkiːbɔːrd/$v$, $v$คีย์บอร์ด$v$, $v$⌨️$v$, $v$key + board = แป้นพิมพ์$v$, $v$n.$v$, $v$Use the keyboard.$v$, $v$ใช้คีย์บอร์ด$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 12, $v$mouse$v$, $v$/maʊs/$v$, $v$เมาส์$v$, $v$🖱️$v$, $v$เมาส์ (แปลว่าหนู)$v$, $v$n.$v$, $v$Click with the mouse.$v$, $v$คลิกด้วยเมาส์$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 13, $v$website$v$, $v$/ˈwebsaɪt/$v$, $v$เว็บไซต์$v$, $v$🌐$v$, $v$web + site = เว็บไซต์$v$, $v$n.$v$, $v$Visit the website.$v$, $v$เข้าเว็บไซต์$v$),
+  ((select id from vocab_themes where slug = $v$technology$v$), 14, $v$message$v$, $v$/ˈmesɪdʒ/$v$, $v$ข้อความ$v$, $v$💬$v$, $v$เมสเสจ = ข้อความ$v$, $v$n.$v$, $v$Send a message.$v$, $v$ส่งข้อความ$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -96,20 +96,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$money$v$), 1, $v$money$v$, $v$/ˈmʌni/$v$, $v$เงิน$v$, $v$💰$v$, $v$มันนี่ = เงิน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 2, $v$coin$v$, $v$/kɔɪn/$v$, $v$เหรียญ$v$, $v$🪙$v$, $v$คอยน์ = เหรียญ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 3, $v$banknote$v$, $v$/ˈbæŋknoʊt/$v$, $v$ธนบัตร$v$, $v$💴$v$, $v$bank + note = แบงก์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 4, $v$ATM$v$, $v$/ˌeɪtiːˈem/$v$, $v$ตู้เอทีเอ็ม$v$, $v$🏧$v$, $v$เอทีเอ็ม ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 5, $v$salary$v$, $v$/ˈsæləri/$v$, $v$เงินเดือน$v$, $v$💵$v$, $v$แซลารี่ = เงินเดือน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 6, $v$wallet$v$, $v$/ˈwɒlɪt/$v$, $v$กระเป๋าเงิน$v$, $v$👛$v$, $v$วอลเล็ต = กระเป๋าตังค์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 7, $v$save$v$, $v$/seɪv/$v$, $v$เก็บออม$v$, $v$🐖$v$, $v$เซฟ = ออมเงิน$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 8, $v$spend$v$, $v$/spend/$v$, $v$ใช้จ่าย$v$, $v$💸$v$, $v$สเปนด์ = จ่าย$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 9, $v$rich$v$, $v$/rɪtʃ/$v$, $v$รวย$v$, $v$🤑$v$, $v$ริช = รวย$v$, $v$adj.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 10, $v$poor$v$, $v$/pʊr/$v$, $v$จน$v$, $v$😔$v$, $v$พัวร์ = จน$v$, $v$adj.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 11, $v$exchange$v$, $v$/ɪksˈtʃeɪndʒ/$v$, $v$แลกเงิน$v$, $v$💱$v$, $v$เอ็กซ์เชนจ์ = แลก$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 12, $v$credit$v$, $v$/ˈkredɪt/$v$, $v$เครดิต$v$, $v$💳$v$, $v$เครดิต ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 13, $v$tip$v$, $v$/tɪp/$v$, $v$เงินทิป$v$, $v$🪙$v$, $v$ทิป ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$money$v$), 14, $v$account$v$, $v$/əˈkaʊnt/$v$, $v$บัญชี$v$, $v$🧾$v$, $v$แอคเคานต์ = บัญชี$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$money$v$), 1, $v$money$v$, $v$/ˈmʌni/$v$, $v$เงิน$v$, $v$💰$v$, $v$มันนี่ = เงิน$v$, $v$n.$v$, $v$I have no money.$v$, $v$ฉันไม่มีเงิน$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 2, $v$coin$v$, $v$/kɔɪn/$v$, $v$เหรียญ$v$, $v$🪙$v$, $v$คอยน์ = เหรียญ$v$, $v$n.$v$, $v$A gold coin.$v$, $v$เหรียญทอง$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 3, $v$banknote$v$, $v$/ˈbæŋknoʊt/$v$, $v$ธนบัตร$v$, $v$💴$v$, $v$bank + note = แบงก์$v$, $v$n.$v$, $v$A 100-baht banknote.$v$, $v$ธนบัตรร้อยบาท$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 4, $v$ATM$v$, $v$/ˌeɪtiːˈem/$v$, $v$ตู้เอทีเอ็ม$v$, $v$🏧$v$, $v$เอทีเอ็ม ตรงตัว$v$, $v$n.$v$, $v$Find an ATM.$v$, $v$หาตู้เอทีเอ็ม$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 5, $v$salary$v$, $v$/ˈsæləri/$v$, $v$เงินเดือน$v$, $v$💵$v$, $v$แซลารี่ = เงินเดือน$v$, $v$n.$v$, $v$A good salary.$v$, $v$เงินเดือนดี$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 6, $v$wallet$v$, $v$/ˈwɒlɪt/$v$, $v$กระเป๋าเงิน$v$, $v$👛$v$, $v$วอลเล็ต = กระเป๋าตังค์$v$, $v$n.$v$, $v$I lost my wallet.$v$, $v$ฉันทำกระเป๋าเงินหาย$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 7, $v$save$v$, $v$/seɪv/$v$, $v$เก็บออม$v$, $v$🐖$v$, $v$เซฟ = ออมเงิน$v$, $v$v.$v$, $v$I save money.$v$, $v$ฉันเก็บเงิน$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 8, $v$spend$v$, $v$/spend/$v$, $v$ใช้จ่าย$v$, $v$💸$v$, $v$สเปนด์ = จ่าย$v$, $v$v.$v$, $v$Don’t spend too much.$v$, $v$อย่าใช้เงินเยอะ$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 9, $v$rich$v$, $v$/rɪtʃ/$v$, $v$รวย$v$, $v$🤑$v$, $v$ริช = รวย$v$, $v$adj.$v$, $v$He is rich.$v$, $v$เขารวย$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 10, $v$poor$v$, $v$/pʊr/$v$, $v$จน$v$, $v$😔$v$, $v$พัวร์ = จน$v$, $v$adj.$v$, $v$They are poor.$v$, $v$พวกเขาจน$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 11, $v$exchange$v$, $v$/ɪksˈtʃeɪndʒ/$v$, $v$แลกเงิน$v$, $v$💱$v$, $v$เอ็กซ์เชนจ์ = แลก$v$, $v$v.$v$, $v$Exchange money here.$v$, $v$แลกเงินที่นี่$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 12, $v$credit$v$, $v$/ˈkredɪt/$v$, $v$เครดิต$v$, $v$💳$v$, $v$เครดิต ตรงตัว$v$, $v$n.$v$, $v$Pay by credit card.$v$, $v$จ่ายด้วยบัตรเครดิต$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 13, $v$tip$v$, $v$/tɪp/$v$, $v$เงินทิป$v$, $v$🪙$v$, $v$ทิป ตรงตัว$v$, $v$n.$v$, $v$Leave a tip.$v$, $v$ให้ทิป$v$),
+  ((select id from vocab_themes where slug = $v$money$v$), 14, $v$account$v$, $v$/əˈkaʊnt/$v$, $v$บัญชี$v$, $v$🧾$v$, $v$แอคเคานต์ = บัญชี$v$, $v$n.$v$, $v$Open an account.$v$, $v$เปิดบัญชี$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -125,20 +125,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$nature$v$), 1, $v$sea$v$, $v$/siː/$v$, $v$ทะเล$v$, $v$🌊$v$, $v$ซี = ทะเล$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 2, $v$beach$v$, $v$/biːtʃ/$v$, $v$ชายหาด$v$, $v$🏖️$v$, $v$บีช = หาด$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 3, $v$mountain$v$, $v$/ˈmaʊntən/$v$, $v$ภูเขา$v$, $v$⛰️$v$, $v$เมาน์เทน = ภูเขา$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 4, $v$river$v$, $v$/ˈrɪvər/$v$, $v$แม่น้ำ$v$, $v$🏞️$v$, $v$ริเวอร์ = แม่น้ำ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 5, $v$forest$v$, $v$/ˈfɒrɪst/$v$, $v$ป่า$v$, $v$🌲$v$, $v$ฟอเรสต์ = ป่า$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 6, $v$island$v$, $v$/ˈaɪlənd/$v$, $v$เกาะ$v$, $v$🏝️$v$, $v$ไอแลนด์ (s เงียบ)$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 7, $v$sky$v$, $v$/skaɪ/$v$, $v$ท้องฟ้า$v$, $v$🌤️$v$, $v$สกาย = ท้องฟ้า$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 8, $v$moon$v$, $v$/muːn/$v$, $v$พระจันทร์$v$, $v$🌙$v$, $v$มูน = พระจันทร์$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 9, $v$star$v$, $v$/stɑːr/$v$, $v$ดาว$v$, $v$⭐$v$, $v$สตาร์ = ดาว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 10, $v$tree$v$, $v$/triː/$v$, $v$ต้นไม้$v$, $v$🌳$v$, $v$ทรี = ต้นไม้$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 11, $v$flower$v$, $v$/ˈflaʊər/$v$, $v$ดอกไม้$v$, $v$🌸$v$, $v$ฟลาวเวอร์ = ดอกไม้$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 12, $v$wave$v$, $v$/weɪv/$v$, $v$คลื่น$v$, $v$🌊$v$, $v$เวฟ = คลื่น$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 13, $v$sand$v$, $v$/sænd/$v$, $v$ทราย$v$, $v$🏜️$v$, $v$แซนด์ = ทราย$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$nature$v$), 14, $v$lake$v$, $v$/leɪk/$v$, $v$ทะเลสาบ$v$, $v$🏞️$v$, $v$เลค = ทะเลสาบ$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$nature$v$), 1, $v$sea$v$, $v$/siː/$v$, $v$ทะเล$v$, $v$🌊$v$, $v$ซี = ทะเล$v$, $v$n.$v$, $v$The sea is blue.$v$, $v$ทะเลสีฟ้า$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 2, $v$beach$v$, $v$/biːtʃ/$v$, $v$ชายหาด$v$, $v$🏖️$v$, $v$บีช = หาด$v$, $v$n.$v$, $v$Relax on the beach.$v$, $v$พักผ่อนที่ชายหาด$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 3, $v$mountain$v$, $v$/ˈmaʊntən/$v$, $v$ภูเขา$v$, $v$⛰️$v$, $v$เมาน์เทน = ภูเขา$v$, $v$n.$v$, $v$Climb the mountain.$v$, $v$ปีนภูเขา$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 4, $v$river$v$, $v$/ˈrɪvər/$v$, $v$แม่น้ำ$v$, $v$🏞️$v$, $v$ริเวอร์ = แม่น้ำ$v$, $v$n.$v$, $v$Swim in the river.$v$, $v$ว่ายน้ำในแม่น้ำ$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 5, $v$forest$v$, $v$/ˈfɒrɪst/$v$, $v$ป่า$v$, $v$🌲$v$, $v$ฟอเรสต์ = ป่า$v$, $v$n.$v$, $v$A green forest.$v$, $v$ป่าเขียว$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 6, $v$island$v$, $v$/ˈaɪlənd/$v$, $v$เกาะ$v$, $v$🏝️$v$, $v$ไอแลนด์ (s เงียบ)$v$, $v$n.$v$, $v$A small island.$v$, $v$เกาะเล็ก ๆ$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 7, $v$sky$v$, $v$/skaɪ/$v$, $v$ท้องฟ้า$v$, $v$🌤️$v$, $v$สกาย = ท้องฟ้า$v$, $v$n.$v$, $v$The sky is clear.$v$, $v$ท้องฟ้าแจ่มใส$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 8, $v$moon$v$, $v$/muːn/$v$, $v$พระจันทร์$v$, $v$🌙$v$, $v$มูน = พระจันทร์$v$, $v$n.$v$, $v$Look at the moon.$v$, $v$ดูพระจันทร์$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 9, $v$star$v$, $v$/stɑːr/$v$, $v$ดาว$v$, $v$⭐$v$, $v$สตาร์ = ดาว$v$, $v$n.$v$, $v$A bright star.$v$, $v$ดาวสว่าง$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 10, $v$tree$v$, $v$/triː/$v$, $v$ต้นไม้$v$, $v$🌳$v$, $v$ทรี = ต้นไม้$v$, $v$n.$v$, $v$A big tree.$v$, $v$ต้นไม้ใหญ่$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 11, $v$flower$v$, $v$/ˈflaʊər/$v$, $v$ดอกไม้$v$, $v$🌸$v$, $v$ฟลาวเวอร์ = ดอกไม้$v$, $v$n.$v$, $v$A pretty flower.$v$, $v$ดอกไม้สวย$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 12, $v$wave$v$, $v$/weɪv/$v$, $v$คลื่น$v$, $v$🌊$v$, $v$เวฟ = คลื่น$v$, $v$n.$v$, $v$A big wave.$v$, $v$คลื่นใหญ่$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 13, $v$sand$v$, $v$/sænd/$v$, $v$ทราย$v$, $v$🏜️$v$, $v$แซนด์ = ทราย$v$, $v$n.$v$, $v$Soft sand.$v$, $v$ทรายนุ่ม$v$),
+  ((select id from vocab_themes where slug = $v$nature$v$), 14, $v$lake$v$, $v$/leɪk/$v$, $v$ทะเลสาบ$v$, $v$🏞️$v$, $v$เลค = ทะเลสาบ$v$, $v$n.$v$, $v$A calm lake.$v$, $v$ทะเลสาบเงียบสงบ$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -154,20 +154,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$questions$v$), 1, $v$what$v$, $v$/wɒt/$v$, $v$อะไร$v$, $v$❓$v$, $v$ว็อท = อะไร$v$, $v$pron.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 2, $v$where$v$, $v$/wer/$v$, $v$ที่ไหน$v$, $v$📍$v$, $v$แวร์ = ที่ไหน$v$, $v$adv.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 3, $v$when$v$, $v$/wen/$v$, $v$เมื่อไหร่$v$, $v$⏰$v$, $v$เว็น = เมื่อไหร่$v$, $v$adv.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 4, $v$who$v$, $v$/huː/$v$, $v$ใคร$v$, $v$🧑$v$, $v$ฮู = ใคร$v$, $v$pron.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 5, $v$why$v$, $v$/waɪ/$v$, $v$ทำไม$v$, $v$🤔$v$, $v$วาย = ทำไม$v$, $v$adv.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 6, $v$how$v$, $v$/haʊ/$v$, $v$อย่างไร$v$, $v$🛠️$v$, $v$ฮาว = ยังไง$v$, $v$adv.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 7, $v$how much$v$, $v$/haʊ mʌtʃ/$v$, $v$ราคาเท่าไร$v$, $v$💰$v$, $v$how + much = เท่าไร$v$, $v$phr.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 8, $v$how many$v$, $v$/haʊ ˈmeni/$v$, $v$กี่อัน$v$, $v$🔢$v$, $v$how + many = กี่ชิ้น$v$, $v$phr.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 9, $v$which$v$, $v$/wɪtʃ/$v$, $v$อันไหน$v$, $v$🔀$v$, $v$วิช = อันไหน$v$, $v$pron.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 10, $v$can$v$, $v$/kæn/$v$, $v$สามารถ$v$, $v$🙋$v$, $v$แคน = ทำได้$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 11, $v$want$v$, $v$/wɒnt/$v$, $v$ต้องการ$v$, $v$🙏$v$, $v$ว็อนท์ = อยากได้$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 12, $v$need$v$, $v$/niːd/$v$, $v$จำเป็น$v$, $v$❗$v$, $v$นีด = ต้องการ$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 13, $v$do$v$, $v$/duː/$v$, $v$ทำ$v$, $v$✅$v$, $v$ดู = ทำ$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$questions$v$), 14, $v$will$v$, $v$/wɪl/$v$, $v$จะ (อนาคต)$v$, $v$🔮$v$, $v$วิล = จะ$v$, $v$v.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$questions$v$), 1, $v$what$v$, $v$/wɒt/$v$, $v$อะไร$v$, $v$❓$v$, $v$ว็อท = อะไร$v$, $v$pron.$v$, $v$What is this?$v$, $v$นี่คืออะไร$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 2, $v$where$v$, $v$/wer/$v$, $v$ที่ไหน$v$, $v$📍$v$, $v$แวร์ = ที่ไหน$v$, $v$adv.$v$, $v$Where are you?$v$, $v$คุณอยู่ที่ไหน$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 3, $v$when$v$, $v$/wen/$v$, $v$เมื่อไหร่$v$, $v$⏰$v$, $v$เว็น = เมื่อไหร่$v$, $v$adv.$v$, $v$When do we start?$v$, $v$เริ่มเมื่อไหร่$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 4, $v$who$v$, $v$/huː/$v$, $v$ใคร$v$, $v$🧑$v$, $v$ฮู = ใคร$v$, $v$pron.$v$, $v$Who is that?$v$, $v$นั่นใคร$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 5, $v$why$v$, $v$/waɪ/$v$, $v$ทำไม$v$, $v$🤔$v$, $v$วาย = ทำไม$v$, $v$adv.$v$, $v$Why not?$v$, $v$ทำไมล่ะ$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 6, $v$how$v$, $v$/haʊ/$v$, $v$อย่างไร$v$, $v$🛠️$v$, $v$ฮาว = ยังไง$v$, $v$adv.$v$, $v$How does it work?$v$, $v$มันทำงานยังไง$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 7, $v$how much$v$, $v$/haʊ mʌtʃ/$v$, $v$ราคาเท่าไร$v$, $v$💰$v$, $v$how + much = เท่าไร$v$, $v$phr.$v$, $v$How much is it?$v$, $v$ราคาเท่าไร$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 8, $v$how many$v$, $v$/haʊ ˈmeni/$v$, $v$กี่อัน$v$, $v$🔢$v$, $v$how + many = กี่ชิ้น$v$, $v$phr.$v$, $v$How many do you want?$v$, $v$เอากี่อัน$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 9, $v$which$v$, $v$/wɪtʃ/$v$, $v$อันไหน$v$, $v$🔀$v$, $v$วิช = อันไหน$v$, $v$pron.$v$, $v$Which one?$v$, $v$อันไหน$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 10, $v$can$v$, $v$/kæn/$v$, $v$สามารถ$v$, $v$🙋$v$, $v$แคน = ทำได้$v$, $v$v.$v$, $v$Can you help me?$v$, $v$ช่วยฉันได้ไหม$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 11, $v$want$v$, $v$/wɒnt/$v$, $v$ต้องการ$v$, $v$🙏$v$, $v$ว็อนท์ = อยากได้$v$, $v$v.$v$, $v$I want this.$v$, $v$ฉันอยากได้อันนี้$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 12, $v$need$v$, $v$/niːd/$v$, $v$จำเป็น$v$, $v$❗$v$, $v$นีด = ต้องการ$v$, $v$v.$v$, $v$I need help.$v$, $v$ฉันต้องการความช่วยเหลือ$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 13, $v$do$v$, $v$/duː/$v$, $v$ทำ$v$, $v$✅$v$, $v$ดู = ทำ$v$, $v$v.$v$, $v$What do you do?$v$, $v$คุณทำงานอะไร$v$),
+  ((select id from vocab_themes where slug = $v$questions$v$), 14, $v$will$v$, $v$/wɪl/$v$, $v$จะ (อนาคต)$v$, $v$🔮$v$, $v$วิล = จะ$v$, $v$v.$v$, $v$I will call you.$v$, $v$ฉันจะโทรหาคุณ$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -183,20 +183,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$furniture$v$), 1, $v$sofa$v$, $v$/ˈsoʊfə/$v$, $v$โซฟา$v$, $v$🛋️$v$, $v$โซฟา ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 2, $v$lamp$v$, $v$/læmp/$v$, $v$โคมไฟ$v$, $v$💡$v$, $v$แลมป์ = โคมไฟ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 3, $v$mirror$v$, $v$/ˈmɪrər/$v$, $v$กระจกเงา$v$, $v$🪞$v$, $v$มิเรอร์ = กระจก$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 4, $v$shelf$v$, $v$/ʃelf/$v$, $v$ชั้นวางของ$v$, $v$🗄️$v$, $v$เชลฟ์ = ชั้นวาง$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 5, $v$curtain$v$, $v$/ˈkɜːrtn/$v$, $v$ผ้าม่าน$v$, $v$🪟$v$, $v$เคอร์เทน = ม่าน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 6, $v$carpet$v$, $v$/ˈkɑːrpɪt/$v$, $v$พรม$v$, $v$🧶$v$, $v$คาร์เพ็ต = พรม$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 7, $v$pillow$v$, $v$/ˈpɪloʊ/$v$, $v$หมอน$v$, $v$🛏️$v$, $v$พิลโล่ = หมอน$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 8, $v$drawer$v$, $v$/drɔːr/$v$, $v$ลิ้นชัก$v$, $v$🗄️$v$, $v$ดรอเออร์ = ลิ้นชัก$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 9, $v$sink$v$, $v$/sɪŋk/$v$, $v$อ่างล้าง$v$, $v$🚰$v$, $v$ซิงค์ = อ่างล้าง$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 10, $v$toilet$v$, $v$/ˈtɔɪlət/$v$, $v$ชักโครก$v$, $v$🚽$v$, $v$ทอยเล็ต = ส้วม$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 11, $v$stairs$v$, $v$/sterz/$v$, $v$บันได$v$, $v$🪜$v$, $v$สแตร์ส = บันได$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 12, $v$closet$v$, $v$/ˈklɒzɪt/$v$, $v$ตู้เสื้อผ้า$v$, $v$🚪$v$, $v$คลอเซ็ต = ตู้เสื้อผ้า$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 13, $v$bathtub$v$, $v$/ˈbæθtʌb/$v$, $v$อ่างอาบน้ำ$v$, $v$🛁$v$, $v$bath + tub = อ่างอาบน้ำ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$furniture$v$), 14, $v$cupboard$v$, $v$/ˈkʌbərd/$v$, $v$ตู้ถ้วยชาม$v$, $v$🗄️$v$, $v$คับเบิร์ด = ตู้เก็บของ$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$furniture$v$), 1, $v$sofa$v$, $v$/ˈsoʊfə/$v$, $v$โซฟา$v$, $v$🛋️$v$, $v$โซฟา ตรงตัว$v$, $v$n.$v$, $v$Sit on the sofa.$v$, $v$นั่งบนโซฟา$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 2, $v$lamp$v$, $v$/læmp/$v$, $v$โคมไฟ$v$, $v$💡$v$, $v$แลมป์ = โคมไฟ$v$, $v$n.$v$, $v$Turn on the lamp.$v$, $v$เปิดโคมไฟ$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 3, $v$mirror$v$, $v$/ˈmɪrər/$v$, $v$กระจกเงา$v$, $v$🪞$v$, $v$มิเรอร์ = กระจก$v$, $v$n.$v$, $v$Look in the mirror.$v$, $v$ส่องกระจก$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 4, $v$shelf$v$, $v$/ʃelf/$v$, $v$ชั้นวางของ$v$, $v$🗄️$v$, $v$เชลฟ์ = ชั้นวาง$v$, $v$n.$v$, $v$Put it on the shelf.$v$, $v$วางบนชั้น$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 5, $v$curtain$v$, $v$/ˈkɜːrtn/$v$, $v$ผ้าม่าน$v$, $v$🪟$v$, $v$เคอร์เทน = ม่าน$v$, $v$n.$v$, $v$Open the curtain.$v$, $v$เปิดผ้าม่าน$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 6, $v$carpet$v$, $v$/ˈkɑːrpɪt/$v$, $v$พรม$v$, $v$🧶$v$, $v$คาร์เพ็ต = พรม$v$, $v$n.$v$, $v$A soft carpet.$v$, $v$พรมนุ่ม$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 7, $v$pillow$v$, $v$/ˈpɪloʊ/$v$, $v$หมอน$v$, $v$🛏️$v$, $v$พิลโล่ = หมอน$v$, $v$n.$v$, $v$A soft pillow.$v$, $v$หมอนนุ่ม$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 8, $v$drawer$v$, $v$/drɔːr/$v$, $v$ลิ้นชัก$v$, $v$🗄️$v$, $v$ดรอเออร์ = ลิ้นชัก$v$, $v$n.$v$, $v$Open the drawer.$v$, $v$เปิดลิ้นชัก$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 9, $v$sink$v$, $v$/sɪŋk/$v$, $v$อ่างล้าง$v$, $v$🚰$v$, $v$ซิงค์ = อ่างล้าง$v$, $v$n.$v$, $v$Wash it in the sink.$v$, $v$ล้างในอ่าง$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 10, $v$toilet$v$, $v$/ˈtɔɪlət/$v$, $v$ชักโครก$v$, $v$🚽$v$, $v$ทอยเล็ต = ส้วม$v$, $v$n.$v$, $v$Where is the toilet?$v$, $v$ห้องน้ำอยู่ไหน$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 11, $v$stairs$v$, $v$/sterz/$v$, $v$บันได$v$, $v$🪜$v$, $v$สแตร์ส = บันได$v$, $v$n.$v$, $v$Use the stairs.$v$, $v$ใช้บันได$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 12, $v$closet$v$, $v$/ˈklɒzɪt/$v$, $v$ตู้เสื้อผ้า$v$, $v$🚪$v$, $v$คลอเซ็ต = ตู้เสื้อผ้า$v$, $v$n.$v$, $v$Clothes in the closet.$v$, $v$เสื้อผ้าในตู้$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 13, $v$bathtub$v$, $v$/ˈbæθtʌb/$v$, $v$อ่างอาบน้ำ$v$, $v$🛁$v$, $v$bath + tub = อ่างอาบน้ำ$v$, $v$n.$v$, $v$Fill the bathtub.$v$, $v$เติมน้ำในอ่างอาบน้ำ$v$),
+  ((select id from vocab_themes where slug = $v$furniture$v$), 14, $v$cupboard$v$, $v$/ˈkʌbərd/$v$, $v$ตู้ถ้วยชาม$v$, $v$🗄️$v$, $v$คับเบิร์ด = ตู้เก็บของ$v$, $v$n.$v$, $v$Cups in the cupboard.$v$, $v$ถ้วยในตู้$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -212,20 +212,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$cooking$v$), 1, $v$cook$v$, $v$/kʊk/$v$, $v$ทำอาหาร$v$, $v$🍳$v$, $v$คุก = ทำอาหาร$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 2, $v$cut$v$, $v$/kʌt/$v$, $v$ตัด/หั่น$v$, $v$🔪$v$, $v$คัท = ตัด$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 3, $v$fry$v$, $v$/fraɪ/$v$, $v$ทอด$v$, $v$🍳$v$, $v$ฟราย = ทอด$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 4, $v$boil$v$, $v$/bɔɪl/$v$, $v$ต้ม$v$, $v$♨️$v$, $v$บอยล์ = ต้ม$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 5, $v$bake$v$, $v$/beɪk/$v$, $v$อบ$v$, $v$🍞$v$, $v$เบก = อบ$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 6, $v$mix$v$, $v$/mɪks/$v$, $v$ผสม$v$, $v$🥣$v$, $v$มิกซ์ = ผสม$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 7, $v$wash$v$, $v$/wɒʃ/$v$, $v$ล้าง$v$, $v$🚰$v$, $v$ว็อช = ล้าง$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 8, $v$peel$v$, $v$/piːl/$v$, $v$ปอกเปลือก$v$, $v$🍌$v$, $v$พีล = ปอก$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 9, $v$pour$v$, $v$/pɔːr/$v$, $v$เท/ริน$v$, $v$🫗$v$, $v$พอร์ = เท$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 10, $v$taste$v$, $v$/teɪst/$v$, $v$ชิม$v$, $v$😋$v$, $v$เทสต์ = ชิม$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 11, $v$add$v$, $v$/æd/$v$, $v$ใส่/เพิ่ม$v$, $v$➕$v$, $v$แอด = เพิ่ม$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 12, $v$stir$v$, $v$/stɜːr/$v$, $v$คน/คนให้เข้ากัน$v$, $v$🥄$v$, $v$สเทอร์ = คน$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 13, $v$chop$v$, $v$/tʃɒp/$v$, $v$สับ$v$, $v$🔪$v$, $v$ช็อป = สับ$v$, $v$v.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$cooking$v$), 14, $v$serve$v$, $v$/sɜːrv/$v$, $v$เสิร์ฟ$v$, $v$🍽️$v$, $v$เสิร์ฟ ตรงตัว$v$, $v$v.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$cooking$v$), 1, $v$cook$v$, $v$/kʊk/$v$, $v$ทำอาหาร$v$, $v$🍳$v$, $v$คุก = ทำอาหาร$v$, $v$v.$v$, $v$He is a good cook.$v$, $v$เขาเป็นพ่อครัวที่ดี$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 2, $v$cut$v$, $v$/kʌt/$v$, $v$ตัด/หั่น$v$, $v$🔪$v$, $v$คัท = ตัด$v$, $v$v.$v$, $v$Cut the vegetables.$v$, $v$หั่นผัก$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 3, $v$fry$v$, $v$/fraɪ/$v$, $v$ทอด$v$, $v$🍳$v$, $v$ฟราย = ทอด$v$, $v$v.$v$, $v$Fry the egg.$v$, $v$ทอดไข่$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 4, $v$boil$v$, $v$/bɔɪl/$v$, $v$ต้ม$v$, $v$♨️$v$, $v$บอยล์ = ต้ม$v$, $v$v.$v$, $v$Boil the water.$v$, $v$ต้มน้ำ$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 5, $v$bake$v$, $v$/beɪk/$v$, $v$อบ$v$, $v$🍞$v$, $v$เบก = อบ$v$, $v$v.$v$, $v$Bake a cake.$v$, $v$อบเค้ก$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 6, $v$mix$v$, $v$/mɪks/$v$, $v$ผสม$v$, $v$🥣$v$, $v$มิกซ์ = ผสม$v$, $v$v.$v$, $v$Mix it well.$v$, $v$ผสมให้เข้ากัน$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 7, $v$wash$v$, $v$/wɒʃ/$v$, $v$ล้าง$v$, $v$🚰$v$, $v$ว็อช = ล้าง$v$, $v$v.$v$, $v$Wash the rice.$v$, $v$ล้างข้าว$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 8, $v$peel$v$, $v$/piːl/$v$, $v$ปอกเปลือก$v$, $v$🍌$v$, $v$พีล = ปอก$v$, $v$v.$v$, $v$Peel the banana.$v$, $v$ปอกกล้วย$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 9, $v$pour$v$, $v$/pɔːr/$v$, $v$เท/ริน$v$, $v$🫗$v$, $v$พอร์ = เท$v$, $v$v.$v$, $v$Pour the milk.$v$, $v$เทนม$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 10, $v$taste$v$, $v$/teɪst/$v$, $v$ชิม$v$, $v$😋$v$, $v$เทสต์ = ชิม$v$, $v$v.$v$, $v$Taste the soup.$v$, $v$ชิมซุป$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 11, $v$add$v$, $v$/æd/$v$, $v$ใส่/เพิ่ม$v$, $v$➕$v$, $v$แอด = เพิ่ม$v$, $v$v.$v$, $v$Add some salt.$v$, $v$ใส่เกลือหน่อย$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 12, $v$stir$v$, $v$/stɜːr/$v$, $v$คน/คนให้เข้ากัน$v$, $v$🥄$v$, $v$สเทอร์ = คน$v$, $v$v.$v$, $v$Stir the soup.$v$, $v$คนซุป$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 13, $v$chop$v$, $v$/tʃɒp/$v$, $v$สับ$v$, $v$🔪$v$, $v$ช็อป = สับ$v$, $v$v.$v$, $v$Chop the onion.$v$, $v$สับหัวหอม$v$),
+  ((select id from vocab_themes where slug = $v$cooking$v$), 14, $v$serve$v$, $v$/sɜːrv/$v$, $v$เสิร์ฟ$v$, $v$🍽️$v$, $v$เสิร์ฟ ตรงตัว$v$, $v$v.$v$, $v$Serve it hot.$v$, $v$เสิร์ฟตอนร้อน$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,
@@ -241,20 +241,20 @@ on conflict (slug) do update set
 insert into vocab_words
   (theme_id, order_index, word, ipa, thai, image_emoji, hint_th, part_of_speech, example_en, example_th)
 values
-  ((select id from vocab_themes where slug = $v$drinks$v$), 1, $v$water$v$, $v$/ˈwɔːtər/$v$, $v$น้ำเปล่า$v$, $v$💧$v$, $v$วอเตอร์ = น้ำ$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 2, $v$juice$v$, $v$/dʒuːs/$v$, $v$น้ำผลไม้$v$, $v$🧃$v$, $v$จูซ = น้ำผลไม้$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 3, $v$soda$v$, $v$/ˈsoʊdə/$v$, $v$น้ำอัดลม$v$, $v$🥤$v$, $v$โซดา = น้ำอัดลม$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 4, $v$beer$v$, $v$/bɪr/$v$, $v$เบียร์$v$, $v$🍺$v$, $v$เบียร์ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 5, $v$wine$v$, $v$/waɪn/$v$, $v$ไวน์$v$, $v$🍷$v$, $v$ไวน์ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 6, $v$smoothie$v$, $v$/ˈsmuːði/$v$, $v$สมูทตี้$v$, $v$🍹$v$, $v$สมูทตี้ ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 7, $v$milkshake$v$, $v$/ˈmɪlkʃeɪk/$v$, $v$มิลค์เชค$v$, $v$🥤$v$, $v$milk + shake = ปั่นนม$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 8, $v$lemonade$v$, $v$/ˌleməˈneɪd/$v$, $v$น้ำมะนาว$v$, $v$🍋$v$, $v$lemon + ade = น้ำมะนาว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 9, $v$cola$v$, $v$/ˈkoʊlə/$v$, $v$โคล่า$v$, $v$🥤$v$, $v$โคล่า ตรงตัว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 10, $v$coconut water$v$, $v$/ˈkoʊkənʌt ˈwɔːtər/$v$, $v$น้ำมะพร้าว$v$, $v$🥥$v$, $v$coconut + water$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 11, $v$ice$v$, $v$/aɪs/$v$, $v$น้ำแข็ง$v$, $v$🧊$v$, $v$ไอซ์ = น้ำแข็ง$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 12, $v$soy milk$v$, $v$/sɔɪ mɪlk/$v$, $v$นมถั่วเหลือง$v$, $v$🥛$v$, $v$soy + milk = นมถั่ว$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 13, $v$hot chocolate$v$, $v$/hɒt ˈtʃɒklət/$v$, $v$ช็อกโกแลตร้อน$v$, $v$☕$v$, $v$hot + chocolate$v$, $v$n.$v$, null, null),
-  ((select id from vocab_themes where slug = $v$drinks$v$), 14, $v$iced tea$v$, $v$/aɪst tiː/$v$, $v$ชาเย็น$v$, $v$🧋$v$, $v$iced + tea = ชาเย็น$v$, $v$n.$v$, null, null)
+  ((select id from vocab_themes where slug = $v$drinks$v$), 1, $v$water$v$, $v$/ˈwɔːtər/$v$, $v$น้ำเปล่า$v$, $v$💧$v$, $v$วอเตอร์ = น้ำ$v$, $v$n.$v$, $v$Drink some water.$v$, $v$ดื่มน้ำ$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 2, $v$juice$v$, $v$/dʒuːs/$v$, $v$น้ำผลไม้$v$, $v$🧃$v$, $v$จูซ = น้ำผลไม้$v$, $v$n.$v$, $v$Orange juice, please.$v$, $v$ขอน้ำส้ม$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 3, $v$soda$v$, $v$/ˈsoʊdə/$v$, $v$น้ำอัดลม$v$, $v$🥤$v$, $v$โซดา = น้ำอัดลม$v$, $v$n.$v$, $v$A cold soda.$v$, $v$น้ำอัดลมเย็น ๆ$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 4, $v$beer$v$, $v$/bɪr/$v$, $v$เบียร์$v$, $v$🍺$v$, $v$เบียร์ ตรงตัว$v$, $v$n.$v$, $v$A cold beer.$v$, $v$เบียร์เย็น$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 5, $v$wine$v$, $v$/waɪn/$v$, $v$ไวน์$v$, $v$🍷$v$, $v$ไวน์ ตรงตัว$v$, $v$n.$v$, $v$A glass of wine.$v$, $v$ไวน์แก้วหนึ่ง$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 6, $v$smoothie$v$, $v$/ˈsmuːði/$v$, $v$สมูทตี้$v$, $v$🍹$v$, $v$สมูทตี้ ตรงตัว$v$, $v$n.$v$, $v$A mango smoothie.$v$, $v$สมูทตี้มะม่วง$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 7, $v$milkshake$v$, $v$/ˈmɪlkʃeɪk/$v$, $v$มิลค์เชค$v$, $v$🥤$v$, $v$milk + shake = ปั่นนม$v$, $v$n.$v$, $v$A chocolate milkshake.$v$, $v$มิลค์เชคช็อกโกแลต$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 8, $v$lemonade$v$, $v$/ˌleməˈneɪd/$v$, $v$น้ำมะนาว$v$, $v$🍋$v$, $v$lemon + ade = น้ำมะนาว$v$, $v$n.$v$, $v$Fresh lemonade.$v$, $v$น้ำมะนาวสด$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 9, $v$cola$v$, $v$/ˈkoʊlə/$v$, $v$โคล่า$v$, $v$🥤$v$, $v$โคล่า ตรงตัว$v$, $v$n.$v$, $v$A can of cola.$v$, $v$โคล่ากระป๋องหนึ่ง$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 10, $v$coconut water$v$, $v$/ˈkoʊkənʌt ˈwɔːtər/$v$, $v$น้ำมะพร้าว$v$, $v$🥥$v$, $v$coconut + water$v$, $v$n.$v$, $v$Cold coconut water.$v$, $v$น้ำมะพร้าวเย็น$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 11, $v$ice$v$, $v$/aɪs/$v$, $v$น้ำแข็ง$v$, $v$🧊$v$, $v$ไอซ์ = น้ำแข็ง$v$, $v$n.$v$, $v$Add some ice.$v$, $v$ใส่น้ำแข็งหน่อย$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 12, $v$soy milk$v$, $v$/sɔɪ mɪlk/$v$, $v$นมถั่วเหลือง$v$, $v$🥛$v$, $v$soy + milk = นมถั่ว$v$, $v$n.$v$, $v$A glass of soy milk.$v$, $v$นมถั่วเหลืองแก้วหนึ่ง$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 13, $v$hot chocolate$v$, $v$/hɒt ˈtʃɒklət/$v$, $v$ช็อกโกแลตร้อน$v$, $v$☕$v$, $v$hot + chocolate$v$, $v$n.$v$, $v$A warm hot chocolate.$v$, $v$ช็อกโกแลตร้อนอุ่น ๆ$v$),
+  ((select id from vocab_themes where slug = $v$drinks$v$), 14, $v$iced tea$v$, $v$/aɪst tiː/$v$, $v$ชาเย็น$v$, $v$🧋$v$, $v$iced + tea = ชาเย็น$v$, $v$n.$v$, $v$Sweet iced tea.$v$, $v$ชาเย็นหวาน$v$)
 on conflict (theme_id, word) do update set
   order_index = excluded.order_index, ipa = excluded.ipa, thai = excluded.thai,
   image_emoji = excluded.image_emoji, hint_th = excluded.hint_th,

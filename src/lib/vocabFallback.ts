@@ -682,8 +682,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "pass (ผ่าน) + port (ท่า) = เอกสารผ่านด่าน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Here is my passport.",
+    "example_th": "นี่หนังสือเดินทางครับ"
   },
   {
     "id": "airport-2",
@@ -696,8 +696,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทิค-เค็ท “ตั๋ว” ที่ต้องฉีก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Show your ticket.",
+    "example_th": "แสดงตั๋วด้วยครับ"
   },
   {
     "id": "airport-3",
@@ -710,8 +710,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ลัก-กิจ กระเป๋าหนักที่ต้อง “ลาก” ไป",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is my luggage?",
+    "example_th": "กระเป๋าฉันอยู่ไหน"
   },
   {
     "id": "airport-4",
@@ -724,8 +724,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เกท = “เกต” ประตู",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to gate five.",
+    "example_th": "ไปที่ประตู 5"
   },
   {
     "id": "airport-5",
@@ -738,8 +738,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซีท = ที่ “ซีท” นั่ง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This is my seat.",
+    "example_th": "นี่ที่นั่งของฉัน"
   },
   {
     "id": "airport-6",
@@ -752,8 +752,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไฟล์ท เครื่อง “ฟลาย” บิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My flight is at noon.",
+    "example_th": "เที่ยวบินฉันเที่ยงวัน"
   },
   {
     "id": "airport-7",
@@ -766,8 +766,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดิ-เลย์ = “ดีเลย์” เครื่องสาย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The flight has a delay.",
+    "example_th": "เที่ยวบินล่าช้า"
   },
   {
     "id": "airport-8",
@@ -780,8 +780,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "de + part = ออก “พาร์ท” จากไป",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Check the departure time.",
+    "example_th": "เช็กเวลาขาออก"
   },
   {
     "id": "airport-9",
@@ -794,8 +794,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "arrive (มาถึง) + al = การมาถึง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The arrival gate is here.",
+    "example_th": "ประตูขาเข้าอยู่ทางนี้"
   },
   {
     "id": "airport-10",
@@ -808,8 +808,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คัส-เทิมส์ ด่านตรวจของเข้าเมือง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go through customs.",
+    "example_th": "ผ่านด่านศุลกากร"
   },
   {
     "id": "airport-11",
@@ -822,8 +822,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทรอล-ลี่ รถเข็น “ทอลลี่”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a trolley.",
+    "example_th": "ฉันต้องการรถเข็น"
   },
   {
     "id": "airport-12",
@@ -836,8 +836,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "board (ขึ้นเครื่อง) + pass (บัตรผ่าน)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Show your boarding pass.",
+    "example_th": "แสดงบัตรขึ้นเครื่อง"
   },
   {
     "id": "hotel-1",
@@ -850,8 +850,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "รี-เซ็พ-ชั่น เคาน์เตอร์ “รับ” แขก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Ask at reception.",
+    "example_th": "ถามที่แผนกต้อนรับ"
   },
   {
     "id": "hotel-2",
@@ -864,8 +864,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คีย์ = “คีย์” กุญแจ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Here is your key.",
+    "example_th": "นี่กุญแจของคุณ"
   },
   {
     "id": "hotel-3",
@@ -878,8 +878,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เบด = “เบด” เตียงนอน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The bed is soft.",
+    "example_th": "เตียงนุ่มดี"
   },
   {
     "id": "hotel-4",
@@ -892,8 +892,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "bath (อาบน้ำ) + room (ห้อง)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is the bathroom?",
+    "example_th": "ห้องน้ำอยู่ไหน"
   },
   {
     "id": "hotel-5",
@@ -906,8 +906,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ชาว-เออร์ ฝักบัว “ฉาว” น้ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The shower is warm.",
+    "example_th": "ฝักบัวน้ำอุ่น"
   },
   {
     "id": "hotel-6",
@@ -920,8 +920,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โซพ ลื่น ๆ มีฟอง “โซป”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "There is no soap.",
+    "example_th": "ไม่มีสบู่"
   },
   {
     "id": "hotel-7",
@@ -934,8 +934,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "break (หยุด) + fast (อดอาหาร) = มื้อเช้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Breakfast is at seven.",
+    "example_th": "อาหารเช้าตอนเจ็ดโมง"
   },
   {
     "id": "hotel-8",
@@ -948,8 +948,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วาย-ฟาย = “ไวไฟ” ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What is the wifi password?",
+    "example_th": "รหัสไวไฟอะไร"
   },
   {
     "id": "hotel-9",
@@ -962,8 +962,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "check (เช็ค) + out (ออก) = คืนห้อง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Checkout is at noon.",
+    "example_th": "เช็คเอาท์เที่ยงวัน"
   },
   {
     "id": "hotel-10",
@@ -976,8 +976,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอล-ลิ-เว-เตอร์ ยกตัวขึ้น “เลเวล”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Take the elevator.",
+    "example_th": "ขึ้นลิฟต์"
   },
   {
     "id": "hotel-11",
@@ -990,8 +990,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แบลง-เค็ท ผ้าห่ม “แบลง” คลุมตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a blanket.",
+    "example_th": "ขอผ้าห่มหน่อย"
   },
   {
     "id": "hotel-12",
@@ -1004,8 +1004,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ลัก-กิจ กระเป๋าที่ต้อง “ลาก”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Keep my luggage please.",
+    "example_th": "ฝากกระเป๋าด้วยครับ"
   },
   {
     "id": "restaurant-1",
@@ -1018,8 +1018,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เม็น-หนู = “เมนู” ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Can I see the menu?",
+    "example_th": "ขอดูเมนูได้ไหม"
   },
   {
     "id": "restaurant-2",
@@ -1032,8 +1032,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เท-เบิ่ล = “เทเบิล” โต๊ะ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A table for two.",
+    "example_th": "โต๊ะสำหรับสองคน"
   },
   {
     "id": "restaurant-3",
@@ -1046,8 +1046,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟอร์ค = “ฟอร์ก” ส้อมมีง่าม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a fork.",
+    "example_th": "ขอส้อมหน่อย"
   },
   {
     "id": "restaurant-4",
@@ -1060,8 +1060,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สปูน = “สปูน” ช้อน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is my spoon?",
+    "example_th": "ช้อนฉันอยู่ไหน"
   },
   {
     "id": "restaurant-5",
@@ -1074,8 +1074,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไนฟ์ (k ไม่ออกเสียง) “ไนฟ์” มีด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The knife is sharp.",
+    "example_th": "มีดคม"
   },
   {
     "id": "restaurant-6",
@@ -1088,8 +1088,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เพลท จานแบน “เพลท”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Put it on the plate.",
+    "example_th": "ใส่ในจาน"
   },
   {
     "id": "restaurant-7",
@@ -1102,8 +1102,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แนพ-คิน ไว้ “แนบ” เช็ดปาก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pass a napkin.",
+    "example_th": "ส่งกระดาษเช็ดปาก"
   },
   {
     "id": "restaurant-8",
@@ -1116,8 +1116,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอ-เทอร์ = น้ำ “วอเตอร์”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A glass of water.",
+    "example_th": "น้ำเปล่าแก้วนึง"
   },
   {
     "id": "restaurant-9",
@@ -1130,8 +1130,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บิล = “บิล” ใบเก็บเงิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Can I get the bill?",
+    "example_th": "ขอบิลหน่อย"
   },
   {
     "id": "restaurant-10",
@@ -1144,8 +1144,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ออ-เดอร์ = “ออเดอร์” สั่ง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I want to order.",
+    "example_th": "ฉันอยากสั่งอาหาร"
   },
   {
     "id": "restaurant-11",
@@ -1158,8 +1158,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สไป-ซี่ เผ็ด “ซี้ด ๆ” (spice เครื่องเทศ)",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is too spicy.",
+    "example_th": "เผ็ดเกินไป"
   },
   {
     "id": "restaurant-12",
@@ -1172,8 +1172,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดิ-ลิ-เชิส อร่อยจน “ดี๊ดี”",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The food is delicious.",
+    "example_th": "อาหารอร่อย"
   },
   {
     "id": "coffee-1",
@@ -1186,8 +1186,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คอฟ-ฟี่ = “กาแฟ” ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "One coffee please.",
+    "example_th": "ขอกาแฟหนึ่งที่"
   },
   {
     "id": "coffee-2",
@@ -1200,8 +1200,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ที = “ที” ชาร้อน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I like green tea.",
+    "example_th": "ฉันชอบชาเขียว"
   },
   {
     "id": "coffee-3",
@@ -1214,8 +1214,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มิลค์ = “มิลค์” นม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add some milk.",
+    "example_th": "ใส่นมหน่อย"
   },
   {
     "id": "coffee-4",
@@ -1228,8 +1228,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ชู-เกอร์ = “ชูการ์” หวาน ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "No sugar please.",
+    "example_th": "ไม่ใส่น้ำตาลครับ"
   },
   {
     "id": "coffee-5",
@@ -1242,8 +1242,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไอซ์ = น้ำแข็ง “ไอศ”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "With ice please.",
+    "example_th": "ใส่น้ำแข็งด้วย"
   },
   {
     "id": "coffee-6",
@@ -1256,8 +1256,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮอท = “ฮอต” ร้อน ๆ",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A hot latte.",
+    "example_th": "ลาเต้ร้อน"
   },
   {
     "id": "coffee-7",
@@ -1270,8 +1270,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ice + ed = ใส่น้ำแข็งแล้ว",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "An iced coffee.",
+    "example_th": "กาแฟเย็น"
   },
   {
     "id": "coffee-8",
@@ -1284,8 +1284,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คัพ = “คัพ” ถ้วย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A big cup.",
+    "example_th": "ถ้วยใหญ่"
   },
   {
     "id": "coffee-9",
@@ -1298,8 +1298,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เค้ก = “เค้ก” ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This cake is sweet.",
+    "example_th": "เค้กนี้หวาน"
   },
   {
     "id": "coffee-10",
@@ -1312,8 +1312,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คุก-กี้ = “คุกกี้” ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I want a cookie.",
+    "example_th": "ขอคุกกี้"
   },
   {
     "id": "coffee-11",
@@ -1326,8 +1326,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ออ-เดอร์ = “ออเดอร์” สั่ง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Order at the counter.",
+    "example_th": "สั่งที่เคาน์เตอร์"
   },
   {
     "id": "coffee-12",
@@ -1340,8 +1340,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไซซ์ = “ไซซ์” ขนาด S/M/L",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What size?",
+    "example_th": "ขนาดไหน"
   },
   {
     "id": "body-1",
@@ -1354,8 +1354,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เฮด = “เฮด” หัว (หัวหน้า = head)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My head hurts.",
+    "example_th": "ปวดหัว"
   },
   {
     "id": "body-2",
@@ -1368,8 +1368,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อาย = “อาย” ตา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Close your eyes.",
+    "example_th": "หลับตา"
   },
   {
     "id": "body-3",
@@ -1382,8 +1382,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอียร์ = หู เอียงหู “เอียร์” ฟัง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My ears hurt.",
+    "example_th": "เจ็บหู"
   },
   {
     "id": "body-4",
@@ -1396,8 +1396,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โนส = จมูก “โนส” ไว้ดม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Blow your nose.",
+    "example_th": "สั่งน้ำมูก"
   },
   {
     "id": "body-5",
@@ -1410,8 +1410,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมาธ์ = ปาก ไว้ “เม้าท์” คุย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open your mouth.",
+    "example_th": "อ้าปาก"
   },
   {
     "id": "body-6",
@@ -1424,8 +1424,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แฮนด์ = มือ (แฮนด์รถจับด้วยมือ)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wash your hands.",
+    "example_th": "ล้างมือ"
   },
   {
     "id": "body-7",
@@ -1438,8 +1438,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อาร์ม = แขน เกร็ง “อาร์ม”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My arm is strong.",
+    "example_th": "แขนฉันแข็งแรง"
   },
   {
     "id": "body-8",
@@ -1452,8 +1452,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เล็ก = ขา (คิดถึง “เลก” ต่อขา)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My leg hurts.",
+    "example_th": "ปวดขา"
   },
   {
     "id": "body-9",
@@ -1466,8 +1466,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟุท = เท้า (1 ฟุต วัดจากเท้า)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My foot is cold.",
+    "example_th": "เท้าเย็น"
   },
   {
     "id": "body-10",
@@ -1480,8 +1480,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แฮร์ = ผม (แฮร์สไตล์ ทรงผม)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Her hair is long.",
+    "example_th": "ผมเธอยาว"
   },
   {
     "id": "body-11",
@@ -1494,8 +1494,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทูธ = ฟัน (ทูธเพสต์ = ยาสีฟัน)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My tooth hurts.",
+    "example_th": "ปวดฟัน"
   },
   {
     "id": "body-12",
@@ -1508,8 +1508,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮาร์ท = หัวใจ ❤️ (ฮาร์ต)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My heart is beating.",
+    "example_th": "หัวใจเต้น"
   },
   {
     "id": "weather-1",
@@ -1522,8 +1522,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซัน = ดวงอาทิตย์ (ซันไชน์ แดดจ้า)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The sun is bright.",
+    "example_th": "แดดจ้า"
   },
   {
     "id": "weather-2",
@@ -1536,8 +1536,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เรน = ฝน “เรน” ตกลงมา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It will rain today.",
+    "example_th": "วันนี้ฝนจะตก"
   },
   {
     "id": "weather-3",
@@ -1550,8 +1550,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คลาวด์ = เมฆ (คลาวด์ลอยบนฟ้า)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look at the clouds.",
+    "example_th": "ดูเมฆสิ"
   },
   {
     "id": "weather-4",
@@ -1564,8 +1564,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วินด์ = ลมพัด “วิ้น”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The wind is strong.",
+    "example_th": "ลมแรง"
   },
   {
     "id": "weather-5",
@@ -1578,8 +1578,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สตอร์ม = พายุ “สตอร์ม” แรง ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A storm is coming.",
+    "example_th": "พายุกำลังมา"
   },
   {
     "id": "weather-6",
@@ -1592,8 +1592,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สโนว์ = หิมะ “สโนว์” ขาว ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It never snows here.",
+    "example_th": "ที่นี่ไม่มีหิมะ"
   },
   {
     "id": "weather-7",
@@ -1606,8 +1606,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮอท = “ฮอต” ร้อนจนเหงื่อ",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is very hot.",
+    "example_th": "ร้อนมาก"
   },
   {
     "id": "weather-8",
@@ -1620,8 +1620,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โคลด์ = หนาว “โคลด์” สั่น",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is cold today.",
+    "example_th": "วันนี้หนาว"
   },
   {
     "id": "weather-9",
@@ -1634,8 +1634,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อัม-เบรล-ล่า ร่ม “อัมเบรลล่า”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Bring an umbrella.",
+    "example_th": "เอาร่มไปด้วย"
   },
   {
     "id": "weather-10",
@@ -1648,8 +1648,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "rain (ฝน) + bow (โค้ง) = รุ้งหลังฝน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look a rainbow!",
+    "example_th": "ดูสิ รุ้ง!"
   },
   {
     "id": "weather-11",
@@ -1662,8 +1662,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ธัน-เดอร์ ฟ้าร้อง “ครืน”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I heard thunder.",
+    "example_th": "ได้ยินฟ้าร้อง"
   },
   {
     "id": "weather-12",
@@ -1676,8 +1676,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟอก = หมอกมัว ๆ “ฟุ้ง”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The fog is thick.",
+    "example_th": "หมอกหนา"
   },
   {
     "id": "kitchen-1",
@@ -1690,8 +1690,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แพน = กระทะแบน “แพน”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Heat the pan.",
+    "example_th": "ตั้งกระทะ"
   },
   {
     "id": "kitchen-2",
@@ -1704,8 +1704,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พอท = หม้อ “พอต” ต้ม ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Boil water in the pot.",
+    "example_th": "ต้มน้ำในหม้อ"
   },
   {
     "id": "kitchen-3",
@@ -1718,8 +1718,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไนฟ์ (k เงียบ) “ไนฟ์” มีด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use a knife.",
+    "example_th": "ใช้มีด"
   },
   {
     "id": "kitchen-4",
@@ -1732,8 +1732,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สปูน = “สปูน” ช้อน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Stir with a spoon.",
+    "example_th": "คนด้วยช้อน"
   },
   {
     "id": "kitchen-5",
@@ -1746,8 +1746,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เพลท = จานแบน “เพลท”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Put it on the plate.",
+    "example_th": "ใส่ในจาน"
   },
   {
     "id": "kitchen-6",
@@ -1760,8 +1760,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โบล = ชาม “โบว์ล” ก้นลึก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A bowl of rice.",
+    "example_th": "ข้าวชามนึง"
   },
   {
     "id": "kitchen-7",
@@ -1774,8 +1774,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สโตฟ = เตา “สโตฟ” จุดไฟ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn on the stove.",
+    "example_th": "เปิดเตา"
   },
   {
     "id": "kitchen-8",
@@ -1788,8 +1788,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซอลท์ = เกลือ (ซอลต์ เค็ม ๆ)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add some salt.",
+    "example_th": "ใส่เกลือหน่อย"
   },
   {
     "id": "kitchen-9",
@@ -1802,8 +1802,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ออยล์ = น้ำมัน “ออยล์” ลื่น ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pour the oil.",
+    "example_th": "เทน้ำมัน"
   },
   {
     "id": "kitchen-10",
@@ -1816,8 +1816,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ้ก = ไข่ “เอ้ก”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fry an egg.",
+    "example_th": "ทอดไข่"
   },
   {
     "id": "kitchen-11",
@@ -1830,8 +1830,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไรซ์ = ข้าว “ไรซ์”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I eat rice every day.",
+    "example_th": "ฉันกินข้าวทุกวัน"
   },
   {
     "id": "kitchen-12",
@@ -1844,8 +1844,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอ-เทอร์ = น้ำ “วอเตอร์”",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Drink water.",
+    "example_th": "ดื่มน้ำ"
   },
   {
     "id": "numbers-1",
@@ -1858,8 +1858,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"วัน\" เลข 1",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have one.",
+    "example_th": "ฉันมีหนึ่งอัน"
   },
   {
     "id": "numbers-2",
@@ -1872,8 +1872,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ทู\" เลข 2",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Two coffees please.",
+    "example_th": "ขอกาแฟสองที่"
   },
   {
     "id": "numbers-3",
@@ -1886,8 +1886,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ธรี\" เลข 3",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Three people.",
+    "example_th": "สามคน"
   },
   {
     "id": "numbers-4",
@@ -1900,8 +1900,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"โฟร์\" เลข 4",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Four o’clock.",
+    "example_th": "สี่โมง"
   },
   {
     "id": "numbers-5",
@@ -1914,8 +1914,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไฟฟ์\" เลข 5",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Give me five.",
+    "example_th": "ขอห้าอัน"
   },
   {
     "id": "numbers-6",
@@ -1928,8 +1928,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ซิกซ์\" เลข 6",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Six days.",
+    "example_th": "หกวัน"
   },
   {
     "id": "numbers-7",
@@ -1942,8 +1942,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เซเว่น\" เหมือน 7-Eleven",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Seven baht.",
+    "example_th": "เจ็ดบาท"
   },
   {
     "id": "numbers-8",
@@ -1956,8 +1956,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เอท\" เลข 8",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Eight hours.",
+    "example_th": "แปดชั่วโมง"
   },
   {
     "id": "numbers-9",
@@ -1970,8 +1970,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไนน์\" เลข 9",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Nine people.",
+    "example_th": "เก้าคน"
   },
   {
     "id": "numbers-10",
@@ -1984,8 +1984,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เท็น\" เลข 10",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Ten minutes.",
+    "example_th": "สิบนาที"
   },
   {
     "id": "numbers-11",
@@ -1998,8 +1998,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮันเดรด = 100",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "One hundred baht.",
+    "example_th": "หนึ่งร้อยบาท"
   },
   {
     "id": "numbers-12",
@@ -2012,8 +2012,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซีโร่ = 0",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Start from zero.",
+    "example_th": "เริ่มจากศูนย์"
   },
   {
     "id": "colors-1",
@@ -2026,8 +2026,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เรด\" สีแดง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I like the red one.",
+    "example_th": "ฉันชอบอันสีแดง"
   },
   {
     "id": "colors-2",
@@ -2040,8 +2040,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บลู\" สีน้ำเงิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The sky is blue.",
+    "example_th": "ท้องฟ้าสีน้ำเงิน"
   },
   {
     "id": "colors-3",
@@ -2054,8 +2054,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"กรีน\" สีเขียว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Green light.",
+    "example_th": "ไฟเขียว"
   },
   {
     "id": "colors-4",
@@ -2068,8 +2068,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เยลโล่\" สีเหลือง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A yellow flower.",
+    "example_th": "ดอกไม้สีเหลือง"
   },
   {
     "id": "colors-5",
@@ -2082,8 +2082,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แบล็ก\" สีดำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A black bag.",
+    "example_th": "กระเป๋าสีดำ"
   },
   {
     "id": "colors-6",
@@ -2096,8 +2096,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไวท์\" สีขาว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A white shirt.",
+    "example_th": "เสื้อสีขาว"
   },
   {
     "id": "colors-7",
@@ -2110,8 +2110,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ออเรนจ์ = สีส้ม (เหมือนผลส้ม)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "An orange is sweet.",
+    "example_th": "ส้มหวาน"
   },
   {
     "id": "colors-8",
@@ -2124,8 +2124,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"พิงก์\" สีชมพู",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A pink dress.",
+    "example_th": "ชุดสีชมพู"
   },
   {
     "id": "colors-9",
@@ -2138,8 +2138,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บราวน์\" สีน้ำตาล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Brown shoes.",
+    "example_th": "รองเท้าสีน้ำตาล"
   },
   {
     "id": "colors-10",
@@ -2152,8 +2152,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เพอเพิล\" สีม่วง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A purple pen.",
+    "example_th": "ปากกาสีม่วง"
   },
   {
     "id": "colors-11",
@@ -2166,8 +2166,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เกรย์\" สีเทา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A gray cat.",
+    "example_th": "แมวสีเทา"
   },
   {
     "id": "colors-12",
@@ -2180,8 +2180,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"โกลด์\" สีทอง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A gold ring.",
+    "example_th": "แหวนทอง"
   },
   {
     "id": "family-1",
@@ -2194,8 +2194,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟาเธอร์ = พ่อ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This is my father.",
+    "example_th": "นี่คือพ่อของฉัน"
   },
   {
     "id": "family-2",
@@ -2208,8 +2208,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มาเธอร์ = แม่",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My mother cooks well.",
+    "example_th": "แม่ฉันทำอาหารเก่ง"
   },
   {
     "id": "family-3",
@@ -2222,8 +2222,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บราเธอร์ = พี่/น้องชาย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have one brother.",
+    "example_th": "ฉันมีพี่ชายคนหนึ่ง"
   },
   {
     "id": "family-4",
@@ -2236,8 +2236,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซิสเตอร์ = พี่/น้องสาว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My sister is tall.",
+    "example_th": "พี่สาวฉันสูง"
   },
   {
     "id": "family-5",
@@ -2250,8 +2250,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ซัน\" ลูกชาย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Their son is five.",
+    "example_th": "ลูกชายเขาห้าขวบ"
   },
   {
     "id": "family-6",
@@ -2264,8 +2264,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดอเทอร์ = ลูกสาว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My daughter is cute.",
+    "example_th": "ลูกสาวฉันน่ารัก"
   },
   {
     "id": "family-7",
@@ -2278,8 +2278,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เบบี๋\" เด็กเล็ก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The baby is sleeping.",
+    "example_th": "ทารกกำลังนอน"
   },
   {
     "id": "family-8",
@@ -2292,8 +2292,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แฟมิลี่ = ครอบครัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I love my family.",
+    "example_th": "ฉันรักครอบครัว"
   },
   {
     "id": "family-9",
@@ -2306,8 +2306,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เฟรนด์\" เพื่อน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is my friend.",
+    "example_th": "เขาเป็นเพื่อนฉัน"
   },
   {
     "id": "family-10",
@@ -2320,8 +2320,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮัสแบนด์ = สามี",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Her husband is kind.",
+    "example_th": "สามีเธอใจดี"
   },
   {
     "id": "family-11",
@@ -2334,8 +2334,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไวฟ์\" ภรรยา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My wife is a teacher.",
+    "example_th": "ภรรยาฉันเป็นครู"
   },
   {
     "id": "family-12",
@@ -2348,8 +2348,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "grand + mother = ยาย/ย่า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My grandmother is old.",
+    "example_th": "ยายฉันแก่แล้ว"
   },
   {
     "id": "time-1",
@@ -2362,8 +2362,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "to + day = วันนี้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am busy today.",
+    "example_th": "วันนี้ฉันยุ่ง"
   },
   {
     "id": "time-2",
@@ -2376,8 +2376,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทูมอร์โรว์ = พรุ่งนี้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "See you tomorrow.",
+    "example_th": "เจอกันพรุ่งนี้"
   },
   {
     "id": "time-3",
@@ -2390,8 +2390,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เยสเตอร์เดย์ = เมื่อวาน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I was sick yesterday.",
+    "example_th": "เมื่อวานฉันป่วย"
   },
   {
     "id": "time-4",
@@ -2404,8 +2404,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"มอร์นิ่ง\" ตอนเช้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Good morning.",
+    "example_th": "สวัสดีตอนเช้า"
   },
   {
     "id": "time-5",
@@ -2418,8 +2418,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "after + noon = หลังเที่ยง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "In the afternoon.",
+    "example_th": "ตอนบ่าย"
   },
   {
     "id": "time-6",
@@ -2432,8 +2432,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"อีฟนิ่ง\" ตอนเย็น",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "In the evening.",
+    "example_th": "ตอนเย็น"
   },
   {
     "id": "time-7",
@@ -2446,8 +2446,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไนท์\" กลางคืน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Good night.",
+    "example_th": "ราตรีสวัสดิ์"
   },
   {
     "id": "time-8",
@@ -2460,8 +2460,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"วีค\" = 7 วัน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Next week.",
+    "example_th": "สัปดาห์หน้า"
   },
   {
     "id": "time-9",
@@ -2474,8 +2474,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"มันธ์\" เดือน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This month.",
+    "example_th": "เดือนนี้"
   },
   {
     "id": "time-10",
@@ -2488,8 +2488,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เยียร์\" ปี",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Happy new year.",
+    "example_th": "สวัสดีปีใหม่"
   },
   {
     "id": "time-11",
@@ -2502,8 +2502,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"อาวเวอร์\" ชั่วโมง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "One hour.",
+    "example_th": "หนึ่งชั่วโมง"
   },
   {
     "id": "time-12",
@@ -2516,8 +2516,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"มินิท\" นาที",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wait a minute.",
+    "example_th": "รอสักครู่"
   },
   {
     "id": "shopping-1",
@@ -2530,8 +2530,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไพรซ์\" ราคา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What is the price?",
+    "example_th": "ราคาเท่าไร"
   },
   {
     "id": "shopping-2",
@@ -2544,8 +2544,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ชีป\" ถูก",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is very cheap.",
+    "example_th": "ถูกมาก"
   },
   {
     "id": "shopping-3",
@@ -2558,8 +2558,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ็กซ์เพนซีฟ = แพง",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This is too expensive.",
+    "example_th": "อันนี้แพงไป"
   },
   {
     "id": "shopping-4",
@@ -2572,8 +2572,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บาย\" ซื้อ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I want to buy this.",
+    "example_th": "ฉันอยากซื้ออันนี้"
   },
   {
     "id": "shopping-5",
@@ -2586,8 +2586,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เพย์\" จ่าย",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "How can I pay?",
+    "example_th": "จ่ายยังไง"
   },
   {
     "id": "shopping-6",
@@ -2600,8 +2600,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แคช\" เงินสด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I pay by cash.",
+    "example_th": "จ่ายเงินสด"
   },
   {
     "id": "shopping-7",
@@ -2614,8 +2614,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"การ์ด\" บัตร",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Can I pay by card?",
+    "example_th": "จ่ายบัตรได้ไหม"
   },
   {
     "id": "shopping-8",
@@ -2628,8 +2628,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดิสเคานต์ = ส่วนลด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Any discount?",
+    "example_th": "มีส่วนลดไหม"
   },
   {
     "id": "shopping-9",
@@ -2642,8 +2642,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เชนจ์ = เงินทอน (การเปลี่ยน)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Here is your change.",
+    "example_th": "นี่เงินทอนครับ"
   },
   {
     "id": "shopping-10",
@@ -2656,8 +2656,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แบ็ก\" ถุง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Can I get a bag?",
+    "example_th": "ขอถุงได้ไหม"
   },
   {
     "id": "shopping-11",
@@ -2670,8 +2670,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เซล\" ลดราคา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is on sale.",
+    "example_th": "กำลังลดราคา"
   },
   {
     "id": "shopping-12",
@@ -2684,8 +2684,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไซซ์\" ขนาด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What size do you want?",
+    "example_th": "เอาไซซ์ไหน"
   },
   {
     "id": "hospital-1",
@@ -2698,8 +2698,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ด็อกเตอร์ = หมอ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a doctor.",
+    "example_th": "ฉันต้องการหมอ"
   },
   {
     "id": "hospital-2",
@@ -2712,8 +2712,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เนิร์ส\" พยาบาล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Ask the nurse.",
+    "example_th": "ถามพยาบาล"
   },
   {
     "id": "hospital-3",
@@ -2726,8 +2726,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมดิซิน = ยา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Take this medicine.",
+    "example_th": "กินยานี้"
   },
   {
     "id": "hospital-4",
@@ -2740,8 +2740,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ซิก\" ป่วย",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I feel sick.",
+    "example_th": "ฉันรู้สึกป่วย"
   },
   {
     "id": "hospital-5",
@@ -2754,8 +2754,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เพน\" เจ็บ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a pain here.",
+    "example_th": "ฉันเจ็บตรงนี้"
   },
   {
     "id": "hospital-6",
@@ -2768,8 +2768,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟีเวอร์ = เป็นไข้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a fever.",
+    "example_th": "ฉันเป็นไข้"
   },
   {
     "id": "hospital-7",
@@ -2782,8 +2782,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "head + ache = ปวดหัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a headache.",
+    "example_th": "ฉันปวดหัว"
   },
   {
     "id": "hospital-8",
@@ -2796,8 +2796,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮอสพิทัล = โรงพยาบาล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to the hospital.",
+    "example_th": "ไปโรงพยาบาล"
   },
   {
     "id": "hospital-9",
@@ -2810,8 +2810,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟาร์มาซี = ร้านยา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Find a pharmacy.",
+    "example_th": "หาร้านขายยา"
   },
   {
     "id": "hospital-10",
@@ -2824,8 +2824,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แอมบิวแลนซ์ = รถพยาบาล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Call an ambulance.",
+    "example_th": "เรียกรถพยาบาล"
   },
   {
     "id": "hospital-11",
@@ -2838,8 +2838,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไทร์ด\" เหนื่อย",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am so tired.",
+    "example_th": "ฉันเหนื่อยมาก"
   },
   {
     "id": "hospital-12",
@@ -2852,8 +2852,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เรสต์\" พัก",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "You need to rest.",
+    "example_th": "คุณต้องพักผ่อน"
   },
   {
     "id": "transport-1",
@@ -2866,8 +2866,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"คาร์\" รถ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a car.",
+    "example_th": "ฉันมีรถ"
   },
   {
     "id": "transport-2",
@@ -2880,8 +2880,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บัส\" รถเมล์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Take the bus.",
+    "example_th": "ขึ้นรถเมล์"
   },
   {
     "id": "transport-3",
@@ -2894,8 +2894,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เทรน\" รถไฟ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The train is late.",
+    "example_th": "รถไฟมาช้า"
   },
   {
     "id": "transport-4",
@@ -2908,8 +2908,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แท็กซี่\" ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Call a taxi.",
+    "example_th": "เรียกแท็กซี่"
   },
   {
     "id": "transport-5",
@@ -2922,8 +2922,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "motor + bike = มอเตอร์ไซค์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I ride a motorbike.",
+    "example_th": "ฉันขี่มอเตอร์ไซค์"
   },
   {
     "id": "transport-6",
@@ -2936,8 +2936,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"โบท\" เรือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Take a boat.",
+    "example_th": "นั่งเรือ"
   },
   {
     "id": "transport-7",
@@ -2950,8 +2950,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไบซิเคิล = จักรยาน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I ride a bicycle.",
+    "example_th": "ฉันขี่จักรยาน"
   },
   {
     "id": "transport-8",
@@ -2964,8 +2964,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "air + plane = เครื่องบิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The airplane is fast.",
+    "example_th": "เครื่องบินเร็ว"
   },
   {
     "id": "transport-9",
@@ -2978,8 +2978,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"สเตชั่น\" สถานี",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is the station?",
+    "example_th": "สถานีอยู่ไหน"
   },
   {
     "id": "transport-10",
@@ -2992,8 +2992,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"โรด\" ถนน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cross the road.",
+    "example_th": "ข้ามถนน"
   },
   {
     "id": "transport-11",
@@ -3006,8 +3006,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ทิคเก็ต\" ตั๋ว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Buy a ticket.",
+    "example_th": "ซื้อตั๋ว"
   },
   {
     "id": "transport-12",
@@ -3020,8 +3020,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แมพ\" แผนที่",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look at the map.",
+    "example_th": "ดูแผนที่"
   },
   {
     "id": "emotions-1",
@@ -3034,8 +3034,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แฮปปี้\" มีความสุข",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am so happy.",
+    "example_th": "ฉันมีความสุขมาก"
   },
   {
     "id": "emotions-2",
@@ -3048,8 +3048,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แซด\" เศร้า",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Why are you sad?",
+    "example_th": "ทำไมเศร้า"
   },
   {
     "id": "emotions-3",
@@ -3062,8 +3062,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แองกรี้\" โกรธ",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Don’t be angry.",
+    "example_th": "อย่าโกรธ"
   },
   {
     "id": "emotions-4",
@@ -3076,8 +3076,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"สแกร์ด\" กลัว",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am scared.",
+    "example_th": "ฉันกลัว"
   },
   {
     "id": "emotions-5",
@@ -3090,8 +3090,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บอร์ด\" เบื่อ",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am bored.",
+    "example_th": "ฉันเบื่อ"
   },
   {
     "id": "emotions-6",
@@ -3104,8 +3104,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ็กไซเต็ด = ตื่นเต้น",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am excited.",
+    "example_th": "ฉันตื่นเต้น"
   },
   {
     "id": "emotions-7",
@@ -3118,8 +3118,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เซอร์ไพรซ์ด = เซอร์ไพรส์",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "She was surprised.",
+    "example_th": "เธอประหลาดใจ"
   },
   {
     "id": "emotions-8",
@@ -3132,8 +3132,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เลิฟ\" รัก",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I love you.",
+    "example_th": "ฉันรักคุณ"
   },
   {
     "id": "emotions-9",
@@ -3146,8 +3146,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮังกรี้ = หิว",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am hungry.",
+    "example_th": "ฉันหิว"
   },
   {
     "id": "emotions-10",
@@ -3160,8 +3160,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เธิร์สตี้ = หิวน้ำ",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am thirsty.",
+    "example_th": "ฉันหิวน้ำ"
   },
   {
     "id": "emotions-11",
@@ -3174,8 +3174,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สลีปปี้ = ง่วง (sleep)",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I feel sleepy.",
+    "example_th": "ฉันง่วง"
   },
   {
     "id": "emotions-12",
@@ -3188,8 +3188,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไฟน์\" สบายดี",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am fine, thanks.",
+    "example_th": "ฉันสบายดี ขอบคุณ"
   },
   {
     "id": "fruits-1",
@@ -3202,8 +3202,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แอปเปิล\" ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I eat an apple.",
+    "example_th": "ฉันกินแอปเปิล"
   },
   {
     "id": "fruits-2",
@@ -3216,8 +3216,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"บานาน่า\" กล้วย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A yellow banana.",
+    "example_th": "กล้วยสีเหลือง"
   },
   {
     "id": "fruits-3",
@@ -3230,8 +3230,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ออเรนจ์\" ส้ม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "An orange is sweet.",
+    "example_th": "ส้มหวาน"
   },
   {
     "id": "fruits-4",
@@ -3244,8 +3244,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แมงโก้\" มะม่วง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I love mango.",
+    "example_th": "ฉันชอบมะม่วง"
   },
   {
     "id": "fruits-5",
@@ -3258,8 +3258,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เกรป\" องุ่น",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Green grapes.",
+    "example_th": "องุ่นเขียว"
   },
   {
     "id": "fruits-6",
@@ -3272,8 +3272,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "water + melon = แตงโม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Watermelon is juicy.",
+    "example_th": "แตงโมฉ่ำ"
   },
   {
     "id": "fruits-7",
@@ -3286,8 +3286,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สตรอว์เบอร์รี่ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A red strawberry.",
+    "example_th": "สตรอว์เบอร์รีสีแดง"
   },
   {
     "id": "fruits-8",
@@ -3300,8 +3300,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "pine + apple = สับปะรด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pineapple is sour.",
+    "example_th": "สับปะรดเปรี้ยว"
   },
   {
     "id": "fruits-9",
@@ -3314,8 +3314,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เลมอน\" มะนาวฝรั่ง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A sour lemon.",
+    "example_th": "เลมอนเปรี้ยว"
   },
   {
     "id": "fruits-10",
@@ -3328,8 +3328,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โคโคนัท = มะพร้าว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fresh coconut.",
+    "example_th": "มะพร้าวสด"
   },
   {
     "id": "fruits-11",
@@ -3342,8 +3342,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เชอร์รี่\" ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A small cherry.",
+    "example_th": "เชอร์รีลูกเล็ก"
   },
   {
     "id": "fruits-12",
@@ -3356,8 +3356,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"พีช\" ลูกพีช",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A sweet peach.",
+    "example_th": "พีชหวาน"
   },
   {
     "id": "jobs-1",
@@ -3370,8 +3370,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "teach + er = ผู้สอน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "She is a teacher.",
+    "example_th": "เธอเป็นครู"
   },
   {
     "id": "jobs-2",
@@ -3384,8 +3384,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สติวเดนท์ = นักเรียน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am a student.",
+    "example_th": "ฉันเป็นนักเรียน"
   },
   {
     "id": "jobs-3",
@@ -3398,8 +3398,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ด็อกเตอร์ = หมอ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a doctor.",
+    "example_th": "ฉันต้องการหมอ"
   },
   {
     "id": "jobs-4",
@@ -3412,8 +3412,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"โพลีส\" ตำรวจ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Call the police.",
+    "example_th": "เรียกตำรวจ"
   },
   {
     "id": "jobs-5",
@@ -3426,8 +3426,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "farm + er = ชาวนา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is a farmer.",
+    "example_th": "เขาเป็นชาวนา"
   },
   {
     "id": "jobs-6",
@@ -3440,8 +3440,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"คุก\" ทำอาหาร",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is a good cook.",
+    "example_th": "เขาเป็นพ่อครัวที่ดี"
   },
   {
     "id": "jobs-7",
@@ -3454,8 +3454,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "drive + er = คนขับ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The driver is here.",
+    "example_th": "คนขับมาแล้ว"
   },
   {
     "id": "jobs-8",
@@ -3468,8 +3468,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เวเทอร์ = พนักงานเสิร์ฟ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Ask the waiter.",
+    "example_th": "ถามบริกร"
   },
   {
     "id": "jobs-9",
@@ -3482,8 +3482,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอนจิเนียร์ = วิศวกร",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "She is an engineer.",
+    "example_th": "เธอเป็นวิศวกร"
   },
   {
     "id": "jobs-10",
@@ -3496,8 +3496,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "sell + er = คนขาย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The seller is kind.",
+    "example_th": "คนขายใจดี"
   },
   {
     "id": "jobs-11",
@@ -3510,8 +3510,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมเนเจอร์ = ผู้จัดการ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Talk to the manager.",
+    "example_th": "คุยกับผู้จัดการ"
   },
   {
     "id": "jobs-12",
@@ -3524,8 +3524,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "work + er = คนทำงาน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is a hard worker.",
+    "example_th": "เขาเป็นคนขยัน"
   },
   {
     "id": "house-1",
@@ -3538,8 +3538,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ดอร์\" ประตู",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Close the door.",
+    "example_th": "ปิดประตู"
   },
   {
     "id": "house-2",
@@ -3552,8 +3552,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วินโดว์ = หน้าต่าง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open the window.",
+    "example_th": "เปิดหน้าต่าง"
   },
   {
     "id": "house-3",
@@ -3566,8 +3566,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เทเบิล\" โต๊ะ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Put it on the table.",
+    "example_th": "วางบนโต๊ะ"
   },
   {
     "id": "house-4",
@@ -3580,8 +3580,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แชร์\" เก้าอี้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sit on the chair.",
+    "example_th": "นั่งบนเก้าอี้"
   },
   {
     "id": "house-5",
@@ -3594,8 +3594,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เบด\" เตียง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Make the bed.",
+    "example_th": "จัดเตียง"
   },
   {
     "id": "house-6",
@@ -3608,8 +3608,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คิทเชน = ห้องครัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cook in the kitchen.",
+    "example_th": "ทำอาหารในครัว"
   },
   {
     "id": "house-7",
@@ -3622,8 +3622,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"รูม\" ห้อง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A clean room.",
+    "example_th": "ห้องสะอาด"
   },
   {
     "id": "house-8",
@@ -3636,8 +3636,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไลท์\" ไฟ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn off the light.",
+    "example_th": "ปิดไฟ"
   },
   {
     "id": "house-9",
@@ -3650,8 +3650,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"คีย์\" กุญแจ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I lost my key.",
+    "example_th": "ฉันทำกุญแจหาย"
   },
   {
     "id": "house-10",
@@ -3664,8 +3664,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"คล็อก\" นาฬิกา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look at the clock.",
+    "example_th": "ดูนาฬิกา"
   },
   {
     "id": "house-11",
@@ -3678,8 +3678,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทเลวิชั่น = ทีวี",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Watch television.",
+    "example_th": "ดูโทรทัศน์"
   },
   {
     "id": "house-12",
@@ -3692,8 +3692,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แฟน\" พัดลม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn on the fan.",
+    "example_th": "เปิดพัดลม"
   },
   {
     "id": "animals-1",
@@ -3706,8 +3706,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ด็อก\" หมา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a dog.",
+    "example_th": "ฉันมีหมา"
   },
   {
     "id": "animals-2",
@@ -3720,8 +3720,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"แคท\" แมว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The cat is cute.",
+    "example_th": "แมวน่ารัก"
   },
   {
     "id": "animals-3",
@@ -3734,8 +3734,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"เบิร์ด\" นก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A bird can fly.",
+    "example_th": "นกบินได้"
   },
   {
     "id": "animals-4",
@@ -3748,8 +3748,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ฟิช\" ปลา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fish live in water.",
+    "example_th": "ปลาอยู่ในน้ำ"
   },
   {
     "id": "animals-5",
@@ -3762,8 +3762,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"คาว\" วัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A cow gives milk.",
+    "example_th": "วัวให้นม"
   },
   {
     "id": "animals-6",
@@ -3776,8 +3776,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"พิก\" หมู",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A pink pig.",
+    "example_th": "หมูสีชมพู"
   },
   {
     "id": "animals-7",
@@ -3790,8 +3790,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ชิคเคน = ไก่",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I eat chicken.",
+    "example_th": "ฉันกินไก่"
   },
   {
     "id": "animals-8",
@@ -3804,8 +3804,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอเลเฟนท์ = ช้าง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "An elephant is big.",
+    "example_th": "ช้างตัวใหญ่"
   },
   {
     "id": "animals-9",
@@ -3818,8 +3818,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ไทเกอร์\" เสือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A tiger is strong.",
+    "example_th": "เสือแข็งแรง"
   },
   {
     "id": "animals-10",
@@ -3832,8 +3832,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"มังกี้\" ลิง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A monkey is funny.",
+    "example_th": "ลิงตลก"
   },
   {
     "id": "animals-11",
@@ -3846,8 +3846,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"สเนก\" งู",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am afraid of snakes.",
+    "example_th": "ฉันกลัวงู"
   },
   {
     "id": "animals-12",
@@ -3860,8 +3860,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "\"ฮอร์ส\" ม้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Ride a horse.",
+    "example_th": "ขี่ม้า"
   },
   {
     "id": "vegetables-1",
@@ -3874,8 +3874,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แคร์รอท ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I like carrots.",
+    "example_th": "ฉันชอบแครอท"
   },
   {
     "id": "vegetables-2",
@@ -3888,8 +3888,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โพเทโท้ = มันฝรั่ง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fried potato.",
+    "example_th": "มันฝรั่งทอด"
   },
   {
     "id": "vegetables-3",
@@ -3902,8 +3902,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คอร์น = ข้าวโพด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sweet corn.",
+    "example_th": "ข้าวโพดหวาน"
   },
   {
     "id": "vegetables-4",
@@ -3916,8 +3916,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บรอกโคลี่ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Eat your broccoli.",
+    "example_th": "กินบรอกโคลี"
   },
   {
     "id": "vegetables-5",
@@ -3930,8 +3930,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "การ์ลิก = กระเทียม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add garlic.",
+    "example_th": "ใส่กระเทียม"
   },
   {
     "id": "vegetables-6",
@@ -3944,8 +3944,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มัชรูม = เห็ด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I like mushrooms.",
+    "example_th": "ฉันชอบเห็ด"
   },
   {
     "id": "vegetables-7",
@@ -3958,8 +3958,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ชิลลี่ เผ็ด ๆ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Too much chili.",
+    "example_th": "พริกเยอะไป"
   },
   {
     "id": "vegetables-8",
@@ -3972,8 +3972,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แคบเบจ = กะหล่ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fresh cabbage.",
+    "example_th": "กะหล่ำสด"
   },
   {
     "id": "vegetables-9",
@@ -3986,8 +3986,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พัมคิน = ฟักทอง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pumpkin soup.",
+    "example_th": "ซุปฟักทอง"
   },
   {
     "id": "vegetables-10",
@@ -4000,8 +4000,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "egg + plant = มะเขือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fried eggplant.",
+    "example_th": "มะเขือทอด"
   },
   {
     "id": "vegetables-11",
@@ -4014,8 +4014,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สลัด ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A green salad.",
+    "example_th": "สลัดผัก"
   },
   {
     "id": "vegetables-12",
@@ -4028,8 +4028,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อันเยิ่น = หัวหอม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Chop the onion.",
+    "example_th": "สับหัวหอม"
   },
   {
     "id": "vegetables-13",
@@ -4042,8 +4042,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สปินิช (ป๊อปอาย)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Spinach is healthy.",
+    "example_th": "ผักโขมดีต่อสุขภาพ"
   },
   {
     "id": "vegetables-14",
@@ -4056,8 +4056,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "จินเจอร์ = ขิง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add some ginger.",
+    "example_th": "ใส่ขิงหน่อย"
   },
   {
     "id": "verbs-1",
@@ -4070,8 +4070,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โก = ไป",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Let’s go.",
+    "example_th": "ไปกันเถอะ"
   },
   {
     "id": "verbs-2",
@@ -4084,8 +4084,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คัม = มา",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Come here.",
+    "example_th": "มานี่"
   },
   {
     "id": "verbs-3",
@@ -4098,8 +4098,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อีท = กิน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Let’s eat.",
+    "example_th": "กินข้าวกัน"
   },
   {
     "id": "verbs-4",
@@ -4112,8 +4112,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดริ๊งค์ = ดื่ม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Drink water.",
+    "example_th": "ดื่มน้ำ"
   },
   {
     "id": "verbs-5",
@@ -4126,8 +4126,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สลีป = นอน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need to sleep.",
+    "example_th": "ฉันต้องนอน"
   },
   {
     "id": "verbs-6",
@@ -4140,8 +4140,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอล์ก = เดิน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Walk slowly.",
+    "example_th": "เดินช้า ๆ"
   },
   {
     "id": "verbs-7",
@@ -4154,8 +4154,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "รัน = วิ่ง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Don’t run.",
+    "example_th": "อย่าวิ่ง"
   },
   {
     "id": "verbs-8",
@@ -4168,8 +4168,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "รี้ด = อ่าน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I read a book.",
+    "example_th": "ฉันอ่านหนังสือ"
   },
   {
     "id": "verbs-9",
@@ -4182,8 +4182,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไรท์ = เขียน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Write your name.",
+    "example_th": "เขียนชื่อคุณ"
   },
   {
     "id": "verbs-10",
@@ -4196,8 +4196,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สปีค = พูด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Speak slowly.",
+    "example_th": "พูดช้า ๆ"
   },
   {
     "id": "verbs-11",
@@ -4210,8 +4210,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ลิสเซน = ฟัง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Listen to me.",
+    "example_th": "ฟังฉัน"
   },
   {
     "id": "verbs-12",
@@ -4224,8 +4224,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ลุค = มอง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look at this.",
+    "example_th": "ดูอันนี้"
   },
   {
     "id": "verbs-13",
@@ -4238,8 +4238,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โอเพน = เปิด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open the box.",
+    "example_th": "เปิดกล่อง"
   },
   {
     "id": "verbs-14",
@@ -4252,8 +4252,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โคลส = ปิด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Close the door.",
+    "example_th": "ปิดประตู"
   },
   {
     "id": "verbs-15",
@@ -4266,8 +4266,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กิฟ = ให้",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Give it to me.",
+    "example_th": "ให้ฉัน"
   },
   {
     "id": "verbs-16",
@@ -4280,8 +4280,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทค = เอา",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Take this.",
+    "example_th": "เอาอันนี้ไป"
   },
   {
     "id": "school-1",
@@ -4294,8 +4294,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บุ๊ก = หนังสือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Read this book.",
+    "example_th": "อ่านหนังสือเล่มนี้"
   },
   {
     "id": "school-2",
@@ -4308,8 +4308,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เพน = ปากกา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need a pen.",
+    "example_th": "ขอปากกา"
   },
   {
     "id": "school-3",
@@ -4322,8 +4322,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เพนซิล = ดินสอ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use a pencil.",
+    "example_th": "ใช้ดินสอ"
   },
   {
     "id": "school-4",
@@ -4336,8 +4336,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "erase + r = ตัวลบ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is the eraser?",
+    "example_th": "ยางลบอยู่ไหน"
   },
   {
     "id": "school-5",
@@ -4350,8 +4350,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "รูลเลอร์ = ไม้บรรทัด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use a ruler.",
+    "example_th": "ใช้ไม้บรรทัด"
   },
   {
     "id": "school-6",
@@ -4364,8 +4364,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "note + book = สมุด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open your notebook.",
+    "example_th": "เปิดสมุด"
   },
   {
     "id": "school-7",
@@ -4378,8 +4378,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เดสก์ = โต๊ะ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sit at your desk.",
+    "example_th": "นั่งที่โต๊ะ"
   },
   {
     "id": "school-8",
@@ -4392,8 +4392,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สติวเดนท์ = นักเรียน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am a student.",
+    "example_th": "ฉันเป็นนักเรียน"
   },
   {
     "id": "school-9",
@@ -4406,8 +4406,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "home + work = การบ้าน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Do your homework.",
+    "example_th": "ทำการบ้าน"
   },
   {
     "id": "school-10",
@@ -4420,8 +4420,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ็กแซม = สอบ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The exam is hard.",
+    "example_th": "ข้อสอบยาก"
   },
   {
     "id": "school-11",
@@ -4434,8 +4434,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คลาส = ห้องเรียน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am in class.",
+    "example_th": "ฉันอยู่ในห้องเรียน"
   },
   {
     "id": "school-12",
@@ -4448,8 +4448,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เพเพอร์ = กระดาษ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A piece of paper.",
+    "example_th": "กระดาษแผ่นหนึ่ง"
   },
   {
     "id": "school-13",
@@ -4462,8 +4462,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดิกชันนารี = ดิก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use a dictionary.",
+    "example_th": "ใช้พจนานุกรม"
   },
   {
     "id": "school-14",
@@ -4476,8 +4476,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เควสชั่น = คำถาม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have a question.",
+    "example_th": "ฉันมีคำถาม"
   },
   {
     "id": "clothes-1",
@@ -4490,8 +4490,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เชิ้ต ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A blue shirt.",
+    "example_th": "เสื้อเชิ้ตสีน้ำเงิน"
   },
   {
     "id": "clothes-2",
@@ -4504,8 +4504,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทีเชิ้ต = เสื้อยืด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A white t-shirt.",
+    "example_th": "เสื้อยืดสีขาว"
   },
   {
     "id": "clothes-3",
@@ -4518,8 +4518,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แพนท์ส = กางเกง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "New pants.",
+    "example_th": "กางเกงใหม่"
   },
   {
     "id": "clothes-4",
@@ -4532,8 +4532,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เดรส ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A pretty dress.",
+    "example_th": "ชุดสวย"
   },
   {
     "id": "clothes-5",
@@ -4546,8 +4546,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ชูส์ = รองเท้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My shoes are new.",
+    "example_th": "รองเท้าฉันใหม่"
   },
   {
     "id": "clothes-6",
@@ -4560,8 +4560,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แฮท = หมวก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wear a hat.",
+    "example_th": "ใส่หมวก"
   },
   {
     "id": "clothes-7",
@@ -4574,8 +4574,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซ็อกส์ = ถุงเท้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Clean socks.",
+    "example_th": "ถุงเท้าสะอาด"
   },
   {
     "id": "clothes-8",
@@ -4588,8 +4588,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แจ็คเก็ต ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wear a jacket.",
+    "example_th": "ใส่แจ็คเก็ต"
   },
   {
     "id": "clothes-9",
@@ -4602,8 +4602,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สเกิร์ต = กระโปรง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A long skirt.",
+    "example_th": "กระโปรงยาว"
   },
   {
     "id": "clothes-10",
@@ -4616,8 +4616,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กลาสเซส = แว่น",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I wear glasses.",
+    "example_th": "ฉันใส่แว่น"
   },
   {
     "id": "clothes-11",
@@ -4630,8 +4630,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ว็อทช์ = นาฬิกาข้อมือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A nice watch.",
+    "example_th": "นาฬิกาสวย"
   },
   {
     "id": "clothes-12",
@@ -4644,8 +4644,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เบลท์ = เข็มขัด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A black belt.",
+    "example_th": "เข็มขัดสีดำ"
   },
   {
     "id": "clothes-13",
@@ -4658,8 +4658,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กลัฟส์ = ถุงมือ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Warm gloves.",
+    "example_th": "ถุงมืออุ่น"
   },
   {
     "id": "clothes-14",
@@ -4672,8 +4672,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สการ์ฟ = ผ้าพันคอ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A red scarf.",
+    "example_th": "ผ้าพันคอสีแดง"
   },
   {
     "id": "places-1",
@@ -4686,8 +4686,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แบงก์ = ธนาคาร",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to the bank.",
+    "example_th": "ไปธนาคาร"
   },
   {
     "id": "places-2",
@@ -4700,8 +4700,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มาร์เก็ต = ตลาด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Buy fruit at the market.",
+    "example_th": "ซื้อผลไม้ที่ตลาด"
   },
   {
     "id": "places-3",
@@ -4714,8 +4714,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พาร์ก = สวน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Walk in the park.",
+    "example_th": "เดินเล่นในสวน"
   },
   {
     "id": "places-4",
@@ -4728,8 +4728,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทมเพิล = วัด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Visit the temple.",
+    "example_th": "ไปวัด"
   },
   {
     "id": "places-5",
@@ -4742,8 +4742,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มอลล์ = ห้าง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Meet at the mall.",
+    "example_th": "เจอกันที่ห้าง"
   },
   {
     "id": "places-6",
@@ -4756,8 +4756,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซินิมา = โรงหนัง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to the cinema.",
+    "example_th": "ไปโรงหนัง"
   },
   {
     "id": "places-7",
@@ -4770,8 +4770,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไลบรารี่ = ห้องสมุด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Read at the library.",
+    "example_th": "อ่านที่ห้องสมุด"
   },
   {
     "id": "places-8",
@@ -4784,8 +4784,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มิวเซียม = พิพิธภัณฑ์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Visit the museum.",
+    "example_th": "ไปพิพิธภัณฑ์"
   },
   {
     "id": "places-9",
@@ -4798,8 +4798,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซู = สวนสัตว์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The zoo is fun.",
+    "example_th": "สวนสัตว์สนุก"
   },
   {
     "id": "places-10",
@@ -4812,8 +4812,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ยิม = ที่ออกกำลัง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I go to the gym.",
+    "example_th": "ฉันไปยิม"
   },
   {
     "id": "places-11",
@@ -4826,8 +4826,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เชิร์ช = โบสถ์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to church.",
+    "example_th": "ไปโบสถ์"
   },
   {
     "id": "places-12",
@@ -4840,8 +4840,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "bake + ry = ร้านขนม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fresh bread at the bakery.",
+    "example_th": "ขนมปังสดที่เบเกอรี"
   },
   {
     "id": "places-13",
@@ -4854,8 +4854,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สคูล = โรงเรียน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go to school.",
+    "example_th": "ไปโรงเรียน"
   },
   {
     "id": "places-14",
@@ -4868,8 +4868,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สตรีท = ถนน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cross the street.",
+    "example_th": "ข้ามถนน"
   },
   {
     "id": "directions-1",
@@ -4882,8 +4882,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เลฟท์ = ซ้าย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn left.",
+    "example_th": "เลี้ยวซ้าย"
   },
   {
     "id": "directions-2",
@@ -4896,8 +4896,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไรท์ = ขวา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn right.",
+    "example_th": "เลี้ยวขวา"
   },
   {
     "id": "directions-3",
@@ -4910,8 +4910,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สเทรท = ตรง",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Go straight.",
+    "example_th": "ตรงไป"
   },
   {
     "id": "directions-4",
@@ -4924,8 +4924,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เนียร์ = ใกล้",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is near here.",
+    "example_th": "อยู่ใกล้ ๆ นี่"
   },
   {
     "id": "directions-5",
@@ -4938,8 +4938,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟาร์ = ไกล",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is very far.",
+    "example_th": "ไกลมาก"
   },
   {
     "id": "directions-6",
@@ -4952,8 +4952,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เฮียร์ = ที่นี่",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Come here.",
+    "example_th": "มาที่นี่"
   },
   {
     "id": "directions-7",
@@ -4966,8 +4966,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แดร์ = ที่นั่น",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is over there.",
+    "example_th": "อยู่ตรงนั้น"
   },
   {
     "id": "directions-8",
@@ -4980,8 +4980,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อัพ = ขึ้น",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look up.",
+    "example_th": "มองขึ้น"
   },
   {
     "id": "directions-9",
@@ -4994,8 +4994,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดาวน์ = ลง",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sit down.",
+    "example_th": "นั่งลง"
   },
   {
     "id": "directions-10",
@@ -5008,8 +5008,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทิร์น = เลี้ยว",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn at the corner.",
+    "example_th": "เลี้ยวตรงหัวมุม"
   },
   {
     "id": "directions-11",
@@ -5022,8 +5022,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สต็อป = หยุด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Stop here.",
+    "example_th": "หยุดตรงนี้"
   },
   {
     "id": "directions-12",
@@ -5036,8 +5036,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คอร์เนอร์ = มุม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "At the corner.",
+    "example_th": "ตรงหัวมุม"
   },
   {
     "id": "directions-13",
@@ -5050,8 +5050,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไซน์ = ป้าย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Read the sign.",
+    "example_th": "อ่านป้าย"
   },
   {
     "id": "directions-14",
@@ -5064,8 +5064,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ครอส = ข้าม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cross the road.",
+    "example_th": "ข้ามถนน"
   },
   {
     "id": "adjectives-1",
@@ -5078,8 +5078,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บิ๊ก = ใหญ่",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A big house.",
+    "example_th": "บ้านหลังใหญ่"
   },
   {
     "id": "adjectives-2",
@@ -5092,8 +5092,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สมอลล์ = เล็ก",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A small dog.",
+    "example_th": "หมาตัวเล็ก"
   },
   {
     "id": "adjectives-3",
@@ -5106,8 +5106,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทอลล์ = สูง",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is tall.",
+    "example_th": "เขาสูง"
   },
   {
     "id": "adjectives-4",
@@ -5120,8 +5120,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ช็อร์ต = สั้น",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A short story.",
+    "example_th": "เรื่องสั้น"
   },
   {
     "id": "adjectives-5",
@@ -5134,8 +5134,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ลอง = ยาว",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A long road.",
+    "example_th": "ถนนยาว"
   },
   {
     "id": "adjectives-6",
@@ -5148,8 +5148,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "นิว = ใหม่",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A new phone.",
+    "example_th": "โทรศัพท์ใหม่"
   },
   {
     "id": "adjectives-7",
@@ -5162,8 +5162,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โอลด์ = เก่า",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "An old car.",
+    "example_th": "รถเก่า"
   },
   {
     "id": "adjectives-8",
@@ -5176,8 +5176,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟาสต์ = เร็ว",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A fast train.",
+    "example_th": "รถไฟเร็ว"
   },
   {
     "id": "adjectives-9",
@@ -5190,8 +5190,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สโลว์ = ช้า",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A slow bus.",
+    "example_th": "รถเมล์ช้า"
   },
   {
     "id": "adjectives-10",
@@ -5204,8 +5204,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กู้ด = ดี",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A good idea.",
+    "example_th": "ความคิดที่ดี"
   },
   {
     "id": "adjectives-11",
@@ -5218,8 +5218,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แบด = แย่",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Bad weather.",
+    "example_th": "อากาศแย่"
   },
   {
     "id": "adjectives-12",
@@ -5232,8 +5232,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อีซี่ = ง่าย",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This is easy.",
+    "example_th": "อันนี้ง่าย"
   },
   {
     "id": "adjectives-13",
@@ -5246,8 +5246,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮาร์ด = ยาก",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "This is hard.",
+    "example_th": "อันนี้ยาก"
   },
   {
     "id": "adjectives-14",
@@ -5260,8 +5260,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บิวติฟูล = สวย",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A beautiful view.",
+    "example_th": "วิวสวย"
   },
   {
     "id": "adjectives-15",
@@ -5274,8 +5274,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คลีน = สะอาด",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A clean room.",
+    "example_th": "ห้องสะอาด"
   },
   {
     "id": "adjectives-16",
@@ -5288,8 +5288,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เดอร์ตี้ = สกปรก",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Dirty shoes.",
+    "example_th": "รองเท้าสกปรก"
   },
   {
     "id": "greetings-1",
@@ -5302,8 +5302,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เฮลโล่ = สวัสดี",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Hello, how are you?",
+    "example_th": "สวัสดี สบายดีไหม"
   },
   {
     "id": "greetings-2",
@@ -5316,8 +5316,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กู้ดบาย = ลาก่อน",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Goodbye, see you.",
+    "example_th": "ลาก่อน เจอกันใหม่"
   },
   {
     "id": "greetings-3",
@@ -5330,8 +5330,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แธงก์ ยู = ขอบคุณ",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Thank you very much.",
+    "example_th": "ขอบคุณมาก"
   },
   {
     "id": "greetings-4",
@@ -5344,8 +5344,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซอรี่ = ขอโทษ",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am sorry.",
+    "example_th": "ฉันขอโทษ"
   },
   {
     "id": "greetings-5",
@@ -5358,8 +5358,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พลีส = กรุณา",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Water, please.",
+    "example_th": "ขอน้ำหน่อย"
   },
   {
     "id": "greetings-6",
@@ -5372,8 +5372,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ็กซคิวส์ มี",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Excuse me, where is the toilet?",
+    "example_th": "ขอโทษ ห้องน้ำอยู่ไหน"
   },
   {
     "id": "greetings-7",
@@ -5386,8 +5386,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เยส = ใช่",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Yes, please.",
+    "example_th": "ครับ/ค่ะ เอา"
   },
   {
     "id": "greetings-8",
@@ -5400,8 +5400,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โน = ไม่",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "No, thank you.",
+    "example_th": "ไม่ ขอบคุณ"
   },
   {
     "id": "greetings-9",
@@ -5414,8 +5414,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เวลคัม = ต้อนรับ",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "You are welcome.",
+    "example_th": "ยินดีต้อนรับ"
   },
   {
     "id": "greetings-10",
@@ -5428,8 +5428,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เฮลป์ = ช่วย",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Help me, please.",
+    "example_th": "ช่วยด้วย"
   },
   {
     "id": "greetings-11",
@@ -5442,8 +5442,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โอเค ตรงตัว",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Okay, no problem.",
+    "example_th": "โอเค ไม่มีปัญหา"
   },
   {
     "id": "greetings-12",
@@ -5456,8 +5456,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "good + night",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Good night, sleep well.",
+    "example_th": "ราตรีสวัสดิ์ นอนหลับฝันดี"
   },
   {
     "id": "greetings-13",
@@ -5470,8 +5470,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "good + morning",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Good morning, everyone.",
+    "example_th": "อรุณสวัสดิ์ทุกคน"
   },
   {
     "id": "greetings-14",
@@ -5484,8 +5484,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไนซ์ ทู มีท ยู",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Nice to meet you.",
+    "example_th": "ยินดีที่ได้รู้จัก"
   },
   {
     "id": "greetings-15",
@@ -5498,8 +5498,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซี ยู = เจอกัน",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "See you later.",
+    "example_th": "ไว้เจอกันใหม่"
   },
   {
     "id": "greetings-16",
@@ -5512,8 +5512,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮาว อาร์ ยู",
     "part_of_speech": "int.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "How are you today?",
+    "example_th": "วันนี้เป็นยังไงบ้าง"
   },
   {
     "id": "days-1",
@@ -5526,8 +5526,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มันเดย์ = จันทร์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "See you on Monday.",
+    "example_th": "เจอกันวันจันทร์"
   },
   {
     "id": "days-2",
@@ -5540,8 +5540,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทิวส์เดย์ = อังคาร",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A meeting on Tuesday.",
+    "example_th": "ประชุมวันอังคาร"
   },
   {
     "id": "days-3",
@@ -5554,8 +5554,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เวนส์เดย์ (d เงียบ)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is Wednesday.",
+    "example_th": "วันนี้วันพุธ"
   },
   {
     "id": "days-4",
@@ -5568,8 +5568,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เธิร์สเดย์ = พฤหัส",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I am free on Thursday.",
+    "example_th": "วันพฤหัสฉันว่าง"
   },
   {
     "id": "days-5",
@@ -5582,8 +5582,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไฟรเดย์ = ศุกร์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Happy Friday!",
+    "example_th": "สุขสันต์วันศุกร์"
   },
   {
     "id": "days-6",
@@ -5596,8 +5596,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แซทเทอร์เดย์ = เสาร์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I rest on Saturday.",
+    "example_th": "วันเสาร์ฉันพัก"
   },
   {
     "id": "days-7",
@@ -5610,8 +5610,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซันเดย์ = อาทิตย์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sunday is a holiday.",
+    "example_th": "วันอาทิตย์เป็นวันหยุด"
   },
   {
     "id": "days-8",
@@ -5624,8 +5624,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "week + end = เสาร์อาทิตย์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Have a nice weekend.",
+    "example_th": "สุดสัปดาห์ให้สนุก"
   },
   {
     "id": "days-9",
@@ -5638,8 +5638,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮอลิเดย์ = วันหยุด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is a holiday today.",
+    "example_th": "วันนี้เป็นวันหยุด"
   },
   {
     "id": "days-10",
@@ -5652,8 +5652,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "birth + day = วันเกิด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Happy birthday!",
+    "example_th": "สุขสันต์วันเกิด"
   },
   {
     "id": "days-11",
@@ -5666,8 +5666,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แคเลนเดอร์ = ปฏิทิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Check the calendar.",
+    "example_th": "ดูปฏิทิน"
   },
   {
     "id": "days-12",
@@ -5680,8 +5680,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "week + day = วันทำงาน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I work on weekdays.",
+    "example_th": "ฉันทำงานวันธรรมดา"
   },
   {
     "id": "days-13",
@@ -5694,8 +5694,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เดย์ = วัน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Have a nice day.",
+    "example_th": "ขอให้เป็นวันที่ดี"
   },
   {
     "id": "days-14",
@@ -5708,8 +5708,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เดท = วันที่",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What is the date today?",
+    "example_th": "วันนี้วันที่เท่าไร"
   },
   {
     "id": "months-1",
@@ -5722,8 +5722,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แจนยัวรี่ = มกราคม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My birthday is in January.",
+    "example_th": "วันเกิดฉันเดือนมกราคม"
   },
   {
     "id": "months-2",
@@ -5736,8 +5736,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เฟบรัวรี่ = กุมภา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "February is short.",
+    "example_th": "กุมภาพันธ์เดือนสั้น"
   },
   {
     "id": "months-3",
@@ -5750,8 +5750,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มาร์ช = มีนา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It is hot in March.",
+    "example_th": "มีนาคมอากาศร้อน"
   },
   {
     "id": "months-4",
@@ -5764,8 +5764,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอพริล = เมษา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Songkran is in April.",
+    "example_th": "สงกรานต์อยู่เดือนเมษายน"
   },
   {
     "id": "months-5",
@@ -5778,8 +5778,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมย์ = พฤษภา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "It rains in May.",
+    "example_th": "พฤษภาคมฝนตก"
   },
   {
     "id": "months-6",
@@ -5792,8 +5792,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "จูน = มิถุนา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "School starts in June.",
+    "example_th": "เปิดเรียนเดือนมิถุนายน"
   },
   {
     "id": "months-7",
@@ -5806,8 +5806,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "จุลาย = กรกฎา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "July is rainy.",
+    "example_th": "กรกฎาคมฝนเยอะ"
   },
   {
     "id": "months-8",
@@ -5820,8 +5820,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ออกัสต์ = สิงหา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I travel in August.",
+    "example_th": "ฉันเที่ยวเดือนสิงหาคม"
   },
   {
     "id": "months-9",
@@ -5834,8 +5834,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เซพเทมเบอร์ = กันยา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "September is cool.",
+    "example_th": "กันยายนอากาศเย็น"
   },
   {
     "id": "months-10",
@@ -5848,8 +5848,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อ็อกโทเบอร์ = ตุลา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "October is nice.",
+    "example_th": "ตุลาคมอากาศดี"
   },
   {
     "id": "months-11",
@@ -5862,8 +5862,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โนเวมเบอร์ = พฤศจิกา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "November is cool.",
+    "example_th": "พฤศจิกายนอากาศเย็น"
   },
   {
     "id": "months-12",
@@ -5876,8 +5876,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดีเซมเบอร์ = ธันวา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "December is cold.",
+    "example_th": "ธันวาคมหนาว"
   },
   {
     "id": "sports-1",
@@ -5890,8 +5890,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "foot + ball = ฟุตบอล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I play football.",
+    "example_th": "ฉันเล่นฟุตบอล"
   },
   {
     "id": "sports-2",
@@ -5904,8 +5904,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บาสเก็ตบอล ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Play basketball.",
+    "example_th": "เล่นบาสเกตบอล"
   },
   {
     "id": "sports-3",
@@ -5918,8 +5918,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทนนิส ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "She plays tennis.",
+    "example_th": "เธอเล่นเทนนิส"
   },
   {
     "id": "sports-4",
@@ -5932,8 +5932,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สวิมมิ่ง = ว่ายน้ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I like swimming.",
+    "example_th": "ฉันชอบว่ายน้ำ"
   },
   {
     "id": "sports-5",
@@ -5946,8 +5946,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "รันนิ่ง = วิ่ง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Running is good.",
+    "example_th": "การวิ่งดีต่อสุขภาพ"
   },
   {
     "id": "sports-6",
@@ -5960,8 +5960,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บ็อกซิ่ง = มวย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He likes boxing.",
+    "example_th": "เขาชอบมวย"
   },
   {
     "id": "sports-7",
@@ -5974,8 +5974,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แบดมินตัน ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Let’s play badminton.",
+    "example_th": "ไปเล่นแบดกัน"
   },
   {
     "id": "sports-8",
@@ -5988,8 +5988,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "กอล์ฟ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "My dad plays golf.",
+    "example_th": "พ่อฉันเล่นกอล์ฟ"
   },
   {
     "id": "sports-9",
@@ -6002,8 +6002,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอลเลย์บอล ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "We play volleyball.",
+    "example_th": "เราเล่นวอลเลย์บอล"
   },
   {
     "id": "sports-10",
@@ -6016,8 +6016,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไซคลิ่ง = ปั่นจักรยาน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I enjoy cycling.",
+    "example_th": "ฉันชอบปั่นจักรยาน"
   },
   {
     "id": "sports-11",
@@ -6030,8 +6030,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โยคะ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I do yoga.",
+    "example_th": "ฉันเล่นโยคะ"
   },
   {
     "id": "sports-12",
@@ -6044,8 +6044,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ปิงปอง ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Play ping pong.",
+    "example_th": "เล่นปิงปอง"
   },
   {
     "id": "sports-13",
@@ -6058,8 +6058,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทีม ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "We are a team.",
+    "example_th": "เราเป็นทีมเดียวกัน"
   },
   {
     "id": "sports-14",
@@ -6072,8 +6072,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บอล = ลูกบอล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Throw the ball.",
+    "example_th": "โยนลูกบอล"
   },
   {
     "id": "technology-1",
@@ -6086,8 +6086,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โฟน = โทรศัพท์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Answer the phone.",
+    "example_th": "รับโทรศัพท์"
   },
   {
     "id": "technology-2",
@@ -6100,8 +6100,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คอมพิวเตอร์ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn on the computer.",
+    "example_th": "เปิดคอมพิวเตอร์"
   },
   {
     "id": "technology-3",
@@ -6114,8 +6114,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อินเทอร์เน็ต ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The internet is slow.",
+    "example_th": "อินเทอร์เน็ตช้า"
   },
   {
     "id": "technology-4",
@@ -6128,8 +6128,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "อีเมล ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Send me an email.",
+    "example_th": "ส่งอีเมลมาให้ฉัน"
   },
   {
     "id": "technology-5",
@@ -6142,8 +6142,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "pass + word = รหัสผ่าน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Enter your password.",
+    "example_th": "ใส่รหัสผ่าน"
   },
   {
     "id": "technology-6",
@@ -6156,8 +6156,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แอป ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Download the app.",
+    "example_th": "ดาวน์โหลดแอป"
   },
   {
     "id": "technology-7",
@@ -6170,8 +6170,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สกรีน = หน้าจอ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The screen is bright.",
+    "example_th": "หน้าจอสว่าง"
   },
   {
     "id": "technology-8",
@@ -6184,8 +6184,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คาเมร่า = กล้อง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn on the camera.",
+    "example_th": "เปิดกล้อง"
   },
   {
     "id": "technology-9",
@@ -6198,8 +6198,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แบตเตอรี่ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The battery is low.",
+    "example_th": "แบตใกล้หมด"
   },
   {
     "id": "technology-10",
@@ -6212,8 +6212,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "charge + r = ที่ชาร์จ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is my charger?",
+    "example_th": "ที่ชาร์จอยู่ไหน"
   },
   {
     "id": "technology-11",
@@ -6226,8 +6226,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "key + board = แป้นพิมพ์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use the keyboard.",
+    "example_th": "ใช้คีย์บอร์ด"
   },
   {
     "id": "technology-12",
@@ -6240,8 +6240,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมาส์ (แปลว่าหนู)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Click with the mouse.",
+    "example_th": "คลิกด้วยเมาส์"
   },
   {
     "id": "technology-13",
@@ -6254,8 +6254,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "web + site = เว็บไซต์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Visit the website.",
+    "example_th": "เข้าเว็บไซต์"
   },
   {
     "id": "technology-14",
@@ -6268,8 +6268,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมสเสจ = ข้อความ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Send a message.",
+    "example_th": "ส่งข้อความ"
   },
   {
     "id": "money-1",
@@ -6282,8 +6282,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มันนี่ = เงิน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I have no money.",
+    "example_th": "ฉันไม่มีเงิน"
   },
   {
     "id": "money-2",
@@ -6296,8 +6296,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คอยน์ = เหรียญ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A gold coin.",
+    "example_th": "เหรียญทอง"
   },
   {
     "id": "money-3",
@@ -6310,8 +6310,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "bank + note = แบงก์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A 100-baht banknote.",
+    "example_th": "ธนบัตรร้อยบาท"
   },
   {
     "id": "money-4",
@@ -6324,8 +6324,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอทีเอ็ม ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Find an ATM.",
+    "example_th": "หาตู้เอทีเอ็ม"
   },
   {
     "id": "money-5",
@@ -6338,8 +6338,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แซลารี่ = เงินเดือน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A good salary.",
+    "example_th": "เงินเดือนดี"
   },
   {
     "id": "money-6",
@@ -6352,8 +6352,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอลเล็ต = กระเป๋าตังค์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I lost my wallet.",
+    "example_th": "ฉันทำกระเป๋าเงินหาย"
   },
   {
     "id": "money-7",
@@ -6366,8 +6366,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เซฟ = ออมเงิน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I save money.",
+    "example_th": "ฉันเก็บเงิน"
   },
   {
     "id": "money-8",
@@ -6380,8 +6380,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สเปนด์ = จ่าย",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Don’t spend too much.",
+    "example_th": "อย่าใช้เงินเยอะ"
   },
   {
     "id": "money-9",
@@ -6394,8 +6394,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ริช = รวย",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is rich.",
+    "example_th": "เขารวย"
   },
   {
     "id": "money-10",
@@ -6408,8 +6408,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พัวร์ = จน",
     "part_of_speech": "adj.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "They are poor.",
+    "example_th": "พวกเขาจน"
   },
   {
     "id": "money-11",
@@ -6422,8 +6422,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เอ็กซ์เชนจ์ = แลก",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Exchange money here.",
+    "example_th": "แลกเงินที่นี่"
   },
   {
     "id": "money-12",
@@ -6436,8 +6436,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เครดิต ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pay by credit card.",
+    "example_th": "จ่ายด้วยบัตรเครดิต"
   },
   {
     "id": "money-13",
@@ -6450,8 +6450,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทิป ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Leave a tip.",
+    "example_th": "ให้ทิป"
   },
   {
     "id": "money-14",
@@ -6464,8 +6464,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แอคเคานต์ = บัญชี",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open an account.",
+    "example_th": "เปิดบัญชี"
   },
   {
     "id": "nature-1",
@@ -6478,8 +6478,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซี = ทะเล",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The sea is blue.",
+    "example_th": "ทะเลสีฟ้า"
   },
   {
     "id": "nature-2",
@@ -6492,8 +6492,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บีช = หาด",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Relax on the beach.",
+    "example_th": "พักผ่อนที่ชายหาด"
   },
   {
     "id": "nature-3",
@@ -6506,8 +6506,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เมาน์เทน = ภูเขา",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Climb the mountain.",
+    "example_th": "ปีนภูเขา"
   },
   {
     "id": "nature-4",
@@ -6520,8 +6520,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ริเวอร์ = แม่น้ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Swim in the river.",
+    "example_th": "ว่ายน้ำในแม่น้ำ"
   },
   {
     "id": "nature-5",
@@ -6534,8 +6534,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟอเรสต์ = ป่า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A green forest.",
+    "example_th": "ป่าเขียว"
   },
   {
     "id": "nature-6",
@@ -6548,8 +6548,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไอแลนด์ (s เงียบ)",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A small island.",
+    "example_th": "เกาะเล็ก ๆ"
   },
   {
     "id": "nature-7",
@@ -6562,8 +6562,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สกาย = ท้องฟ้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "The sky is clear.",
+    "example_th": "ท้องฟ้าแจ่มใส"
   },
   {
     "id": "nature-8",
@@ -6576,8 +6576,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มูน = พระจันทร์",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look at the moon.",
+    "example_th": "ดูพระจันทร์"
   },
   {
     "id": "nature-9",
@@ -6590,8 +6590,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สตาร์ = ดาว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A bright star.",
+    "example_th": "ดาวสว่าง"
   },
   {
     "id": "nature-10",
@@ -6604,8 +6604,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทรี = ต้นไม้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A big tree.",
+    "example_th": "ต้นไม้ใหญ่"
   },
   {
     "id": "nature-11",
@@ -6618,8 +6618,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟลาวเวอร์ = ดอกไม้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A pretty flower.",
+    "example_th": "ดอกไม้สวย"
   },
   {
     "id": "nature-12",
@@ -6632,8 +6632,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เวฟ = คลื่น",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A big wave.",
+    "example_th": "คลื่นใหญ่"
   },
   {
     "id": "nature-13",
@@ -6646,8 +6646,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แซนด์ = ทราย",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Soft sand.",
+    "example_th": "ทรายนุ่ม"
   },
   {
     "id": "nature-14",
@@ -6660,8 +6660,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เลค = ทะเลสาบ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A calm lake.",
+    "example_th": "ทะเลสาบเงียบสงบ"
   },
   {
     "id": "questions-1",
@@ -6674,8 +6674,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ว็อท = อะไร",
     "part_of_speech": "pron.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What is this?",
+    "example_th": "นี่คืออะไร"
   },
   {
     "id": "questions-2",
@@ -6688,8 +6688,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แวร์ = ที่ไหน",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where are you?",
+    "example_th": "คุณอยู่ที่ไหน"
   },
   {
     "id": "questions-3",
@@ -6702,8 +6702,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เว็น = เมื่อไหร่",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "When do we start?",
+    "example_th": "เริ่มเมื่อไหร่"
   },
   {
     "id": "questions-4",
@@ -6716,8 +6716,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮู = ใคร",
     "part_of_speech": "pron.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Who is that?",
+    "example_th": "นั่นใคร"
   },
   {
     "id": "questions-5",
@@ -6730,8 +6730,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วาย = ทำไม",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Why not?",
+    "example_th": "ทำไมล่ะ"
   },
   {
     "id": "questions-6",
@@ -6744,8 +6744,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฮาว = ยังไง",
     "part_of_speech": "adv.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "How does it work?",
+    "example_th": "มันทำงานยังไง"
   },
   {
     "id": "questions-7",
@@ -6758,8 +6758,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "how + much = เท่าไร",
     "part_of_speech": "phr.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "How much is it?",
+    "example_th": "ราคาเท่าไร"
   },
   {
     "id": "questions-8",
@@ -6772,8 +6772,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "how + many = กี่ชิ้น",
     "part_of_speech": "phr.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "How many do you want?",
+    "example_th": "เอากี่อัน"
   },
   {
     "id": "questions-9",
@@ -6786,8 +6786,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วิช = อันไหน",
     "part_of_speech": "pron.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Which one?",
+    "example_th": "อันไหน"
   },
   {
     "id": "questions-10",
@@ -6800,8 +6800,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แคน = ทำได้",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Can you help me?",
+    "example_th": "ช่วยฉันได้ไหม"
   },
   {
     "id": "questions-11",
@@ -6814,8 +6814,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ว็อนท์ = อยากได้",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I want this.",
+    "example_th": "ฉันอยากได้อันนี้"
   },
   {
     "id": "questions-12",
@@ -6828,8 +6828,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "นีด = ต้องการ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I need help.",
+    "example_th": "ฉันต้องการความช่วยเหลือ"
   },
   {
     "id": "questions-13",
@@ -6842,8 +6842,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดู = ทำ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "What do you do?",
+    "example_th": "คุณทำงานอะไร"
   },
   {
     "id": "questions-14",
@@ -6856,8 +6856,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วิล = จะ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "I will call you.",
+    "example_th": "ฉันจะโทรหาคุณ"
   },
   {
     "id": "furniture-1",
@@ -6870,8 +6870,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โซฟา ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sit on the sofa.",
+    "example_th": "นั่งบนโซฟา"
   },
   {
     "id": "furniture-2",
@@ -6884,8 +6884,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แลมป์ = โคมไฟ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Turn on the lamp.",
+    "example_th": "เปิดโคมไฟ"
   },
   {
     "id": "furniture-3",
@@ -6898,8 +6898,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มิเรอร์ = กระจก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Look in the mirror.",
+    "example_th": "ส่องกระจก"
   },
   {
     "id": "furniture-4",
@@ -6912,8 +6912,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เชลฟ์ = ชั้นวาง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Put it on the shelf.",
+    "example_th": "วางบนชั้น"
   },
   {
     "id": "furniture-5",
@@ -6926,8 +6926,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เคอร์เทน = ม่าน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open the curtain.",
+    "example_th": "เปิดผ้าม่าน"
   },
   {
     "id": "furniture-6",
@@ -6940,8 +6940,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คาร์เพ็ต = พรม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A soft carpet.",
+    "example_th": "พรมนุ่ม"
   },
   {
     "id": "furniture-7",
@@ -6954,8 +6954,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พิลโล่ = หมอน",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A soft pillow.",
+    "example_th": "หมอนนุ่ม"
   },
   {
     "id": "furniture-8",
@@ -6968,8 +6968,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ดรอเออร์ = ลิ้นชัก",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Open the drawer.",
+    "example_th": "เปิดลิ้นชัก"
   },
   {
     "id": "furniture-9",
@@ -6982,8 +6982,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ซิงค์ = อ่างล้าง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wash it in the sink.",
+    "example_th": "ล้างในอ่าง"
   },
   {
     "id": "furniture-10",
@@ -6996,8 +6996,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ทอยเล็ต = ส้วม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Where is the toilet?",
+    "example_th": "ห้องน้ำอยู่ไหน"
   },
   {
     "id": "furniture-11",
@@ -7010,8 +7010,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สแตร์ส = บันได",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Use the stairs.",
+    "example_th": "ใช้บันได"
   },
   {
     "id": "furniture-12",
@@ -7024,8 +7024,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คลอเซ็ต = ตู้เสื้อผ้า",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Clothes in the closet.",
+    "example_th": "เสื้อผ้าในตู้"
   },
   {
     "id": "furniture-13",
@@ -7038,8 +7038,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "bath + tub = อ่างอาบน้ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fill the bathtub.",
+    "example_th": "เติมน้ำในอ่างอาบน้ำ"
   },
   {
     "id": "furniture-14",
@@ -7052,8 +7052,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คับเบิร์ด = ตู้เก็บของ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cups in the cupboard.",
+    "example_th": "ถ้วยในตู้"
   },
   {
     "id": "cooking-1",
@@ -7066,8 +7066,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คุก = ทำอาหาร",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "He is a good cook.",
+    "example_th": "เขาเป็นพ่อครัวที่ดี"
   },
   {
     "id": "cooking-2",
@@ -7080,8 +7080,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "คัท = ตัด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cut the vegetables.",
+    "example_th": "หั่นผัก"
   },
   {
     "id": "cooking-3",
@@ -7094,8 +7094,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ฟราย = ทอด",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fry the egg.",
+    "example_th": "ทอดไข่"
   },
   {
     "id": "cooking-4",
@@ -7108,8 +7108,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "บอยล์ = ต้ม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Boil the water.",
+    "example_th": "ต้มน้ำ"
   },
   {
     "id": "cooking-5",
@@ -7122,8 +7122,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เบก = อบ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Bake a cake.",
+    "example_th": "อบเค้ก"
   },
   {
     "id": "cooking-6",
@@ -7136,8 +7136,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "มิกซ์ = ผสม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Mix it well.",
+    "example_th": "ผสมให้เข้ากัน"
   },
   {
     "id": "cooking-7",
@@ -7150,8 +7150,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ว็อช = ล้าง",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Wash the rice.",
+    "example_th": "ล้างข้าว"
   },
   {
     "id": "cooking-8",
@@ -7164,8 +7164,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พีล = ปอก",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Peel the banana.",
+    "example_th": "ปอกกล้วย"
   },
   {
     "id": "cooking-9",
@@ -7178,8 +7178,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "พอร์ = เท",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Pour the milk.",
+    "example_th": "เทนม"
   },
   {
     "id": "cooking-10",
@@ -7192,8 +7192,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เทสต์ = ชิม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Taste the soup.",
+    "example_th": "ชิมซุป"
   },
   {
     "id": "cooking-11",
@@ -7206,8 +7206,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "แอด = เพิ่ม",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add some salt.",
+    "example_th": "ใส่เกลือหน่อย"
   },
   {
     "id": "cooking-12",
@@ -7220,8 +7220,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สเทอร์ = คน",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Stir the soup.",
+    "example_th": "คนซุป"
   },
   {
     "id": "cooking-13",
@@ -7234,8 +7234,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ช็อป = สับ",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Chop the onion.",
+    "example_th": "สับหัวหอม"
   },
   {
     "id": "cooking-14",
@@ -7248,8 +7248,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เสิร์ฟ ตรงตัว",
     "part_of_speech": "v.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Serve it hot.",
+    "example_th": "เสิร์ฟตอนร้อน"
   },
   {
     "id": "drinks-1",
@@ -7262,8 +7262,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "วอเตอร์ = น้ำ",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Drink some water.",
+    "example_th": "ดื่มน้ำ"
   },
   {
     "id": "drinks-2",
@@ -7276,8 +7276,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "จูซ = น้ำผลไม้",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Orange juice, please.",
+    "example_th": "ขอน้ำส้ม"
   },
   {
     "id": "drinks-3",
@@ -7290,8 +7290,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โซดา = น้ำอัดลม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A cold soda.",
+    "example_th": "น้ำอัดลมเย็น ๆ"
   },
   {
     "id": "drinks-4",
@@ -7304,8 +7304,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "เบียร์ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A cold beer.",
+    "example_th": "เบียร์เย็น"
   },
   {
     "id": "drinks-5",
@@ -7318,8 +7318,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไวน์ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A glass of wine.",
+    "example_th": "ไวน์แก้วหนึ่ง"
   },
   {
     "id": "drinks-6",
@@ -7332,8 +7332,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "สมูทตี้ ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A mango smoothie.",
+    "example_th": "สมูทตี้มะม่วง"
   },
   {
     "id": "drinks-7",
@@ -7346,8 +7346,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "milk + shake = ปั่นนม",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A chocolate milkshake.",
+    "example_th": "มิลค์เชคช็อกโกแลต"
   },
   {
     "id": "drinks-8",
@@ -7360,8 +7360,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "lemon + ade = น้ำมะนาว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Fresh lemonade.",
+    "example_th": "น้ำมะนาวสด"
   },
   {
     "id": "drinks-9",
@@ -7374,8 +7374,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "โคล่า ตรงตัว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A can of cola.",
+    "example_th": "โคล่ากระป๋องหนึ่ง"
   },
   {
     "id": "drinks-10",
@@ -7388,8 +7388,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "coconut + water",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Cold coconut water.",
+    "example_th": "น้ำมะพร้าวเย็น"
   },
   {
     "id": "drinks-11",
@@ -7402,8 +7402,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "ไอซ์ = น้ำแข็ง",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Add some ice.",
+    "example_th": "ใส่น้ำแข็งหน่อย"
   },
   {
     "id": "drinks-12",
@@ -7416,8 +7416,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "soy + milk = นมถั่ว",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A glass of soy milk.",
+    "example_th": "นมถั่วเหลืองแก้วหนึ่ง"
   },
   {
     "id": "drinks-13",
@@ -7430,8 +7430,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "hot + chocolate",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "A warm hot chocolate.",
+    "example_th": "ช็อกโกแลตร้อนอุ่น ๆ"
   },
   {
     "id": "drinks-14",
@@ -7444,8 +7444,8 @@ const FALLBACK_WORDS: VocabWord[] = [
     "image_url": null,
     "hint_th": "iced + tea = ชาเย็น",
     "part_of_speech": "n.",
-    "example_en": null,
-    "example_th": null
+    "example_en": "Sweet iced tea.",
+    "example_th": "ชาเย็นหวาน"
   },
   {
     "id": "ai-1",
